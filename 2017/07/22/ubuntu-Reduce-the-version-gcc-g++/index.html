@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Ubuntu," />
 
 
 
@@ -94,14 +94,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="有时候我们在跑别人的程序的时候发现自己编译器的版本过高以至于不能运行，这个时候我们就需要降低编译器的版本。 首先安装低版本的编译器这里由于本人用的ubuntu16.04所以编译器自带的是gcc-5.4和g++-5.4,但是需要低版本的，经过测试现在还可以安装4.7的版本 sudo apt-get install gcc-4.7 gcc-4.7-multilib g++-4.7 g++-4.7-mu">
+<meta name="keywords" content="Ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu环境下降低gcc和g++的版本------by黄海亮">
+<meta property="og:url" content="http://yoursite.com/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/index.html">
 <meta property="og:site_name" content="Darren">
+<meta property="og:description" content="有时候我们在跑别人的程序的时候发现自己编译器的版本过高以至于不能运行，这个时候我们就需要降低编译器的版本。 首先安装低版本的编译器这里由于本人用的ubuntu16.04所以编译器自带的是gcc-5.4和g++-5.4,但是需要低版本的，经过测试现在还可以安装4.7的版本 sudo apt-get install gcc-4.7 gcc-4.7-multilib g++-4.7 g++-4.7-mu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-15T05:56:24.839Z">
+<meta property="og:updated_time" content="2017-08-15T01:59:51.874Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="ubuntu环境下降低gcc和g++的版本------by黄海亮">
+<meta name="twitter:description" content="有时候我们在跑别人的程序的时候发现自己编译器的版本过高以至于不能运行，这个时候我们就需要降低编译器的版本。 首先安装低版本的编译器这里由于本人用的ubuntu16.04所以编译器自带的是gcc-5.4和g++-5.4,但是需要低版本的，经过测试现在还可以安装4.7的版本 sudo apt-get install gcc-4.7 gcc-4.7-multilib g++-4.7 g++-4.7-mu">
 
 
 
@@ -130,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/"/>
 
 
 
 
 
-  <title>tags | Darren</title>
+  <title>ubuntu环境下降低gcc和g++的版本------by黄海亮 | Darren</title>
   
 
 
@@ -241,40 +245,163 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Darren">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Darren">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 5 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Start-a-blog/" style="font-size: 12px; color: #ccc">Start a blog</a> <a href="/tags/Ubuntu/" style="font-size: 30px; color: #111">Ubuntu</a> <a href="/tags/start/" style="font-size: 12px; color: #ccc">start</a> <a href="/tags/手把手教你配置Ubuntu-server服务器/" style="font-size: 30px; color: #111">手把手教你配置Ubuntu server服务器</a> <a href="/tags/深度学习环境搭建/" style="font-size: 12px; color: #ccc">深度学习环境搭建</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">ubuntu环境下降低gcc和g++的版本------by黄海亮</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:45:31+08:00">
+                2017-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>有时候我们在跑别人的程序的时候发现自己编译器的版本过高以至于不能运行，这个时候我们就需要降低编译器的版本。</p>
+<h1 id="首先安装低版本的编译器"><a href="#首先安装低版本的编译器" class="headerlink" title="首先安装低版本的编译器"></a>首先安装低版本的编译器</h1><p>这里由于本人用的ubuntu16.04所以编译器自带的是gcc-5.4和g++-5.4,但是需要低版本的，经过测试现在还可以安装4.7的版本</p>
+<pre><code>sudo apt-get install gcc-4.7 gcc-4.7-multilib g++-4.7 g++-4.7-multilib
+</code></pre><h1 id="配置级别"><a href="#配置级别" class="headerlink" title="配置级别"></a>配置级别</h1><pre><code>sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 50
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 40
+</code></pre><p>接着输入</p>
+<pre><code>sudo update-alternatives --config gcc
+</code></pre><p>然后可以自己选择版本。</p>
+<p>同理配置好了gcc还要配置g++</p>
+<pre><code>sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.7 50
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 40
+</code></pre><p>同理g++的选择为：</p>
+<pre><code>sudo update-alternatives --config g++
+</code></pre><p>如果想删除可选项的话可以键入以下指令：</p>
+<pre><code>sudo update-alternatives --remove gcc /usr/bin/gcc-4.5
+</code></pre><p>本文是自己跟同门根据网上资料整理而得，希望对大家有用。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/22/ubuntu16-04-Server-install-CUDA/" rel="next" title="ubuntu16.04 Server install CUDA------by黄海亮">
+                <i class="fa fa-chevron-left"></i> ubuntu16.04 Server install CUDA------by黄海亮
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/22/双系统时ubuntu更改开机引导/" rel="prev" title="双系统时ubuntu更改开机引导------by黄海亮">
+                双系统时ubuntu更改开机引导------by黄海亮 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -307,8 +434,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -361,6 +497,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#首先安装低版本的编译器"><span class="nav-number">1.</span> <span class="nav-text">首先安装低版本的编译器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置级别"><span class="nav-number">2.</span> <span class="nav-text">配置级别</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -484,10 +636,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 

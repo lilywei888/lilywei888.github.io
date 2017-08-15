@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Ubuntu," />
 
 
 
@@ -94,14 +94,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="我们在windows上安装ubuntu双系统的时候，ubuntu的引导会默认先进入ubuntu系统，这对于那些想使用ubuntu但是并不常用ubuntu系统的人有一些不方便。在网上我有看到EaseBCD这个软件可以用来管理启动项的。但是因为个人之前和身边的朋友使用过，感觉其实并没有解决用户的问题，不安装EaseBCD的时候只用进入一次选择界面，而安装完EaseBCD的时候我们竟然需要进入两次引导界">
+<meta name="keywords" content="Ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="双系统时ubuntu更改开机引导------by黄海亮">
+<meta property="og:url" content="http://yoursite.com/2017/07/22/双系统时ubuntu更改开机引导/index.html">
 <meta property="og:site_name" content="Darren">
+<meta property="og:description" content="我们在windows上安装ubuntu双系统的时候，ubuntu的引导会默认先进入ubuntu系统，这对于那些想使用ubuntu但是并不常用ubuntu系统的人有一些不方便。在网上我有看到EaseBCD这个软件可以用来管理启动项的。但是因为个人之前和身边的朋友使用过，感觉其实并没有解决用户的问题，不安装EaseBCD的时候只用进入一次选择界面，而安装完EaseBCD的时候我们竟然需要进入两次引导界">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-15T05:56:24.839Z">
+<meta property="og:updated_time" content="2017-08-15T01:59:51.876Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="双系统时ubuntu更改开机引导------by黄海亮">
+<meta name="twitter:description" content="我们在windows上安装ubuntu双系统的时候，ubuntu的引导会默认先进入ubuntu系统，这对于那些想使用ubuntu但是并不常用ubuntu系统的人有一些不方便。在网上我有看到EaseBCD这个软件可以用来管理启动项的。但是因为个人之前和身边的朋友使用过，感觉其实并没有解决用户的问题，不安装EaseBCD的时候只用进入一次选择界面，而安装完EaseBCD的时候我们竟然需要进入两次引导界">
 
 
 
@@ -130,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/22/双系统时ubuntu更改开机引导/"/>
 
 
 
 
 
-  <title>tags | Darren</title>
+  <title>双系统时ubuntu更改开机引导------by黄海亮 | Darren</title>
   
 
 
@@ -241,40 +245,152 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/双系统时ubuntu更改开机引导/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Darren">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Darren">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 5 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Start-a-blog/" style="font-size: 12px; color: #ccc">Start a blog</a> <a href="/tags/Ubuntu/" style="font-size: 30px; color: #111">Ubuntu</a> <a href="/tags/start/" style="font-size: 12px; color: #ccc">start</a> <a href="/tags/手把手教你配置Ubuntu-server服务器/" style="font-size: 30px; color: #111">手把手教你配置Ubuntu server服务器</a> <a href="/tags/深度学习环境搭建/" style="font-size: 12px; color: #ccc">深度学习环境搭建</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">双系统时ubuntu更改开机引导------by黄海亮</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:46:31+08:00">
+                2017-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>我们在windows上安装ubuntu双系统的时候，ubuntu的引导会默认先进入ubuntu系统，这对于那些想使用ubuntu但是并不常用ubuntu系统的人有一些不方便。<br>在网上我有看到EaseBCD这个软件可以用来管理启动项的。<br>但是因为个人之前和身边的朋友使用过，感觉其实并没有解决用户的问题，不安装EaseBCD的时候只用进入一次选择界面，而安装完EaseBCD的时候我们竟然需要进入两次引导界面，这就很不方便。（此处之争对ubuntu其他的双系统也许EaseBCD会更加方便些）另外之前一个朋友发现这个地方很不方便，于是就卸载了EaseBCD结果他的系统完全进不去了，最后在大神的指导下才修复进入了windows系统。</p>
+<p>说了这么多到底如何更改启动项呢？其实使用ubuntu自带的系统文件就可以了。</p>
+<h1 id="根据ubuntu自带的系统文件就可以修改启动顺序"><a href="#根据ubuntu自带的系统文件就可以修改启动顺序" class="headerlink" title="根据ubuntu自带的系统文件就可以修改启动顺序"></a>根据ubuntu自带的系统文件就可以修改启动顺序</h1><p>进入系统文件</p>
+<pre><code>sudo vim /etc/default/grub
+</code></pre><p>进去之后找到GRUB_DEFAULT，它代表启动顺序。<br>然后后面的数字需要根据自己电脑开机时显示的顺序进行选择<br>当然里面还有很多的文件，还可以修改其他的参数，比如，选择界面等待的时间等（默认是10s,如果觉得开机时间太久了，可以自行更改的）</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/" rel="next" title="ubuntu环境下降低gcc和g++的版本------by黄海亮">
+                <i class="fa fa-chevron-left"></i> ubuntu环境下降低gcc和g++的版本------by黄海亮
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/22/ubuntu密钥登录教程/" rel="prev" title="ubuntu密钥登录教程------by黄海亮">
+                ubuntu密钥登录教程------by黄海亮 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -307,8 +423,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -361,6 +486,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#根据ubuntu自带的系统文件就可以修改启动顺序"><span class="nav-number">1.</span> <span class="nav-text">根据ubuntu自带的系统文件就可以修改启动顺序</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -484,10 +625,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 

@@ -326,8 +326,7 @@
         
           
             <h1 id="CUDA两个数组相加"><a href="#CUDA两个数组相加" class="headerlink" title="CUDA两个数组相加"></a>CUDA两个数组相加</h1><p>在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。</p>
-<p>##下面是一些代码的体现,主要是CPU以及GPU的对比</p>
-<p>1、主程序</p>
+<h2 id="下面是一些代码的体现-主要是CPU以及GPU的对比"><a href="#下面是一些代码的体现-主要是CPU以及GPU的对比" class="headerlink" title="下面是一些代码的体现,主要是CPU以及GPU的对比"></a>下面是一些代码的体现,主要是CPU以及GPU的对比</h2><p>1、主程序</p>
 <pre><code>#include &quot;A_add_B.h&quot;
 int main(void)
 {
@@ -438,8 +437,7 @@ void init(unsigned int length)
 nvcc --compiler-options -fPIC -c A_add_B.cu -lcudart -I&quot;/usr/local/cuda/include/&quot;
 nvcc --compiler-options -fPIC -o A_add_B A_add_B.o -lcudart -I&quot;/usr/local/cuda/include/&quot; -L&quot;/usr/local/cuda/lib64&quot;
 rm -f A_add_B.o
-</code></pre><p>###通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。</p>
-
+</code></pre><h3 id="通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。"><a href="#通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。" class="headerlink" title="通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。"></a>通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。</h3>
           
         
       
@@ -1515,141 +1513,6 @@ type: tags
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/ubuntu密钥登录教程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Darren">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/22/ubuntu密钥登录教程/" itemprop="url">ubuntu密钥登录教程------by黄海亮</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:48:31+08:00">
-                2017-07-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>#ubuntu密钥登录教程</p>
-<p>##上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。</p>
-<p>###本文使用XShell进行远程连接</p>
-<p>###使用WinSCP来进行ubuntu与ubuntu之间的文件的传输</p>
-<p>#XShell<br>首先现在登录时输入密码那一栏已经变成了灰色，这个时候只能使用密匙登录了。<br><img src="http://img.blog.csdn.net/20170716230052647?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>拿到密钥的第一步可以先添加密钥<br><img src="http://img.blog.csdn.net/20170716230143712?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p><img src="http://img.blog.csdn.net/20170716230209146?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>找到自己密钥的路径即可<br><img src="http://img.blog.csdn.net/20170716230239310?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>密钥导入进来以后那个文件就可以不要了，当然如果还有其他地方需要的话还需要导入其他的地方，不过如果误删了不要方，旁边还有导出呢。<br>导入成功以后可以进入属性<br><img src="http://img.blog.csdn.net/20170716230314907?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>大家可以更改密码，初始密码都为空的，这个地方相当于你再给你的密钥又手动加了一层密码，当然也可以不加，因为我发现加了以后登录的时候还要你自己输入一遍。<br>属性上面还有一公钥，这个里面就是我们放到服务器中的东西，这个东西不要给别人，当然我给你们的密匙你们更不能给别人，否者别人就可以轻松的登录你的账号了。<br>剩下的登录方法更以前一样。</p>
-<p>#WinSCP<br>同样此时winscp用密码也登录不上了<br><img src="http://img.blog.csdn.net/20170716230438986?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>确认</p>
-<p>直接在之前建立的那个里面更改就好，点击编辑<br><img src="http://img.blog.csdn.net/20170716230513915?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>然后点高级<br><img src="http://img.blog.csdn.net/20170716230529320?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>验证<br><img src="http://img.blog.csdn.net/20170716230551613?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>然后添加密钥文件的路径<br><img src="http://img.blog.csdn.net/20170716230616590?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>右下角选择所有文件<br><img src="http://img.blog.csdn.net/20170716230644369?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>选择密匙<br>然后有一个格式转换，选择确定<br><img src="http://img.blog.csdn.net/20170716230702329?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>然后保存确定保存就完了，大功告成可以链接了。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/Ubuntu 系统设置密钥登陆/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1746,6 +1609,141 @@ vim authorized_keys
 </code></pre><p>把自己生成的公钥复制进来就可以了<br>然后保存，并且更改文件模式</p>
 <pre><code>chmod 600 authorized_keys
 </code></pre><h3 id="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"><a href="#注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的" class="headerlink" title="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"></a>注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/ubuntu密钥登录教程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Darren">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Darren">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/22/ubuntu密钥登录教程/" itemprop="url">ubuntu密钥登录教程------by黄海亮</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:48:31+08:00">
+                2017-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#ubuntu密钥登录教程</p>
+<p>##上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。</p>
+<p>###本文使用XShell进行远程连接</p>
+<p>###使用WinSCP来进行ubuntu与ubuntu之间的文件的传输</p>
+<p>#XShell<br>首先现在登录时输入密码那一栏已经变成了灰色，这个时候只能使用密匙登录了。<br><img src="http://img.blog.csdn.net/20170716230052647?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>拿到密钥的第一步可以先添加密钥<br><img src="http://img.blog.csdn.net/20170716230143712?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20170716230209146?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>找到自己密钥的路径即可<br><img src="http://img.blog.csdn.net/20170716230239310?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>密钥导入进来以后那个文件就可以不要了，当然如果还有其他地方需要的话还需要导入其他的地方，不过如果误删了不要方，旁边还有导出呢。<br>导入成功以后可以进入属性<br><img src="http://img.blog.csdn.net/20170716230314907?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>大家可以更改密码，初始密码都为空的，这个地方相当于你再给你的密钥又手动加了一层密码，当然也可以不加，因为我发现加了以后登录的时候还要你自己输入一遍。<br>属性上面还有一公钥，这个里面就是我们放到服务器中的东西，这个东西不要给别人，当然我给你们的密匙你们更不能给别人，否者别人就可以轻松的登录你的账号了。<br>剩下的登录方法更以前一样。</p>
+<p>#WinSCP<br>同样此时winscp用密码也登录不上了<br><img src="http://img.blog.csdn.net/20170716230438986?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>确认</p>
+<p>直接在之前建立的那个里面更改就好，点击编辑<br><img src="http://img.blog.csdn.net/20170716230513915?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>然后点高级<br><img src="http://img.blog.csdn.net/20170716230529320?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>验证<br><img src="http://img.blog.csdn.net/20170716230551613?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>然后添加密钥文件的路径<br><img src="http://img.blog.csdn.net/20170716230616590?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>右下角选择所有文件<br><img src="http://img.blog.csdn.net/20170716230644369?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>选择密匙<br>然后有一个格式转换，选择确定<br><img src="http://img.blog.csdn.net/20170716230702329?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>然后保存确定保存就完了，大功告成可以链接了。</p>
+
           
         
       

@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="CUDA两个数组相加在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。 ##下面是一些代码的体现,主要是CPU以及GPU的对比 1、主程序 #include">
+<meta name="description" content="CUDA两个数组相加在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。 下面是一些代码的体现,主要是CPU以及GPU的对比1、主程序 #include &amp;q">
 <meta name="keywords" content="CUDA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CUDA-两个数组相加------by黄海亮">
 <meta property="og:url" content="http://yoursite.com/2017/08/15/CUDA-两个数组相加/index.html">
 <meta property="og:site_name" content="Darren">
-<meta property="og:description" content="CUDA两个数组相加在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。 ##下面是一些代码的体现,主要是CPU以及GPU的对比 1、主程序 #include">
+<meta property="og:description" content="CUDA两个数组相加在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。 下面是一些代码的体现,主要是CPU以及GPU的对比1、主程序 #include &amp;q">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-15T12:10:41.376Z">
+<meta property="og:updated_time" content="2017-08-15T12:14:21.337Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CUDA-两个数组相加------by黄海亮">
-<meta name="twitter:description" content="CUDA两个数组相加在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。 ##下面是一些代码的体现,主要是CPU以及GPU的对比 1、主程序 #include">
+<meta name="twitter:description" content="CUDA两个数组相加在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。 下面是一些代码的体现,主要是CPU以及GPU的对比1、主程序 #include &amp;q">
 
 
 
@@ -325,8 +325,7 @@
 
       
         <h1 id="CUDA两个数组相加"><a href="#CUDA两个数组相加" class="headerlink" title="CUDA两个数组相加"></a>CUDA两个数组相加</h1><p>在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。</p>
-<p>##下面是一些代码的体现,主要是CPU以及GPU的对比</p>
-<p>1、主程序</p>
+<h2 id="下面是一些代码的体现-主要是CPU以及GPU的对比"><a href="#下面是一些代码的体现-主要是CPU以及GPU的对比" class="headerlink" title="下面是一些代码的体现,主要是CPU以及GPU的对比"></a>下面是一些代码的体现,主要是CPU以及GPU的对比</h2><p>1、主程序</p>
 <pre><code>#include &quot;A_add_B.h&quot;
 int main(void)
 {
@@ -437,8 +436,7 @@ void init(unsigned int length)
 nvcc --compiler-options -fPIC -c A_add_B.cu -lcudart -I&quot;/usr/local/cuda/include/&quot;
 nvcc --compiler-options -fPIC -o A_add_B A_add_B.o -lcudart -I&quot;/usr/local/cuda/include/&quot; -L&quot;/usr/local/cuda/lib64&quot;
 rm -f A_add_B.o
-</code></pre><p>###通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。</p>
-
+</code></pre><h3 id="通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。"><a href="#通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。" class="headerlink" title="通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。"></a>通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。</h3>
       
     </div>
     
@@ -601,7 +599,7 @@ rm -f A_add_B.o
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CUDA两个数组相加"><span class="nav-number">1.</span> <span class="nav-text">CUDA两个数组相加</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CUDA两个数组相加"><span class="nav-number">1.</span> <span class="nav-text">CUDA两个数组相加</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下面是一些代码的体现-主要是CPU以及GPU的对比"><span class="nav-number">1.1.</span> <span class="nav-text">下面是一些代码的体现,主要是CPU以及GPU的对比</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。"><span class="nav-number">1.1.1.</span> <span class="nav-text">通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

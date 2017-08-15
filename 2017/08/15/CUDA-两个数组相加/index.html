@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="start," />
+  <meta name="keywords" content="CUDA," />
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="Thanks for JingJing’s help to me!">
-<meta name="keywords" content="start">
+<meta name="description" content="CUDA两个数组相加在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。 ##下面是一些代码的体现,主要是CPU以及GPU的对比 1、主程序 #include">
+<meta name="keywords" content="CUDA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Thanks">
-<meta property="og:url" content="http://yoursite.com/2017/07/22/thanks/index.html">
+<meta property="og:title" content="CUDA-两个数组相加">
+<meta property="og:url" content="http://yoursite.com/2017/08/15/CUDA-两个数组相加/index.html">
 <meta property="og:site_name" content="Darren">
-<meta property="og:description" content="Thanks for JingJing’s help to me!">
+<meta property="og:description" content="CUDA两个数组相加在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。 ##下面是一些代码的体现,主要是CPU以及GPU的对比 1、主程序 #include">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-15T06:05:50.849Z">
+<meta property="og:updated_time" content="2017-08-15T12:07:57.603Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Thanks">
-<meta name="twitter:description" content="Thanks for JingJing’s help to me!">
+<meta name="twitter:title" content="CUDA-两个数组相加">
+<meta name="twitter:description" content="CUDA两个数组相加在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。 ##下面是一些代码的体现,主要是CPU以及GPU的对比 1、主程序 #include">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/22/thanks/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/15/CUDA-两个数组相加/"/>
 
 
 
 
 
-  <title>Thanks | Darren</title>
+  <title>CUDA-两个数组相加 | Darren</title>
   
 
 
@@ -257,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/thanks/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/CUDA-两个数组相加/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Darren">
@@ -274,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Thanks</h1>
+          <h1 class="post-title" itemprop="name headline">CUDA-两个数组相加</h1>
         
 
         <div class="post-meta">
@@ -286,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T13:11:11+08:00">
-                2017-07-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T20:07:13+08:00">
+                2017-08-15
               </time>
             
 
@@ -324,7 +324,120 @@
       
 
       
-        <p>Thanks for JingJing’s help to me!</p>
+        <h1 id="CUDA两个数组相加"><a href="#CUDA两个数组相加" class="headerlink" title="CUDA两个数组相加"></a>CUDA两个数组相加</h1><p>在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。</p>
+<p>##下面是一些代码的体现,主要是CPU以及GPU的对比</p>
+<p>1、主程序</p>
+<pre><code>#include &quot;A_add_B.h&quot;
+int main(void)
+{
+    //数组赋初值
+    for(int i=0;i&lt;N;i++)
+    {
+        A[i]=-i;
+        B[i]=i*i;
+    }
+    //开始CPU计算
+    start_CPU = clock();
+    for(int i=0;i&lt;N;i++)
+    {
+        C[i]=A[i]+B[i];
+    }
+    finish_CPU = clock();
+    //初始化GPU计算的参数
+    init(N);    
+    //开始GPU计算
+    start_GPU = clock();
+    //*vector_add(A,B,N);
+    //执行核函数
+    AaddB&lt;&lt;&lt;num_blocks, threadsPerBlock&gt;&gt;&gt;(dev_A, dev_B, dev_C, N);
+    finish_GPU = clock();
+    // 结果拷贝回来
+    cudaMemcpy(C , dev_C, size, cudaMemcpyDeviceToHost);
+    //释放内存
+    cudaFree(dev_A);
+    cudaFree(dev_B);
+    cudaFree(dev_C);
+    //输出结果查看
+    for(int i=0;i&lt;N;i++)
+    {
+        //printf(&quot;A=%f   %d\n&quot;,A[i],i );
+        //printf(&quot;B=%f   %d\n&quot;,B[i],i );
+        printf(&quot;%f+%f=%f   %d\n&quot;,A[i],B[i],C[i],i );
+    }
+    printf(&quot;\n&quot;);
+    //显示线程和线程块的数量
+    printf(&quot;threadsPerBlock =%d\n&quot;,threadsPerBlock  );
+    printf(&quot;num_blocks=%d\n&quot;,num_blocks);
+    printf(&quot;\n&quot;);
+    //显示GPU的用时
+    time_GPU = (double)(finish_GPU - start_GPU)*1000 ;
+    printf( &quot;time_GPU=%f us\n&quot;, time_GPU);
+    printf(&quot;\n&quot;);
+    //显示CPU的用时
+        time_CPU = (double)(finish_CPU - start_CPU)*1000 ;
+    printf( &quot;time_CPU=%f us\n&quot;, time_CPU);
+
+    return 0;
+}
+</code></pre><p>2、GPU函数</p>
+<pre><code>#include &quot;stdio.h&quot;
+#include &quot;memcpy.h&quot;    
+//两数组相加的GPU函数
+__global__ void AaddB(const float *A,const float *B,float *C,int length)
+{
+    const int i=blockDim.x*blockIdx.x+threadIdx.x;
+    if (i&lt;length)
+    {
+        C[i]=A[i]+B[i];
+    }
+}    
+float *vector_add(float *A,float *B,unsigned int length)
+{      
+    //执行核函数
+    AaddB&lt;&lt;&lt;num_blocks, threadsPerBlock&gt;&gt;&gt;(dev_A, dev_B, dev_C, length);   
+    // 结果拷贝回来
+    cudaMemcpy(C , dev_C, size, cudaMemcpyDeviceToHost);    
+    //释放内存
+    cudaFree(dev_A);
+    cudaFree(dev_B);
+    cudaFree(dev_C);   
+    //返回值
+    return C;       
+}
+</code></pre><p>3、参数函数</p>
+<pre><code>//计时参数定义
+#include &quot;time.h&quot;
+clock_t start_GPU, finish_GPU,start_CPU, finish_CPU; 
+double time_GPU,time_CPU;
+
+#define N 10000
+float A[N],B[N],C[N];
+float *dev_A,*dev_B,*dev_C;
+unsigned int size=N*sizeof(float);
+
+//线程/线程块数量
+const int threadsPerBlock = 1024;//线程块的大小。目前有些gpu的线程块最大为512，有些为1024.
+const int  num_blocks = (N / threadsPerBlock) + ((N%threadsPerBlock) ? 1 : 0);
+
+//GPU参数初始化
+void init(unsigned int length)
+{
+
+    // 分配内存
+    cudaMalloc((void **)&amp;dev_A, size);
+    cudaMalloc((void **)&amp;dev_B, size);
+    cudaMalloc((void **)&amp;dev_C, size);
+
+    // 拷贝内存
+    cudaMemcpy(dev_A, A, size, cudaMemcpyHostToDevice);
+    cudaMemcpy(dev_B, B, size, cudaMemcpyHostToDevice);
+}
+</code></pre><p>4、Makefile的编写</p>
+<pre><code>ALL:
+nvcc --compiler-options -fPIC -c A_add_B.cu -lcudart -I&quot;/usr/local/cuda/include/&quot;
+nvcc --compiler-options -fPIC -o A_add_B A_add_B.o -lcudart -I&quot;/usr/local/cuda/include/&quot; -L&quot;/usr/local/cuda/lib64&quot;
+rm -f A_add_B.o
+</code></pre><p>###通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。</p>
 
       
     </div>
@@ -342,7 +455,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/start/" rel="tag"># start</a>
+            <a href="/tags/CUDA/" rel="tag"># CUDA</a>
           
         </div>
       
@@ -355,8 +468,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/21/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/08/15/搭建自己的github博客/" rel="next" title="建立自己的github博客------by黄海亮">
+                <i class="fa fa-chevron-left"></i> 建立自己的github博客------by黄海亮
               </a>
             
           </div>
@@ -364,10 +477,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/22/ubuntu16-04-Server-install-CUDA/" rel="prev" title="ubuntu16.04 Server install CUDA------by黄海亮">
-                ubuntu16.04 Server install CUDA------by黄海亮 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -419,8 +528,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -473,6 +591,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CUDA两个数组相加"><span class="nav-number">1.</span> <span class="nav-text">CUDA两个数组相加</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

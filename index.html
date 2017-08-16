@@ -254,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/16/CUDA-两个数组相加/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/16/Hadoop集群安装配置教程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Darren">
@@ -273,7 +273,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/16/CUDA-两个数组相加/" itemprop="url">CUDA-两个数组相加------by黄海亮</a></h1>
+                <a class="post-title-link" href="/2017/08/16/Hadoop集群安装配置教程/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -285,7 +285,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-16T10:14:29+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-16T20:21:16+08:00">
                 2017-08-16
               </time>
             
@@ -325,10 +325,112 @@
       
         
           
-            <h1 id="CUDA两个数组相加"><a href="#CUDA两个数组相加" class="headerlink" title="CUDA两个数组相加"></a>CUDA两个数组相加</h1><p>在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。</p>
-<h2 id="下面是一些代码的体现-主要是CPU以及GPU的对比"><a href="#下面是一些代码的体现-主要是CPU以及GPU的对比" class="headerlink" title="下面是一些代码的体现,主要是CPU以及GPU的对比"></a>下面是一些代码的体现,主要是CPU以及GPU的对比</h2><p>1、主程序<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"A_add_B.h"</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="comment">//数组赋初值</span></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</div><div class="line">	&#123;</div><div class="line">		A[i]=-i;</div><div class="line">		B[i]=i*i;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//开始CPU计算</span></div><div class="line">	start_CPU = clock();</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</div><div class="line">	&#123;</div><div class="line">		C[i]=A[i]+B[i];</div><div class="line">	&#125;</div><div class="line">	finish_CPU = clock();</div><div class="line">	<span class="comment">//初始化GPU计算的参数</span></div><div class="line">	init(N);	</div><div class="line">	<span class="comment">//开始GPU计算</span></div><div class="line">	start_GPU = clock();</div><div class="line">	<span class="comment">//*vector_add(A,B,N);</span></div><div class="line">	<span class="comment">//执行核函数</span></div><div class="line">	AaddB&lt;&lt;&lt;num_blocks, threadsPerBlock&gt;&gt;&gt;(dev_A, dev_B, dev_C, N);</div><div class="line">	finish_GPU = clock();</div><div class="line">	<span class="comment">// 结果拷贝回来</span></div><div class="line">	cudaMemcpy(C , dev_C, size, cudaMemcpyDeviceToHost);</div><div class="line">	<span class="comment">//释放内存</span></div><div class="line">	cudaFree(dev_A);</div><div class="line">	cudaFree(dev_B);</div><div class="line">	cudaFree(dev_C);</div><div class="line">	<span class="comment">//输出结果查看</span></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="comment">//printf("A=%f   %d\n",A[i],i );</span></div><div class="line">		<span class="comment">//printf("B=%f   %d\n",B[i],i );</span></div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%f+%f=%f   %d\n"</span>,A[i],B[i],C[i],i );</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	<span class="comment">//显示线程和线程块的数量</span></div><div class="line">	<span class="built_in">printf</span>(<span class="string">"threadsPerBlock =%d\n"</span>,threadsPerBlock  );</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"num_blocks=%d\n"</span>,num_blocks);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	<span class="comment">//显示GPU的用时</span></div><div class="line">	time_GPU = (<span class="keyword">double</span>)(finish_GPU - start_GPU)*<span class="number">1000</span> ;</div><div class="line">	<span class="built_in">printf</span>( <span class="string">"time_GPU=%f us\n"</span>, time_GPU);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	<span class="comment">//显示CPU的用时</span></div><div class="line">    	time_CPU = (<span class="keyword">double</span>)(finish_CPU - start_CPU)*<span class="number">1000</span> ;</div><div class="line">	<span class="built_in">printf</span>( <span class="string">"time_CPU=%f us\n"</span>, time_CPU);</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>2、GPU函数<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></div><div class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"memcpy.h"</span>    </span></div><div class="line"> <span class="comment">//两数组相加的GPU函数</span></div><div class="line"> __<span class="function">global__ <span class="keyword">void</span> <span class="title">AaddB</span><span class="params">(<span class="keyword">const</span> <span class="keyword">float</span> *A,<span class="keyword">const</span> <span class="keyword">float</span> *B,<span class="keyword">float</span> *C,<span class="keyword">int</span> length)</span></span></div><div class="line"><span class="function"> </span>&#123;</div><div class="line">     <span class="keyword">const</span> <span class="keyword">int</span> i=blockDim.x*blockIdx.x+threadIdx.x;</div><div class="line"> 	<span class="keyword">if</span> (i&lt;length)</div><div class="line"> 	&#123;</div><div class="line"> 		C[i]=A[i]+B[i];</div><div class="line"> 	&#125;</div><div class="line"> &#125;    </div><div class="line"> <span class="function"><span class="keyword">float</span> *<span class="title">vector_add</span><span class="params">(<span class="keyword">float</span> *A,<span class="keyword">float</span> *B,<span class="keyword">unsigned</span> <span class="keyword">int</span> length)</span></span></div><div class="line"><span class="function"> </span>&#123;  	</div><div class="line"> 	<span class="comment">//执行核函数</span></div><div class="line"> 	AaddB&lt;&lt;&lt;num_blocks, threadsPerBlock&gt;&gt;&gt;(dev_A, dev_B, dev_C, length);   </div><div class="line"> 	<span class="comment">// 结果拷贝回来</span></div><div class="line"> 	cudaMemcpy(C , dev_C, size, cudaMemcpyDeviceToHost);    </div><div class="line"> 	<span class="comment">//释放内存</span></div><div class="line"> 	cudaFree(dev_A);</div><div class="line"> 	cudaFree(dev_B);</div><div class="line"> 	cudaFree(dev_C);   </div><div class="line"> 	<span class="comment">//返回值</span></div><div class="line"> 	<span class="keyword">return</span> C;   	</div><div class="line"> &#125;</div><div class="line">```  </div><div class="line"><span class="number">3</span>、参数函数</div><div class="line">```c</div><div class="line"> <span class="comment">//计时参数定义</span></div><div class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span></span></div><div class="line"> <span class="keyword">clock_t</span> start_GPU, finish_GPU,start_CPU, finish_CPU; </div><div class="line"> <span class="keyword">double</span> time_GPU,time_CPU;</div><div class="line"> </div><div class="line"> <span class="meta">#<span class="meta-keyword">define</span> N 10000</span></div><div class="line"> <span class="keyword">float</span> A[N],B[N],C[N];</div><div class="line"> <span class="keyword">float</span> *dev_A,*dev_B,*dev_C;</div><div class="line"> <span class="keyword">unsigned</span> <span class="keyword">int</span> size=N*<span class="keyword">sizeof</span>(<span class="keyword">float</span>);</div><div class="line"> </div><div class="line"> <span class="comment">//线程/线程块数量</span></div><div class="line"> <span class="keyword">const</span> <span class="keyword">int</span> threadsPerBlock = <span class="number">1024</span>;<span class="comment">//线程块的大小。目前有些gpu的线程块最大为512，有些为1024.</span></div><div class="line"> <span class="keyword">const</span> <span class="keyword">int</span>  num_blocks = (N / threadsPerBlock) + ((N%threadsPerBlock) ? <span class="number">1</span> : <span class="number">0</span>);</div><div class="line"> </div><div class="line"> <span class="comment">//GPU参数初始化</span></div><div class="line"> <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> length)</span></span></div><div class="line"><span class="function"> </span>&#123;</div><div class="line">     </div><div class="line"> 	<span class="comment">// 分配内存</span></div><div class="line"> 	cudaMalloc((<span class="keyword">void</span> **)&amp;dev_A, size);</div><div class="line"> 	cudaMalloc((<span class="keyword">void</span> **)&amp;dev_B, size);</div><div class="line"> 	cudaMalloc((<span class="keyword">void</span> **)&amp;dev_C, size);</div><div class="line"> </div><div class="line"> 	<span class="comment">// 拷贝内存</span></div><div class="line"> 	cudaMemcpy(dev_A, A, size, cudaMemcpyHostToDevice);</div><div class="line"> 	cudaMemcpy(dev_B, B, size, cudaMemcpyHostToDevice);</div><div class="line"> &#125;</div><div class="line">```   </div><div class="line"><span class="number">4</span>、Makefile的编写</div><div class="line">```bash</div><div class="line">ALL:</div><div class="line">nvcc --compiler-options -fPIC -c A_add_B.cu -lcudart -I<span class="string">"/usr/local/cuda/include/"</span></div><div class="line">nvcc --compiler-options -fPIC -o A_add_B A_add_B.o -lcudart -I<span class="string">"/usr/local/cuda/include/"</span> -<span class="string">L"/usr/local/cuda/lib64"</span></div><div class="line">rm -f A_add_B.o</div></pre></td></tr></table></figure></p>
-<h3 id="通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。"><a href="#通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。" class="headerlink" title="通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。"></a>通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。</h3>
+            <h1 id="hadoop集群安装"><a href="#hadoop集群安装" class="headerlink" title="hadoop集群安装"></a>hadoop集群安装</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>Hadoop 集群的安装配置大致为如下流程:</p>
+<pre><code>1、选定一台机器作为 Master
+2、在 Master 节点上配置 hadoop 用户、安装 SSH server、安装 Java 环境
+3、在 Master 节点上安装 Hadoop，并完成配置
+4、在其他 Slave 节点上配置 hadoop 用户、安装 SSH server、安装 Java 环境
+5、将 Master 节点上的 /usr/local/hadoop 目录复制到其他 Slave 节点上
+6、在 Master 节点上开启 Hadoop
+</code></pre><h2 id="创建hadoop账户"><a href="#创建hadoop账户" class="headerlink" title="创建hadoop账户"></a>创建hadoop账户</h2><p>添加用户：</p>
+<pre><code>sudo useradd -m hadoop -s /bin/bash
+</code></pre><p>给用户设置密码：</p>
+<pre><code>sudo passwd hadoop
+</code></pre><p>给用户管理员权限：</p>
+<pre><code>sudo adduser hadoop sudo
+</code></pre><h2 id="更新apt"><a href="#更新apt" class="headerlink" title="更新apt"></a>更新apt</h2><pre><code>sudo apt-get update
+</code></pre><p>安装vim:</p>
+<pre><code>sudo apt-get install vim
+</code></pre><p>##安装Java环境</p>
+<pre><code>sudo apt-get install openjdk-8-jre openjdk-8-jdk
+dpkg -L openjdk-8-jdk | grep &apos;/bin/javac&apos;
+vim ~/.bashrc
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+source ~/.bashrc    # 使变量设置生效
+检查是否正确：
+echo $JAVA_HOME     # 检验变量值
+java -version
+$JAVA_HOME/bin/java -version  # 与直接执行 java -version 一样
+</code></pre><p>如果设置正确的话，$JAVA_HOME/bin/java -version 会输出 java 的版本信息，且和 java -version 的输出结果一样</p>
+<h2 id="安装-Hadoop-2"><a href="#安装-Hadoop-2" class="headerlink" title="安装 Hadoop 2"></a>安装 Hadoop 2</h2><p>Hadoop 2 可以通过 <a href="http://mirror.bit.edu.cn/apache/hadoop/common/" target="_blank" rel="external">http://mirror.bit.edu.cn/apache/hadoop/common/</a> 或者 <a href="http://mirrors.cnnic.cn/apache/hadoop/common/" target="_blank" rel="external">http://mirrors.cnnic.cn/apache/hadoop/common/</a> 下载，一般选择下载最新的稳定版本，即下载 “stable” 下的 hadoop-2.x.y.tar.gz 这个格式的文件，这是编译好的，另一个包含 src 的则是 Hadoop 源代码，需要进行编译才可使用。</p>
+<h3 id="我们选择将-Hadoop-安装至-usr-local-中："><a href="#我们选择将-Hadoop-安装至-usr-local-中：" class="headerlink" title="我们选择将 Hadoop 安装至 /usr/local/ 中："></a>我们选择将 Hadoop 安装至 /usr/local/ 中：</h3><pre><code>sudo tar -zxf ~/下载/hadoop-2.7.3.tar.gz -C /usr/local    # 解压到/usr/local中
+cd /usr/local/
+sudo mv ./hadoop-2.7.3/ ./hadoop            # 将文件夹名改为hadoop
+sudo chown -R hadoop ./hadoop       # 修改文件权限
+Hadoop 解压后即可使用。输入如下命令来检查 Hadoop 是否可用，成功则会显示 Hadoop 版本信息：
+cd /usr/local/hadoop
+./bin/hadoop version
+</code></pre><h2 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h2><p>假设集群<strong>所用的节点都位于同一个局域网</strong>。</p>
+<p>首先在 Master 节点上完成准备工作，并关闭 Hadoop (/usr/local/hadoop/sbin/stop-dfs.sh)，再进行后续集群配置。</p>
+<p>为了便于区分，可以修改各个节点的主机名（在终端标题、命令行中可以看到主机名，以便区分）。在 Ubuntu中，我们在 Master 节点上执行如下命令修改主机名（即改为 Master，注意是区分大小写的）：</p>
+<p>设置主机名：</p>
+<pre><code>sudo vim /etc/hostname
+</code></pre><p>设置IP</p>
+<pre><code>sudo vim /etc/hosts
+</code></pre><p>设置如下：</p>
+<pre><code>192.168.1.121   Master
+192.168.1.122   Slave1
+</code></pre><p>我们在 /etc/hosts 中将该映射关系填写上去即可，如下图所示（一般该文件中只有一个 127.0.0.1，其对应名为 localhost，如果有多余的应删除，特别是不能有 “127.0.0.1 Master” 这样的记录）</p>
+<p>配置好后需要在各个节点上执行如下命令，测试是否相互 ping 得通，如果 ping 不通，后面就无法顺利配置成功：<br>ping Master -c 3   # 只ping 3次，否则要按 Ctrl+c 中断<br>ping Slave1 -c 3</p>
+<p><strong>继续下一步配置前，请先完成所有节点的网络配置，修改过主机名的话需重启才能生效。</strong></p>
+<h2 id="SSH无密码登陆节点"><a href="#SSH无密码登陆节点" class="headerlink" title="SSH无密码登陆节点"></a>SSH无密码登陆节点</h2><pre><code>sudo apt-get install openssh-server
+</code></pre><p><strong>Master上面操作：</strong></p>
+<p>首先生成 Master 节点的公匙，在 Master 节点的终端中执行（因为改过主机名，所以还需要删掉原有的再重新生成一次）：</p>
+<pre><code>cd ~/.ssh               # 如果没有该目录，先执行一次ssh localhost
+rm ./id_rsa*            # 删除之前生成的公匙（如果有）
+ssh-keygen -t rsa       # 一直按回车就可以
+</code></pre><p>让 Master 节点需能无密码 SSH 本机，在 Master 节点上执行：</p>
+<pre><code>cat ./id_rsa.pub &gt;&gt; ./authorized_keys    
+</code></pre><p>完成后可执行 ssh Master 验证一下（可能需要输入 yes，成功后执行 exit 返回原来的终端）。接着在 Master 节点将上公匙传输到 Slave1 节点：（当然多个节点的话，每个节点都要传输）</p>
+<pre><code>scp ~/.ssh/id_rsa.pub hadoop@Slave1:/home/hadoop/
+</code></pre><p><strong>Slave1上面操作：</strong></p>
+<p>接着在 Slave1 节点上，将 ssh 公匙加入授权：</p>
+<pre><code>mkdir ~/.ssh       # 如果不存在该文件夹需先创建，若已存在则忽略
+cat ~/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+rm ~/id_rsa.pub    # 用完就可以删掉了
+</code></pre><p>如果有其他 Slave 节点，也要执行将 Master 公匙传输到 Slave 节点、在 Slave 节点上加入授权这两步。<br>（如果配置好了以后可以用 ssh Slave1 指令检验，发现可以不用密码就可以连接上了）</p>
+<h3 id="配置PATH变量"><a href="#配置PATH变量" class="headerlink" title="配置PATH变量"></a>配置PATH变量</h3><p>在单机伪分布式配置教程的最后，说到可以将 Hadoop 安装目录加入 PATH 变量中，这样就可以在任意目录中直接使用 hadoo、hdfs 等命令了，如果还没有配置的，需要在 Master 节点上进行配置。首先执行 vim ~/.bashrc，加入一行：</p>
+<pre><code>export PATH=$PATH:/usr/local/hadoop/bin:/usr/local/hadoop/sbin
+</code></pre><p>保存后执行 </p>
+<pre><code>source ~/.bashrc 
+</code></pre><p>使配置生效</p>
+<h3 id="配置集群-分布式环境"><a href="#配置集群-分布式环境" class="headerlink" title="配置集群/分布式环境"></a>配置集群/分布式环境</h3><p>集群/分布式模式需要修改 <strong><em>/usr/local/hadoop/etc/hadoop</em></strong> 中的5个配置文件，更多设置项可点击查看官方说明，这里仅设置了正常启动所必须的设置项： slaves、core-site.xml、hdfs-site.xml、mapred-site.xml、yarn-site.xml 。</p>
+<p><strong><em>1,</em></strong> 文件 slaves，将作为 DataNode 的主机名写入该文件，每行一个，默认为 localhost，所以在伪分布式配置时，节点即作为 NameNode 也作为 DataNode。分布式配置可以保留 localhost，也可以删掉，让 Master 节点仅作为 NameNode 使用。</p>
+<p>本教程让 Master 节点仅作为 NameNode 使用，因此<strong><em>将文件中原来的 localhost 删除，只添加一行内容：Slave1。（相应的如果有多个节点要都添加上的）</em></strong></p>
+<p><strong><em>2,</em></strong> 文件 <strong><em>core-site.xml</em></strong> 改为下面的配置：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;fs.defaultFS&lt;/name&gt;</div><div class="line">                &lt;value&gt;hdfs:<span class="comment">//Master:9000&lt;/value&gt;</span></div><div class="line">        &lt;/property&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</div><div class="line">                &lt;value&gt;file:/usr/local/hadoop/tmp&lt;/value&gt;</div><div class="line">                &lt;description&gt;Abase for other temporary directories.&lt;/description&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure></p>
+<p><strong><em>3,</em></strong> 文件 <strong><em>hdfs-site.xml</em></strong>，dfs.replication 一般设为 3，但我们只有一个 Slave 节点，所以 dfs.replication 的值还是设为 1：（如果是多个节点还是改为3）【这里的参数我的理解是数据备份多少次】<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;</div><div class="line">                &lt;value&gt;Slave0:50090&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;dfs.replication&lt;/name&gt;</div><div class="line">                &lt;value&gt;3&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;</div><div class="line">                &lt;value&gt;file:/usr/local/hadoop/tmp/dfs/name&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;</div><div class="line">                &lt;value&gt;file:/usr/local/hadoop/tmp/dfs/data&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure></p>
+<p><strong><em>4, </em></strong>文件 <strong><em>mapred-site.xml</em></strong> （可能需要先重命名，默认文件名为 mapred-site.xml.template），然后配置修改如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</div><div class="line">                &lt;value&gt;yarn&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;mapreduce.jobhistory.address&lt;/name&gt;</div><div class="line">                &lt;value&gt;Master:10020&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;mapreduce.jobhistory.webapp.address&lt;/name&gt;</div><div class="line">                &lt;value&gt;Master:19888&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure></p>
+<p><strong><em>5,</em></strong> 文件 yarn-site.xml：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</div><div class="line">                &lt;value&gt;Master&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">                &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</div><div class="line">                &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure></p>
+<p>配置好后，将 Master 上的 /usr/local/Hadoop 文件夹复制到各个节点上。因为之前有跑过伪分布式模式，建议在切换到集群模式前先删除之前的临时文件。</p>
+<p><strong><em>在 Master 节点上执行：</em></strong></p>
+<pre><code>cd /usr/local
+sudo rm -r ./hadoop/tmp     # 删除 Hadoop 临时文件
+sudo rm -r ./hadoop/logs/*   # 删除日志文件
+tar -zcf ~/hadoop.master.tar.gz ./hadoop   # 先压缩再复制
+cd ~
+scp ./hadoop.master.tar.gz Slave1:/home/hadoop
+</code></pre><p><strong><em>在 Slave1 节点上执行：</em></strong>（如果有多个节点每个节点上都要执行一遍）</p>
+<pre><code>sudo rm -r /usr/local/hadoop    # 删掉旧的（如果存在）
+sudo tar -zxf ~/hadoop.master.tar.gz -C /usr/local
+sudo chown -R hadoop /usr/local/hadoop
+</code></pre><p>（如果启动不成功的话可以删除  /usr/loval  目录下的 logs和 tmp 再重新操作一次）<br>同样，如果有其他 Slave 节点，也要执行将 hadoop.master.tar.gz 传输到 Slave 节点、在 Slave 节点解压文件的操作。</p>
+<p><strong><em>首次启动需要先在 Master 节点执行 NameNode 的格式化：</em></strong></p>
+<pre><code>hdfs namenode -format       # 首次运行需要执行初始化，之后不需要
+</code></pre><p>接着可以启动 hadoop 了，启动需要在 Master 节点上进行：</p>
+<pre><code>start-dfs.sh
+start-yarn.sh
+mr-jobhistory-daemon.sh start historyserver
+也可以在更目录下面执行
+start-all.sh
+mr-jobhistory-daemon.sh start historyserver
+</code></pre><p>通过命令 jps 可以查看各个节点所启动的进程。<br>正确的话，在 Master 节点上可以看到 NameNode、ResourceManager、SecondrryNameNode、JobHistoryServer 进程</p>
+<p>在 <strong>Slave</strong> 节点可以看到 DataNode 和 NodeManager 进程.</p>
+<p>缺少任一进程都表示出错。另外还需要在 Master 节点上通过命令 hdfs dfsadmin -report 查看 DataNode 是否正常启动，如果 Live datanodes 不为 0 ，则说明集群启动成功。</p>
+<p>也可以通过 Web 页面看到查看 DataNode 和 NameNode 的状态：<a href="http://master:50070/" target="_blank" rel="external">http://master:50070/</a>。如果不成功，可以通过启动日志排查原因。</p>
+<p>同样可以通过 Web 界面查看任务进度 <a href="http://master:8088/cluster" target="_blank" rel="external">http://master:8088/cluster</a>，在 Web 界面点击 “Tracking UI” 这一列的 History 连接，可以看到任务的运行信息</p>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><p>Hadoop集群安装配置教程_Hadoop2.6.0_Ubuntu/CentOS：<br><a href="http://www.powerxing.com/install-hadoop-cluster/" target="_blank" rel="external">http://www.powerxing.com/install-hadoop-cluster/</a></p>
+<p>Hadoop安装教程_单机/伪分布式配置_Hadoop2.6.0/Ubuntu14.04<br><a href="http://www.powerxing.com/install-hadoop/" target="_blank" rel="external">http://www.powerxing.com/install-hadoop/</a></p>
+
           
         
       
@@ -1404,141 +1506,6 @@ type: tags
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/ubuntu密钥登录教程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Darren">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/22/ubuntu密钥登录教程/" itemprop="url">ubuntu密钥登录教程------by黄海亮</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:48:31+08:00">
-                2017-07-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>#ubuntu密钥登录教程</p>
-<p>##上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。</p>
-<p>###本文使用XShell进行远程连接</p>
-<p>###使用WinSCP来进行ubuntu与ubuntu之间的文件的传输</p>
-<p>#XShell<br>首先现在登录时输入密码那一栏已经变成了灰色，这个时候只能使用密匙登录了。<br><img src="http://img.blog.csdn.net/20170716230052647?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>拿到密钥的第一步可以先添加密钥<br><img src="http://img.blog.csdn.net/20170716230143712?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p><img src="http://img.blog.csdn.net/20170716230209146?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>找到自己密钥的路径即可<br><img src="http://img.blog.csdn.net/20170716230239310?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>密钥导入进来以后那个文件就可以不要了，当然如果还有其他地方需要的话还需要导入其他的地方，不过如果误删了不要方，旁边还有导出呢。<br>导入成功以后可以进入属性<br><img src="http://img.blog.csdn.net/20170716230314907?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>大家可以更改密码，初始密码都为空的，这个地方相当于你再给你的密钥又手动加了一层密码，当然也可以不加，因为我发现加了以后登录的时候还要你自己输入一遍。<br>属性上面还有一公钥，这个里面就是我们放到服务器中的东西，这个东西不要给别人，当然我给你们的密匙你们更不能给别人，否者别人就可以轻松的登录你的账号了。<br>剩下的登录方法更以前一样。</p>
-<p>#WinSCP<br>同样此时winscp用密码也登录不上了<br><img src="http://img.blog.csdn.net/20170716230438986?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>确认</p>
-<p>直接在之前建立的那个里面更改就好，点击编辑<br><img src="http://img.blog.csdn.net/20170716230513915?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>然后点高级<br><img src="http://img.blog.csdn.net/20170716230529320?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>验证<br><img src="http://img.blog.csdn.net/20170716230551613?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>然后添加密钥文件的路径<br><img src="http://img.blog.csdn.net/20170716230616590?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>右下角选择所有文件<br><img src="http://img.blog.csdn.net/20170716230644369?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>选择密匙<br>然后有一个格式转换，选择确定<br><img src="http://img.blog.csdn.net/20170716230702329?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>然后保存确定保存就完了，大功告成可以链接了。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/Ubuntu 系统设置密钥登陆/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1669,6 +1636,141 @@ vim authorized_keys
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/ubuntu密钥登录教程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Darren">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Darren">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/22/ubuntu密钥登录教程/" itemprop="url">ubuntu密钥登录教程------by黄海亮</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:48:31+08:00">
+                2017-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#ubuntu密钥登录教程</p>
+<p>##上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。</p>
+<p>###本文使用XShell进行远程连接</p>
+<p>###使用WinSCP来进行ubuntu与ubuntu之间的文件的传输</p>
+<p>#XShell<br>首先现在登录时输入密码那一栏已经变成了灰色，这个时候只能使用密匙登录了。<br><img src="http://img.blog.csdn.net/20170716230052647?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>拿到密钥的第一步可以先添加密钥<br><img src="http://img.blog.csdn.net/20170716230143712?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20170716230209146?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>找到自己密钥的路径即可<br><img src="http://img.blog.csdn.net/20170716230239310?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>密钥导入进来以后那个文件就可以不要了，当然如果还有其他地方需要的话还需要导入其他的地方，不过如果误删了不要方，旁边还有导出呢。<br>导入成功以后可以进入属性<br><img src="http://img.blog.csdn.net/20170716230314907?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>大家可以更改密码，初始密码都为空的，这个地方相当于你再给你的密钥又手动加了一层密码，当然也可以不加，因为我发现加了以后登录的时候还要你自己输入一遍。<br>属性上面还有一公钥，这个里面就是我们放到服务器中的东西，这个东西不要给别人，当然我给你们的密匙你们更不能给别人，否者别人就可以轻松的登录你的账号了。<br>剩下的登录方法更以前一样。</p>
+<p>#WinSCP<br>同样此时winscp用密码也登录不上了<br><img src="http://img.blog.csdn.net/20170716230438986?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>确认</p>
+<p>直接在之前建立的那个里面更改就好，点击编辑<br><img src="http://img.blog.csdn.net/20170716230513915?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>然后点高级<br><img src="http://img.blog.csdn.net/20170716230529320?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>验证<br><img src="http://img.blog.csdn.net/20170716230551613?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>然后添加密钥文件的路径<br><img src="http://img.blog.csdn.net/20170716230616590?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>右下角选择所有文件<br><img src="http://img.blog.csdn.net/20170716230644369?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>选择密匙<br>然后有一个格式转换，选择确定<br><img src="http://img.blog.csdn.net/20170716230702329?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>然后保存确定保存就完了，大功告成可以链接了。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -1732,7 +1834,7 @@ vim authorized_keys
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

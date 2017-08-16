@@ -1712,7 +1712,7 @@ type: tags
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/Ubuntu 系统设置密钥登陆/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/ubuntu密钥登录教程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Darren">
@@ -1731,7 +1731,7 @@ type: tags
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/22/Ubuntu 系统设置密钥登陆/" itemprop="url">Ubuntu 系统设置密钥登陆------by黄海亮</a></h1>
+                <a class="post-title-link" href="/2017/07/22/ubuntu密钥登录教程/" itemprop="url">ubuntu密钥登录教程------by黄海亮</a></h1>
         
 
         <div class="post-meta">
@@ -1783,31 +1783,23 @@ type: tags
       
         
           
-            <h1 id="Ubuntu-系统设置密钥登陆"><a href="#Ubuntu-系统设置密钥登陆" class="headerlink" title="Ubuntu 系统设置密钥登陆"></a>Ubuntu 系统设置密钥登陆</h1><p>本文主要参考文档<br>    <a href="http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html" target="_blank" rel="external">http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html</a><br>    <a href="http://blog.csdn.net/kenhins/article/details/51585565" target="_blank" rel="external">http://blog.csdn.net/kenhins/article/details/51585565</a><br>自己简单整理留作备份以备后期查看</p>
-<p>个人感觉用密钥登陆比用密码登陆安全很多，所以一旦生成密码之后一定不要将自己的密钥给别人，否者别人将很轻松的登陆你的账户，当然我发现如果你使用XShell远程连接ubuntu服务器的时候你可以再给密钥加上一层密码的。</p>
-<h2 id="密钥的生成"><a href="#密钥的生成" class="headerlink" title="密钥的生成"></a>密钥的生成</h2><p>这一步如果你使用XShell的话其实很简单，在上面的工具中有一个“新建用户密钥生成向导”，进去你自己一定会的，这里就不多说了</p>
-<p>#设置密钥登陆<br>首先需要修改一些配置文件</p>
-<pre><code>vim /etc/ssh/sshd_config
-</code></pre><p>进入sshd_config文件后需要更改几个地方</p>
-<pre><code>PubkeyAuthentication yes    #启用公告密钥配对认证方式 
-AuthorizedKeysFile  %h/.ssh/authorized_keys    #设定PublicKey文件路径
-RSAAuthentication yes  #允许RSA密钥
-PasswordAuthentication no #禁止密码验证登录,如果启用的话,RSA认证登录就没有意义了
-#禁用root账户登录，非必要，但为了安全性，请配置
-PermitRootLogin no
-</code></pre><p>其实我在配置的时候发现其中有些找了很多遍都没有找到，然后我就直接手动照着输入一遍也是可以的。</p>
-<p>然后保存配置，重新启动服务</p>
-<pre><code>service sshd restart
-</code></pre><p>#配置密钥<br>由上面的配置文件我们可以看出来密钥放置的位置应该在用户根目录下的.ssh/authorized_keys中，如果系统本身就有authorize_keys，那么你就可以直接将你的公钥复制进来但是一般情况下刚装好的新机器没有这个目录，这就需要我们先生成一个(这里我们可以直接进入你要创建的账户去进行，可以使用指令 su 需要创建的用户名)</p>
-<pre><code>ssh-keygen
-</code></pre><p>输入该指令后一路回车即可<br>回头用指令</p>
-<pre><code>ll
-</code></pre><p>你可以发现在当前用户的更目录下就会生成一个 .ssh的文件夹,然后再进入这个文件夹操作</p>
-<pre><code>cd ~/.ssh
-vim authorized_keys
-</code></pre><p>把自己生成的公钥复制进来就可以了<br>然后保存，并且更改文件模式</p>
-<pre><code>chmod 600 authorized_keys
-</code></pre><h3 id="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"><a href="#注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的" class="headerlink" title="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"></a>注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的</h3>
+            <p>#ubuntu密钥登录教程</p>
+<p>##上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。</p>
+<p>###本文使用XShell进行远程连接</p>
+<p>###使用WinSCP来进行ubuntu与ubuntu之间的文件的传输</p>
+<p>#XShell<br>首先现在登录时输入密码那一栏已经变成了灰色，这个时候只能使用密匙登录了。<br><img src="http://img.blog.csdn.net/20170716230052647?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>拿到密钥的第一步可以先添加密钥<br><img src="http://img.blog.csdn.net/20170716230143712?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20170716230209146?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>找到自己密钥的路径即可<br><img src="http://img.blog.csdn.net/20170716230239310?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>密钥导入进来以后那个文件就可以不要了，当然如果还有其他地方需要的话还需要导入其他的地方，不过如果误删了不要方，旁边还有导出呢。<br>导入成功以后可以进入属性<br><img src="http://img.blog.csdn.net/20170716230314907?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>大家可以更改密码，初始密码都为空的，这个地方相当于你再给你的密钥又手动加了一层密码，当然也可以不加，因为我发现加了以后登录的时候还要你自己输入一遍。<br>属性上面还有一公钥，这个里面就是我们放到服务器中的东西，这个东西不要给别人，当然我给你们的密匙你们更不能给别人，否者别人就可以轻松的登录你的账号了。<br>剩下的登录方法更以前一样。</p>
+<p>#WinSCP<br>同样此时winscp用密码也登录不上了<br><img src="http://img.blog.csdn.net/20170716230438986?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>确认</p>
+<p>直接在之前建立的那个里面更改就好，点击编辑<br><img src="http://img.blog.csdn.net/20170716230513915?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>然后点高级<br><img src="http://img.blog.csdn.net/20170716230529320?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>验证<br><img src="http://img.blog.csdn.net/20170716230551613?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>然后添加密钥文件的路径<br><img src="http://img.blog.csdn.net/20170716230616590?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>右下角选择所有文件<br><img src="http://img.blog.csdn.net/20170716230644369?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>选择密匙<br>然后有一个格式转换，选择确定<br><img src="http://img.blog.csdn.net/20170716230702329?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>然后保存确定保存就完了，大功告成可以链接了。</p>
+
           
         
       

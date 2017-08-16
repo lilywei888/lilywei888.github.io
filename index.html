@@ -254,6 +254,212 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/16/Hadoop安装_单机伪分布式配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Darren">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Darren">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/16/Hadoop安装_单机伪分布式配置/" itemprop="url">Hadoop安装_单机伪分布式配置------by黄海亮</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-16T20:34:00+08:00">
+                2017-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Hadoop安装-单机伪分布式配置"><a href="#Hadoop安装-单机伪分布式配置" class="headerlink" title="Hadoop安装_单机伪分布式配置"></a>Hadoop安装_单机伪分布式配置</h1><h2 id="创建hadoop账户"><a href="#创建hadoop账户" class="headerlink" title="创建hadoop账户"></a>创建hadoop账户</h2><p>添加用户：</p>
+<pre><code>sudo useradd -m hadoop -s /bin/bash
+</code></pre><p>给用户设置密码：</p>
+<pre><code>sudo passwd hadoop
+</code></pre><p>给用户管理员权限：</p>
+<pre><code>sudo adduser hadoop sudo
+</code></pre><p>更新apt</p>
+<pre><code>sudo apt-get update
+</code></pre><p>安装vim:</p>
+<pre><code>sudo apt-get install vim
+</code></pre><h2 id="安装SSH、配置SSH无密码登陆"><a href="#安装SSH、配置SSH无密码登陆" class="headerlink" title="安装SSH、配置SSH无密码登陆"></a>安装SSH、配置SSH无密码登陆</h2><pre><code>sudo apt-get install openssh-server
+ssh localhost
+exit                           # 退出刚才的 ssh localhost
+cd ~/.ssh/                     # 若没有该目录，请先执行一次ssh localhost
+ssh-keygen -t rsa              # 会有提示，都按回车就可以
+cat ./id_rsa.pub &gt;&gt; ./authorized_keys  # 加入授权
+</code></pre><p>此时再   ssh localhost   时就可以无密码访问了。</p>
+<h2 id="安装Java环境"><a href="#安装Java环境" class="headerlink" title="安装Java环境"></a>安装Java环境</h2><pre><code>sudo apt-get install openjdk-8-jre openjdk-8-jdk
+dpkg -L openjdk-8-jdk | grep &apos;/bin/javac&apos;
+vim ~/.bashrc
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+source ~/.bashrc    # 使变量设置生效
+</code></pre><p>检查是否正确：</p>
+<pre><code>echo $JAVA_HOME     # 检验变量值
+java -version
+$JAVA_HOME/bin/java -version  # 与直接执行 java -version 一样
+</code></pre><p>如果设置正确的话，$JAVA_HOME/bin/java -version 会输出 java 的版本信息，且和 java -version 的输出结果一样</p>
+<h2 id="安装-Hadoop-2"><a href="#安装-Hadoop-2" class="headerlink" title="安装 Hadoop 2"></a>安装 Hadoop 2</h2><p>Hadoop 2 可以通过 <a href="http://mirror.bit.edu.cn/apache/hadoop/common/" target="_blank" rel="external">http://mirror.bit.edu.cn/apache/hadoop/common/</a> 或者 <a href="http://mirrors.cnnic.cn/apache/hadoop/common/" target="_blank" rel="external">http://mirrors.cnnic.cn/apache/hadoop/common/</a> 下载，一般选择下载最新的稳定版本，即下载 “stable” 下的 hadoop-2.x.y.tar.gz 这个格式的文件，这是编译好的，另一个包含 src 的则是 Hadoop 源代码，需要进行编译才可使用。</p>
+<p>我们选择将 Hadoop 安装至 /usr/local/ 中：</p>
+<pre><code>sudo tar -zxf ~/下载/hadoop-2.7.3.tar.gz -C /usr/local    # 解压到/usr/local中
+cd /usr/local/
+sudo mv ./hadoop-2.7.3/ ./hadoop            # 将文件夹名改为hadoop
+sudo chown -R hadoop ./hadoop       # 修改文件权限
+</code></pre><p><strong>Hadoop 解压后即可使用。输入如下命令来检查 Hadoop 是否可用，成功则会显示 Hadoop 版本信息：</strong></p>
+<pre><code>cd /usr/local/hadoop
+./bin/hadoop version
+</code></pre><h2 id="Hadoop单机配置-非分布式"><a href="#Hadoop单机配置-非分布式" class="headerlink" title="Hadoop单机配置(非分布式)"></a>Hadoop单机配置(非分布式)</h2><p>【这一步个人认为可以用来检测hadoop是否安装成功，可以不用管的】</p>
+<pre><code>cd /usr/local/hadoop
+mkdir ./input
+cp ./etc/hadoop/*.xml ./input   # 将配置文件作为输入文件
+./bin/hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar grep ./input ./output &apos;dfs[a-z.]+&apos;  （和上面一行连着的）
+cat ./output/*          # 查看运行结果
+rm -r ./output
+</code></pre><h2 id="Hadoop伪分布式配置"><a href="#Hadoop伪分布式配置" class="headerlink" title="Hadoop伪分布式配置"></a>Hadoop伪分布式配置</h2><p>Hadoop 可以在单节点上以伪分布式的方式运行，Hadoop 进程以分离的 Java 进程来运行，节点既作为 NameNode 也作为 DataNode，同时，读取的是 HDFS 中的文件。</p>
+<p>Hadoop 的配置文件位于 /usr/local/hadoop/etc/hadoop/ 中，伪分布式需要修改2个配置文件 core-site.xml 和 hdfs-site.xml 。Hadoop的配置文件是 xml 格式，每个配置以声明 property 的 name 和 value 的方式来实现。</p>
+<p>修改配置文件 <strong>core-site.xml</strong> (通过 vim 编辑会比较方便: vim ./etc/hadoop/core-site.xml)，将当中的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">&lt;/configuration&gt;</div><div class="line">修改为下面配置：</div><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</div><div class="line">             &lt;value&gt;file:/usr/<span class="built_in">local</span>/hadoop/tmp&lt;/value&gt;</div><div class="line">             &lt;description&gt;Abase <span class="keyword">for</span> other temporary directories.&lt;/description&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;fs.defaultFS&lt;/name&gt;</div><div class="line">             &lt;value&gt;hdfs://localhost:9000&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure></p>
+<p>同样的，修改配置文件 <strong>hdfs-site.xml</strong>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;dfs.replication&lt;/name&gt;</div><div class="line">             &lt;value&gt;1&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;</div><div class="line">             &lt;value&gt;file:/usr/<span class="built_in">local</span>/hadoop/tmp/dfs/name&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;</div><div class="line">             &lt;value&gt;file:/usr/<span class="built_in">local</span>/hadoop/tmp/dfs/data&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure></p>
+<p><strong><em>配置完成后，执行 NameNode 的格式化:<br>成功的话，会看到 “successfully formatted” 和 “Exitting with status 0” 的提示，若为 “Exitting with status 1” 则是出错。</em></strong></p>
+<p><strong>接着开启 NameNode 和 DataNode 守护进程。</strong></p>
+<pre><code>./sbin/start-dfs.sh
+</code></pre><p><strong>输入yes（可能第一次需要）</strong><br>启动完成后，可以通过命令 jps 来判断是否成功启动，若成功启动则会列出如下进程: “NameNode”、”DataNode” 和 “SecondaryNameNode”（如果 SecondaryNameNode 没有启动，请运行 sbin/stop-dfs.sh 关闭进程，然后再次尝试启动尝试）。如果没有 NameNode 或 DataNode ，那就是配置不成功，请仔细检查之前步骤，或通过查看启动日志排查原因。<br><strong>成功启动后，可以访问 Web 界面 <a href="http://localhost:50070/" target="_blank" rel="external">http://localhost:50070/</a> 查看 NameNode 和 Datanode 信息，还可以在线查看 HDFS 中的文件。</strong></p>
+<h2 id="运行Hadoop伪分布式实例"><a href="#运行Hadoop伪分布式实例" class="headerlink" title="运行Hadoop伪分布式实例"></a>运行Hadoop伪分布式实例</h2><p><strong>（配置时其实也可以不用管，它只是跑了一个例子）</strong></p>
+<p>上面的单机模式，grep 例子读取的是本地数据，伪分布式读取的则是 HDFS 上的数据。要使用 HDFS，首先需要在 HDFS 中创建用户目录：</p>
+<pre><code>./bin/hdfs dfs -mkdir -p /user/hadoop
+</code></pre><p>接着将 ./etc/hadoop 中的 xml 文件作为输入文件复制到分布式文件系统中，即将 /usr/local/hadoop/etc/hadoop 复制到分布式文件系统中的 /user/hadoop/input 中。我们使用的是 hadoop 用户，并且已创建相应的用户目录 /user/hadoop ，因此在命令中就可以使用相对路径如 input，其对应的绝对路径就是 /user/hadoop/input:</p>
+<pre><code>./bin/hdfs dfs -mkdir input
+./bin/hdfs dfs -put ./etc/hadoop/*.xml input
+</code></pre><p>复制完成后，可以通过如下命令查看文件列表：</p>
+<pre><code>./bin/hdfs dfs -ls input
+</code></pre><p>伪分布式运行 MapReduce 作业的方式跟单机模式相同，区别在于伪分布式读取的是HDFS中的文件（可以将单机步骤中创建的本地 input 文件夹，输出结果 output 文件夹都删掉来验证这一点）。</p>
+<pre><code>./bin/hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar grep input output &apos;dfs[a-z.]+&apos;
+</code></pre><p>查看运行结果的命令（查看的是位于 HDFS 中的输出结果）：</p>
+<pre><code>./bin/hdfs dfs -cat output/*
+</code></pre><p>我们也可以将运行结果取回到本地：</p>
+<pre><code>rm -r ./output    # 先删除本地的 output 文件夹（如果存在）
+./bin/hdfs dfs -get output ./output     # 将 HDFS 上的 output 文件夹拷贝到本机
+cat ./output/*
+</code></pre><p>Hadoop 运行程序时，输出目录不能存在，否则会提示错误 “org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://localhost:9000/user/hadoop/output already exists” ，因此若要再次执行，需要执行如下命令删除 output 文件夹:</p>
+<pre><code>./bin/hdfs dfs -rm -r output    # 删除 output 文件夹
+</code></pre><p>若要关闭 Hadoop，则运行</p>
+<pre><code>./sbin/stop-dfs.sh
+</code></pre><h2 id="启动YARN"><a href="#启动YARN" class="headerlink" title="启动YARN"></a>启动YARN</h2><p>（伪分布式不启动 YARN 也可以，一般不会影响程序执行）</p>
+<p>YARN 是从 MapReduce 中分离出来的，负责资源管理与任务调度。YARN 运行于 MapReduce 之上，提供了高可用性、高扩展性</p>
+<p><strong>上述通过 ./sbin/start-dfs.sh 启动 Hadoop，仅仅是启动了 MapReduce 环境，我们可以启动 YARN ，让 YARN 来负责资源管理与任务调度。</strong></p>
+<p>首先修改配置文件 mapred-site.xml，这边需要先进行重命名：</p>
+<pre><code>mv ./etc/hadoop/mapred-site.xml.template ./etc/hadoop/mapred-site.xml
+</code></pre><p>然后再进行编辑，同样使用 vim 编辑 <strong>vim ./etc/hadoop/mapred-site.xml</strong> ：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</div><div class="line">             &lt;value&gt;yarn&lt;/value&gt;</div><div class="line">        &lt;/property&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure></p>
+<p>接着修改配置文件 <strong>yarn-site.xml</strong>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">        &lt;property&gt;</div><div class="line">             &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</div><div class="line">             &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</div><div class="line">            &lt;/property&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure></p>
+<p>然后就可以启动 YARN 了（需要先执行过 ./sbin/start-dfs.sh）：</p>
+<pre><code>./sbin/start-yarn.sh      # 启动YARN
+./sbin/mr-jobhistory-daemon.sh start historyserver  # 开启历史服务器，才能在Web中查看任务运行情况
+</code></pre><p>开启后通过 <strong>jps</strong> 查看，可以看到多了 NodeManager 和 ResourceManager 两个后台进程<br>启动 YARN 之后，运行实例的方法还是一样的，仅仅是资源管理方式、任务调度不同。观察日志信息可以发现，不启用 YARN 时，是 “mapred.LocalJobRunner” 在跑任务，启用 YARN 之后，是 “mapred.YARNRunner” 在跑任务。启动 YARN 有个好处是可以通过 Web 界面查看任务的运行情况：<a href="http://master:8088/cluster" target="_blank" rel="external">http://master:8088/cluster</a>，</p>
+<p>同样的，关闭 YARN 的脚本如下：</p>
+<pre><code>./sbin/stop-yarn.sh
+./sbin/mr-jobhistory-daemon.sh stop historyserver
+</code></pre><h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><p>Hadoop集群安装配置教程_Hadoop2.6.0_Ubuntu/CentOS：<br><a href="http://www.powerxing.com/install-hadoop-cluster/" target="_blank" rel="external">http://www.powerxing.com/install-hadoop-cluster/</a></p>
+<p>Hadoop安装教程_单机/伪分布式配置_Hadoop2.6.0/Ubuntu14.04<br><a href="http://www.powerxing.com/install-hadoop/" target="_blank" rel="external">http://www.powerxing.com/install-hadoop/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/16/Hadoop集群安装配置教程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1628,149 +1834,6 @@ type: tags
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/Ubuntu 系统设置密钥登陆/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Darren">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/22/Ubuntu 系统设置密钥登陆/" itemprop="url">Ubuntu 系统设置密钥登陆------by黄海亮</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:48:31+08:00">
-                2017-07-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Ubuntu-系统设置密钥登陆"><a href="#Ubuntu-系统设置密钥登陆" class="headerlink" title="Ubuntu 系统设置密钥登陆"></a>Ubuntu 系统设置密钥登陆</h1><p>本文主要参考文档<br>    <a href="http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html" target="_blank" rel="external">http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html</a><br>    <a href="http://blog.csdn.net/kenhins/article/details/51585565" target="_blank" rel="external">http://blog.csdn.net/kenhins/article/details/51585565</a><br>自己简单整理留作备份以备后期查看</p>
-<p>个人感觉用密钥登陆比用密码登陆安全很多，所以一旦生成密码之后一定不要将自己的密钥给别人，否者别人将很轻松的登陆你的账户，当然我发现如果你使用XShell远程连接ubuntu服务器的时候你可以再给密钥加上一层密码的。</p>
-<h2 id="密钥的生成"><a href="#密钥的生成" class="headerlink" title="密钥的生成"></a>密钥的生成</h2><p>这一步如果你使用XShell的话其实很简单，在上面的工具中有一个“新建用户密钥生成向导”，进去你自己一定会的，这里就不多说了</p>
-<p>#设置密钥登陆<br>首先需要修改一些配置文件</p>
-<pre><code>vim /etc/ssh/sshd_config
-</code></pre><p>进入sshd_config文件后需要更改几个地方</p>
-<pre><code>PubkeyAuthentication yes    #启用公告密钥配对认证方式 
-AuthorizedKeysFile  %h/.ssh/authorized_keys    #设定PublicKey文件路径
-RSAAuthentication yes  #允许RSA密钥
-PasswordAuthentication no #禁止密码验证登录,如果启用的话,RSA认证登录就没有意义了
-#禁用root账户登录，非必要，但为了安全性，请配置
-PermitRootLogin no
-</code></pre><p>其实我在配置的时候发现其中有些找了很多遍都没有找到，然后我就直接手动照着输入一遍也是可以的。</p>
-<p>然后保存配置，重新启动服务</p>
-<pre><code>service sshd restart
-</code></pre><p>#配置密钥<br>由上面的配置文件我们可以看出来密钥放置的位置应该在用户根目录下的.ssh/authorized_keys中，如果系统本身就有authorize_keys，那么你就可以直接将你的公钥复制进来但是一般情况下刚装好的新机器没有这个目录，这就需要我们先生成一个(这里我们可以直接进入你要创建的账户去进行，可以使用指令 su 需要创建的用户名)</p>
-<pre><code>ssh-keygen
-</code></pre><p>输入该指令后一路回车即可<br>回头用指令</p>
-<pre><code>ll
-</code></pre><p>你可以发现在当前用户的更目录下就会生成一个 .ssh的文件夹,然后再进入这个文件夹操作</p>
-<pre><code>cd ~/.ssh
-vim authorized_keys
-</code></pre><p>把自己生成的公钥复制进来就可以了<br>然后保存，并且更改文件模式</p>
-<pre><code>chmod 600 authorized_keys
-</code></pre><h3 id="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"><a href="#注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的" class="headerlink" title="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"></a>注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的</h3>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1821,7 +1884,7 @@ vim authorized_keys
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

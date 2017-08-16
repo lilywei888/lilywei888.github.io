@@ -254,6 +254,149 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/Ubuntu 系统设置密钥登陆/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Darren">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Darren">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/22/Ubuntu 系统设置密钥登陆/" itemprop="url">Ubuntu 系统设置密钥登陆------by黄海亮</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:48:31+08:00">
+                2017-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Ubuntu-系统设置密钥登陆"><a href="#Ubuntu-系统设置密钥登陆" class="headerlink" title="Ubuntu 系统设置密钥登陆"></a>Ubuntu 系统设置密钥登陆</h1><p>本文主要参考文档<br>    <a href="http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html" target="_blank" rel="external">http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html</a><br>    <a href="http://blog.csdn.net/kenhins/article/details/51585565" target="_blank" rel="external">http://blog.csdn.net/kenhins/article/details/51585565</a><br>自己简单整理留作备份以备后期查看</p>
+<p>个人感觉用密钥登陆比用密码登陆安全很多，所以一旦生成密码之后一定不要将自己的密钥给别人，否者别人将很轻松的登陆你的账户，当然我发现如果你使用XShell远程连接ubuntu服务器的时候你可以再给密钥加上一层密码的。</p>
+<h2 id="密钥的生成"><a href="#密钥的生成" class="headerlink" title="密钥的生成"></a>密钥的生成</h2><p>这一步如果你使用XShell的话其实很简单，在上面的工具中有一个“新建用户密钥生成向导”，进去你自己一定会的，这里就不多说了</p>
+<p>#设置密钥登陆<br>首先需要修改一些配置文件</p>
+<pre><code>vim /etc/ssh/sshd_config
+</code></pre><p>进入sshd_config文件后需要更改几个地方</p>
+<pre><code>PubkeyAuthentication yes    #启用公告密钥配对认证方式 
+AuthorizedKeysFile  %h/.ssh/authorized_keys    #设定PublicKey文件路径
+RSAAuthentication yes  #允许RSA密钥
+PasswordAuthentication no #禁止密码验证登录,如果启用的话,RSA认证登录就没有意义了
+#禁用root账户登录，非必要，但为了安全性，请配置
+PermitRootLogin no
+</code></pre><p>其实我在配置的时候发现其中有些找了很多遍都没有找到，然后我就直接手动照着输入一遍也是可以的。</p>
+<p>然后保存配置，重新启动服务</p>
+<pre><code>service sshd restart
+</code></pre><p>#配置密钥<br>由上面的配置文件我们可以看出来密钥放置的位置应该在用户根目录下的.ssh/authorized_keys中，如果系统本身就有authorize_keys，那么你就可以直接将你的公钥复制进来但是一般情况下刚装好的新机器没有这个目录，这就需要我们先生成一个(这里我们可以直接进入你要创建的账户去进行，可以使用指令 su 需要创建的用户名)</p>
+<pre><code>ssh-keygen
+</code></pre><p>输入该指令后一路回车即可<br>回头用指令</p>
+<pre><code>ll
+</code></pre><p>你可以发现在当前用户的更目录下就会生成一个 .ssh的文件夹,然后再进入这个文件夹操作</p>
+<pre><code>cd ~/.ssh
+vim authorized_keys
+</code></pre><p>把自己生成的公钥复制进来就可以了<br>然后保存，并且更改文件模式</p>
+<pre><code>chmod 600 authorized_keys
+</code></pre><h3 id="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"><a href="#注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的" class="headerlink" title="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"></a>注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/双系统时ubuntu更改开机引导/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -962,7 +1105,7 @@ To uninstall the NVIDIA Driver. run nvidia-unistall
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

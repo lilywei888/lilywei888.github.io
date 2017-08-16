@@ -254,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/CUDA-两个数组相加/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/16/CUDA-两个数组相加/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Darren">
@@ -273,7 +273,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/15/CUDA-两个数组相加/" itemprop="url">CUDA-两个数组相加------by黄海亮</a></h1>
+                <a class="post-title-link" href="/2017/08/16/CUDA-两个数组相加/" itemprop="url">CUDA-两个数组相加------by黄海亮</a></h1>
         
 
         <div class="post-meta">
@@ -285,8 +285,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T20:07:13+08:00">
-                2017-08-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-16T10:14:29+08:00">
+                2017-08-16
               </time>
             
 
@@ -326,10 +326,8 @@
         
           
             <h1 id="CUDA两个数组相加"><a href="#CUDA两个数组相加" class="headerlink" title="CUDA两个数组相加"></a>CUDA两个数组相加</h1><p>在CPU中写这个程序的时候我们直接使用for循环就可以了，但是这样计算会比较慢的，所以我们可以使用GPU来进行并行加速的。不过呢，如果两个数组都比较小的话，我们用GPU来加速就有点得不偿失了。因为GPU操作的时候有内存的拷贝，在CPU往GPU以及GPU往CPU拷贝内存的时候，都是很占用时间的。</p>
-<h2 id="下面是一些代码的体现-主要是CPU以及GPU的对比"><a href="#下面是一些代码的体现-主要是CPU以及GPU的对比" class="headerlink" title="下面是一些代码的体现,主要是CPU以及GPU的对比"></a>下面是一些代码的体现,主要是CPU以及GPU的对比</h2><p>1、主程序<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"A_add_B.h"</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="comment">//数组赋初值</span></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</div><div class="line">	&#123;</div><div class="line">		A[i]=-i;</div><div class="line">		B[i]=i*i;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//开始CPU计算</span></div><div class="line">	start_CPU = clock();</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</div><div class="line">	&#123;</div><div class="line">		C[i]=A[i]+B[i];</div><div class="line">	&#125;</div><div class="line">	finish_CPU = clock();</div><div class="line">	<span class="comment">//初始化GPU计算的参数</span></div><div class="line">	init(N);	</div><div class="line">	<span class="comment">//开始GPU计算</span></div><div class="line">	start_GPU = clock();</div><div class="line">	<span class="comment">//*vector_add(A,B,N);</span></div><div class="line">	<span class="comment">//执行核函数</span></div><div class="line">	AaddB&lt;&lt;&lt;num_blocks, threadsPerBlock&gt;&gt;&gt;(dev_A, dev_B, dev_C, N);</div><div class="line">	finish_GPU = clock();</div><div class="line">	<span class="comment">// 结果拷贝回来</span></div><div class="line">	cudaMemcpy(C , dev_C, size, cudaMemcpyDeviceToHost);</div><div class="line">	<span class="comment">//释放内存</span></div><div class="line">	cudaFree(dev_A);</div><div class="line">	cudaFree(dev_B);</div><div class="line">	cudaFree(dev_C);</div><div class="line">	<span class="comment">//输出结果查看</span></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="comment">//printf("A=%f   %d\n",A[i],i );</span></div><div class="line">		<span class="comment">//printf("B=%f   %d\n",B[i],i );</span></div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%f+%f=%f   %d\n"</span>,A[i],B[i],C[i],i );</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	<span class="comment">//显示线程和线程块的数量</span></div><div class="line">	<span class="built_in">printf</span>(<span class="string">"threadsPerBlock =%d\n"</span>,threadsPerBlock  );</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"num_blocks=%d\n"</span>,num_blocks);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	<span class="comment">//显示GPU的用时</span></div><div class="line">	time_GPU = (<span class="keyword">double</span>)(finish_GPU - start_GPU)*<span class="number">1000</span> ;</div><div class="line">	<span class="built_in">printf</span>( <span class="string">"time_GPU=%f us\n"</span>, time_GPU);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	<span class="comment">//显示CPU的用时</span></div><div class="line">    	time_CPU = (<span class="keyword">double</span>)(finish_CPU - start_CPU)*<span class="number">1000</span> ;</div><div class="line">	<span class="built_in">printf</span>( <span class="string">"time_CPU=%f us\n"</span>, time_CPU);</div><div class="line">    </div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>2、GPU函数<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"memcpy.h"</span>    </span></div><div class="line"><span class="comment">//两数组相加的GPU函数</span></div><div class="line">__<span class="function">global__ <span class="keyword">void</span> <span class="title">AaddB</span><span class="params">(<span class="keyword">const</span> <span class="keyword">float</span> *A,<span class="keyword">const</span> <span class="keyword">float</span> *B,<span class="keyword">float</span> *C,<span class="keyword">int</span> length)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">const</span> <span class="keyword">int</span> i=blockDim.x*blockIdx.x+threadIdx.x;</div><div class="line">	<span class="keyword">if</span> (i&lt;length)</div><div class="line">	&#123;</div><div class="line">		C[i]=A[i]+B[i];</div><div class="line">	&#125;</div><div class="line">&#125;    </div><div class="line"><span class="function"><span class="keyword">float</span> *<span class="title">vector_add</span><span class="params">(<span class="keyword">float</span> *A,<span class="keyword">float</span> *B,<span class="keyword">unsigned</span> <span class="keyword">int</span> length)</span></span></div><div class="line"><span class="function"></span>&#123;  	</div><div class="line">	<span class="comment">//执行核函数</span></div><div class="line">	AaddB&lt;&lt;&lt;num_blocks, threadsPerBlock&gt;&gt;&gt;(dev_A, dev_B, dev_C, length);   </div><div class="line">	<span class="comment">// 结果拷贝回来</span></div><div class="line">	cudaMemcpy(C , dev_C, size, cudaMemcpyDeviceToHost);    </div><div class="line">	<span class="comment">//释放内存</span></div><div class="line">	cudaFree(dev_A);</div><div class="line">	cudaFree(dev_B);</div><div class="line">	cudaFree(dev_C);   </div><div class="line">	<span class="comment">//返回值</span></div><div class="line">	<span class="keyword">return</span> C;   	</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>3、参数函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">//计时参数定义</div><div class="line">#include &quot;time.h&quot;</div><div class="line">clock_t start_GPU, finish_GPU,start_CPU, finish_CPU; </div><div class="line">double time_GPU,time_CPU;</div><div class="line">    </div><div class="line">#define N 10000</div><div class="line">float A[N],B[N],C[N];</div><div class="line">float *dev_A,*dev_B,*dev_C;</div><div class="line">unsigned int size=N*sizeof(float);</div><div class="line">    </div><div class="line">//线程/线程块数量</div><div class="line">const int threadsPerBlock = 1024;//线程块的大小。目前有些gpu的线程块最大为512，有些为1024.</div><div class="line">const int  num_blocks = (N / threadsPerBlock) + ((N%threadsPerBlock) ? 1 : 0);</div><div class="line">    </div><div class="line">//GPU参数初始化</div><div class="line">void init(unsigned int length)</div><div class="line">&#123;</div><div class="line">        </div><div class="line">	// 分配内存</div><div class="line">	cudaMalloc((void **)&amp;dev_A, size);</div><div class="line">	cudaMalloc((void **)&amp;dev_B, size);</div><div class="line">	cudaMalloc((void **)&amp;dev_C, size);</div><div class="line">    </div><div class="line">	// 拷贝内存</div><div class="line">	cudaMemcpy(dev_A, A, size, cudaMemcpyHostToDevice);</div><div class="line">	cudaMemcpy(dev_B, B, size, cudaMemcpyHostToDevice);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>4、Makefile的编写<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ALL:</div><div class="line">nvcc --compiler-options -fPIC -c A_add_B.cu -lcudart -I<span class="string">"/usr/local/cuda/include/"</span></div><div class="line">nvcc --compiler-options -fPIC -o A_add_B A_add_B.o -lcudart -I<span class="string">"/usr/local/cuda/include/"</span> -L<span class="string">"/usr/local/cuda/lib64"</span></div><div class="line">rm -f A_add_B.o</div></pre></td></tr></table></figure></p>
+<h2 id="下面是一些代码的体现-主要是CPU以及GPU的对比"><a href="#下面是一些代码的体现-主要是CPU以及GPU的对比" class="headerlink" title="下面是一些代码的体现,主要是CPU以及GPU的对比"></a>下面是一些代码的体现,主要是CPU以及GPU的对比</h2><p>1、主程序<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"A_add_B.h"</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="comment">//数组赋初值</span></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</div><div class="line">	&#123;</div><div class="line">		A[i]=-i;</div><div class="line">		B[i]=i*i;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//开始CPU计算</span></div><div class="line">	start_CPU = clock();</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</div><div class="line">	&#123;</div><div class="line">		C[i]=A[i]+B[i];</div><div class="line">	&#125;</div><div class="line">	finish_CPU = clock();</div><div class="line">	<span class="comment">//初始化GPU计算的参数</span></div><div class="line">	init(N);	</div><div class="line">	<span class="comment">//开始GPU计算</span></div><div class="line">	start_GPU = clock();</div><div class="line">	<span class="comment">//*vector_add(A,B,N);</span></div><div class="line">	<span class="comment">//执行核函数</span></div><div class="line">	AaddB&lt;&lt;&lt;num_blocks, threadsPerBlock&gt;&gt;&gt;(dev_A, dev_B, dev_C, N);</div><div class="line">	finish_GPU = clock();</div><div class="line">	<span class="comment">// 结果拷贝回来</span></div><div class="line">	cudaMemcpy(C , dev_C, size, cudaMemcpyDeviceToHost);</div><div class="line">	<span class="comment">//释放内存</span></div><div class="line">	cudaFree(dev_A);</div><div class="line">	cudaFree(dev_B);</div><div class="line">	cudaFree(dev_C);</div><div class="line">	<span class="comment">//输出结果查看</span></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="comment">//printf("A=%f   %d\n",A[i],i );</span></div><div class="line">		<span class="comment">//printf("B=%f   %d\n",B[i],i );</span></div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%f+%f=%f   %d\n"</span>,A[i],B[i],C[i],i );</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	<span class="comment">//显示线程和线程块的数量</span></div><div class="line">	<span class="built_in">printf</span>(<span class="string">"threadsPerBlock =%d\n"</span>,threadsPerBlock  );</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"num_blocks=%d\n"</span>,num_blocks);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	<span class="comment">//显示GPU的用时</span></div><div class="line">	time_GPU = (<span class="keyword">double</span>)(finish_GPU - start_GPU)*<span class="number">1000</span> ;</div><div class="line">	<span class="built_in">printf</span>( <span class="string">"time_GPU=%f us\n"</span>, time_GPU);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	<span class="comment">//显示CPU的用时</span></div><div class="line">    	time_CPU = (<span class="keyword">double</span>)(finish_CPU - start_CPU)*<span class="number">1000</span> ;</div><div class="line">	<span class="built_in">printf</span>( <span class="string">"time_CPU=%f us\n"</span>, time_CPU);</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>2、GPU函数<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></div><div class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"memcpy.h"</span>    </span></div><div class="line"> <span class="comment">//两数组相加的GPU函数</span></div><div class="line"> __<span class="function">global__ <span class="keyword">void</span> <span class="title">AaddB</span><span class="params">(<span class="keyword">const</span> <span class="keyword">float</span> *A,<span class="keyword">const</span> <span class="keyword">float</span> *B,<span class="keyword">float</span> *C,<span class="keyword">int</span> length)</span></span></div><div class="line"><span class="function"> </span>&#123;</div><div class="line">     <span class="keyword">const</span> <span class="keyword">int</span> i=blockDim.x*blockIdx.x+threadIdx.x;</div><div class="line"> 	<span class="keyword">if</span> (i&lt;length)</div><div class="line"> 	&#123;</div><div class="line"> 		C[i]=A[i]+B[i];</div><div class="line"> 	&#125;</div><div class="line"> &#125;    </div><div class="line"> <span class="function"><span class="keyword">float</span> *<span class="title">vector_add</span><span class="params">(<span class="keyword">float</span> *A,<span class="keyword">float</span> *B,<span class="keyword">unsigned</span> <span class="keyword">int</span> length)</span></span></div><div class="line"><span class="function"> </span>&#123;  	</div><div class="line"> 	<span class="comment">//执行核函数</span></div><div class="line"> 	AaddB&lt;&lt;&lt;num_blocks, threadsPerBlock&gt;&gt;&gt;(dev_A, dev_B, dev_C, length);   </div><div class="line"> 	<span class="comment">// 结果拷贝回来</span></div><div class="line"> 	cudaMemcpy(C , dev_C, size, cudaMemcpyDeviceToHost);    </div><div class="line"> 	<span class="comment">//释放内存</span></div><div class="line"> 	cudaFree(dev_A);</div><div class="line"> 	cudaFree(dev_B);</div><div class="line"> 	cudaFree(dev_C);   </div><div class="line"> 	<span class="comment">//返回值</span></div><div class="line"> 	<span class="keyword">return</span> C;   	</div><div class="line"> &#125;</div><div class="line">```  </div><div class="line"><span class="number">3</span>、参数函数</div><div class="line">```c</div><div class="line"> <span class="comment">//计时参数定义</span></div><div class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span></span></div><div class="line"> <span class="keyword">clock_t</span> start_GPU, finish_GPU,start_CPU, finish_CPU; </div><div class="line"> <span class="keyword">double</span> time_GPU,time_CPU;</div><div class="line"> </div><div class="line"> <span class="meta">#<span class="meta-keyword">define</span> N 10000</span></div><div class="line"> <span class="keyword">float</span> A[N],B[N],C[N];</div><div class="line"> <span class="keyword">float</span> *dev_A,*dev_B,*dev_C;</div><div class="line"> <span class="keyword">unsigned</span> <span class="keyword">int</span> size=N*<span class="keyword">sizeof</span>(<span class="keyword">float</span>);</div><div class="line"> </div><div class="line"> <span class="comment">//线程/线程块数量</span></div><div class="line"> <span class="keyword">const</span> <span class="keyword">int</span> threadsPerBlock = <span class="number">1024</span>;<span class="comment">//线程块的大小。目前有些gpu的线程块最大为512，有些为1024.</span></div><div class="line"> <span class="keyword">const</span> <span class="keyword">int</span>  num_blocks = (N / threadsPerBlock) + ((N%threadsPerBlock) ? <span class="number">1</span> : <span class="number">0</span>);</div><div class="line"> </div><div class="line"> <span class="comment">//GPU参数初始化</span></div><div class="line"> <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> length)</span></span></div><div class="line"><span class="function"> </span>&#123;</div><div class="line">     </div><div class="line"> 	<span class="comment">// 分配内存</span></div><div class="line"> 	cudaMalloc((<span class="keyword">void</span> **)&amp;dev_A, size);</div><div class="line"> 	cudaMalloc((<span class="keyword">void</span> **)&amp;dev_B, size);</div><div class="line"> 	cudaMalloc((<span class="keyword">void</span> **)&amp;dev_C, size);</div><div class="line"> </div><div class="line"> 	<span class="comment">// 拷贝内存</span></div><div class="line"> 	cudaMemcpy(dev_A, A, size, cudaMemcpyHostToDevice);</div><div class="line"> 	cudaMemcpy(dev_B, B, size, cudaMemcpyHostToDevice);</div><div class="line"> &#125;</div><div class="line">```   </div><div class="line"><span class="number">4</span>、Makefile的编写</div><div class="line">```bash</div><div class="line">ALL:</div><div class="line">nvcc --compiler-options -fPIC -c A_add_B.cu -lcudart -I<span class="string">"/usr/local/cuda/include/"</span></div><div class="line">nvcc --compiler-options -fPIC -o A_add_B A_add_B.o -lcudart -I<span class="string">"/usr/local/cuda/include/"</span> -<span class="string">L"/usr/local/cuda/lib64"</span></div><div class="line">rm -f A_add_B.o</div></pre></td></tr></table></figure></p>
 <h3 id="通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。"><a href="#通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。" class="headerlink" title="通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。"></a>通过上面的代码我们就可以进行两个数组的加法比较，我们通过更改N可以发现N越大的话GPU计算越快，相反CPU计算越快，这就是上面所说的内存拷贝占用时间太多了。</h3>
           
         
@@ -1406,6 +1404,141 @@ type: tags
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/ubuntu密钥登录教程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Darren">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Darren">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/22/ubuntu密钥登录教程/" itemprop="url">ubuntu密钥登录教程------by黄海亮</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:48:31+08:00">
+                2017-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#ubuntu密钥登录教程</p>
+<p>##上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。</p>
+<p>###本文使用XShell进行远程连接</p>
+<p>###使用WinSCP来进行ubuntu与ubuntu之间的文件的传输</p>
+<p>#XShell<br>首先现在登录时输入密码那一栏已经变成了灰色，这个时候只能使用密匙登录了。<br><img src="http://img.blog.csdn.net/20170716230052647?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>拿到密钥的第一步可以先添加密钥<br><img src="http://img.blog.csdn.net/20170716230143712?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20170716230209146?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>找到自己密钥的路径即可<br><img src="http://img.blog.csdn.net/20170716230239310?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>密钥导入进来以后那个文件就可以不要了，当然如果还有其他地方需要的话还需要导入其他的地方，不过如果误删了不要方，旁边还有导出呢。<br>导入成功以后可以进入属性<br><img src="http://img.blog.csdn.net/20170716230314907?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>大家可以更改密码，初始密码都为空的，这个地方相当于你再给你的密钥又手动加了一层密码，当然也可以不加，因为我发现加了以后登录的时候还要你自己输入一遍。<br>属性上面还有一公钥，这个里面就是我们放到服务器中的东西，这个东西不要给别人，当然我给你们的密匙你们更不能给别人，否者别人就可以轻松的登录你的账号了。<br>剩下的登录方法更以前一样。</p>
+<p>#WinSCP<br>同样此时winscp用密码也登录不上了<br><img src="http://img.blog.csdn.net/20170716230438986?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>确认</p>
+<p>直接在之前建立的那个里面更改就好，点击编辑<br><img src="http://img.blog.csdn.net/20170716230513915?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>然后点高级<br><img src="http://img.blog.csdn.net/20170716230529320?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>验证<br><img src="http://img.blog.csdn.net/20170716230551613?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>然后添加密钥文件的路径<br><img src="http://img.blog.csdn.net/20170716230616590?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>右下角选择所有文件<br><img src="http://img.blog.csdn.net/20170716230644369?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>选择密匙<br>然后有一个格式转换，选择确定<br><img src="http://img.blog.csdn.net/20170716230702329?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>然后保存确定保存就完了，大功告成可以链接了。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/Ubuntu 系统设置密钥登陆/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1502,141 +1635,6 @@ vim authorized_keys
 </code></pre><p>把自己生成的公钥复制进来就可以了<br>然后保存，并且更改文件模式</p>
 <pre><code>chmod 600 authorized_keys
 </code></pre><h3 id="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"><a href="#注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的" class="headerlink" title="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"></a>注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的</h3>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/ubuntu密钥登录教程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Darren">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Darren">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/22/ubuntu密钥登录教程/" itemprop="url">ubuntu密钥登录教程------by黄海亮</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:48:31+08:00">
-                2017-07-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>#ubuntu密钥登录教程</p>
-<p>##上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。</p>
-<p>###本文使用XShell进行远程连接</p>
-<p>###使用WinSCP来进行ubuntu与ubuntu之间的文件的传输</p>
-<p>#XShell<br>首先现在登录时输入密码那一栏已经变成了灰色，这个时候只能使用密匙登录了。<br><img src="http://img.blog.csdn.net/20170716230052647?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>拿到密钥的第一步可以先添加密钥<br><img src="http://img.blog.csdn.net/20170716230143712?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p><img src="http://img.blog.csdn.net/20170716230209146?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>找到自己密钥的路径即可<br><img src="http://img.blog.csdn.net/20170716230239310?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>密钥导入进来以后那个文件就可以不要了，当然如果还有其他地方需要的话还需要导入其他的地方，不过如果误删了不要方，旁边还有导出呢。<br>导入成功以后可以进入属性<br><img src="http://img.blog.csdn.net/20170716230314907?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>大家可以更改密码，初始密码都为空的，这个地方相当于你再给你的密钥又手动加了一层密码，当然也可以不加，因为我发现加了以后登录的时候还要你自己输入一遍。<br>属性上面还有一公钥，这个里面就是我们放到服务器中的东西，这个东西不要给别人，当然我给你们的密匙你们更不能给别人，否者别人就可以轻松的登录你的账号了。<br>剩下的登录方法更以前一样。</p>
-<p>#WinSCP<br>同样此时winscp用密码也登录不上了<br><img src="http://img.blog.csdn.net/20170716230438986?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>确认</p>
-<p>直接在之前建立的那个里面更改就好，点击编辑<br><img src="http://img.blog.csdn.net/20170716230513915?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>然后点高级<br><img src="http://img.blog.csdn.net/20170716230529320?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>验证<br><img src="http://img.blog.csdn.net/20170716230551613?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>然后添加密钥文件的路径<br><img src="http://img.blog.csdn.net/20170716230616590?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>右下角选择所有文件<br><img src="http://img.blog.csdn.net/20170716230644369?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>选择密匙<br>然后有一个格式转换，选择确定<br><img src="http://img.blog.csdn.net/20170716230702329?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>然后保存确定保存就完了，大功告成可以链接了。</p>
-
           
         
       

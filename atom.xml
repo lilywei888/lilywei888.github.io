@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Darren</title>
+  <subtitle>海亮的笔记本</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://huanghailiang.github.io/"/>
+  <updated>2017-08-16T12:50:52.202Z</updated>
+  <id>https://huanghailiang.github.io/</id>
+  
+  <author>
+    <name>Darren</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hadoop安装_单机伪分布式配置------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/08/16/Hadoop%E5%AE%89%E8%A3%85_%E5%8D%95%E6%9C%BA%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/"/>
+    <id>https://huanghailiang.github.io/2017/08/16/Hadoop安装_单机伪分布式配置/</id>
+    <published>2017-08-16T12:34:00.000Z</published>
+    <updated>2017-08-16T12:50:52.202Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Hadoop安装-单机伪分布式配置&quot;&gt;&lt;a href=&quot;#Hadoop安装-单机伪分布式配置&quot; class=&quot;headerlink&quot; title=&quot;Hadoop安装_单机伪分布式配置&quot;&gt;&lt;/a&gt;Hadoop安装_单机伪分布式配置&lt;/h1&gt;&lt;h2 id=&quot;创建had
+    
+    </summary>
+    
+    
+      <category term="Hadoop" scheme="https://huanghailiang.github.io/tags/Hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hadoop集群安装配置教程------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/08/16/Hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/"/>
+    <id>https://huanghailiang.github.io/2017/08/16/Hadoop集群安装配置教程/</id>
+    <published>2017-08-16T12:28:00.000Z</published>
+    <updated>2017-08-16T12:50:52.203Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;hadoop集群安装&quot;&gt;&lt;a href=&quot;#hadoop集群安装&quot; class=&quot;headerlink&quot; title=&quot;hadoop集群安装&quot;&gt;&lt;/a&gt;hadoop集群安装&lt;/h1&gt;&lt;h2 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;head
+    
+    </summary>
+    
+    
+      <category term="Hadoop" scheme="https://huanghailiang.github.io/tags/Hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>建立自己的github博客------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/08/15/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://huanghailiang.github.io/2017/08/15/搭建自己的github博客/</id>
+    <published>2017-08-15T02:06:00.000Z</published>
+    <updated>2017-08-16T02:14:29.954Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;可以根据博客中的hello-world文件中讲述的安装&quot;&gt;&lt;a href=&quot;#可以根据博客中的hello-world文件中讲述的安装&quot; class=&quot;headerlink&quot; title=&quot;可以根据博客中的hello-world文件中讲述的安装&quot;&gt;&lt;/a&gt;可以根据博
+    
+    </summary>
+    
+    
+      <category term="Start a blog" scheme="https://huanghailiang.github.io/tags/Start-a-blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深度学习环境搭建------by邵碧尧</title>
+    <link href="https://huanghailiang.github.io/2017/07/23/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>https://huanghailiang.github.io/2017/07/23/深度学习环境搭建/</id>
+    <published>2017-07-23T08:27:31.000Z</published>
+    <updated>2017-08-16T02:14:29.955Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;深度学习环境搭建&quot;&gt;&lt;a href=&quot;#深度学习环境搭建&quot; class=&quot;headerlink&quot; title=&quot;深度学习环境搭建&quot;&gt;&lt;/a&gt;深度学习环境搭建&lt;/h1&gt;&lt;p&gt;开始接触深度学习一年多时间了，总是有种技术发展飞快，没等你掌握现有技术更牛X的技术又出来了。
+    
+    </summary>
+    
+    
+      <category term="深度学习环境搭建" scheme="https://huanghailiang.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装远程图形界面x2go------by邵碧尧</title>
+    <link href="https://huanghailiang.github.io/2017/07/23/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu%20server%E6%9C%8D%E5%8A%A1%E5%99%A8_5/"/>
+    <id>https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_5/</id>
+    <published>2017-07-23T08:25:31.000Z</published>
+    <updated>2017-08-16T02:14:29.953Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu ser
+    
+    </summary>
+    
+    
+      <category term="手把手教你配置Ubuntu server服务器" scheme="https://huanghailiang.github.io/tags/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu-server%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>管理服务器用户------by邵碧尧</title>
+    <link href="https://huanghailiang.github.io/2017/07/23/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu%20server%E6%9C%8D%E5%8A%A1%E5%99%A8_4/"/>
+    <id>https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_4/</id>
+    <published>2017-07-23T08:16:31.000Z</published>
+    <updated>2017-08-16T02:14:29.951Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu ser
+    
+    </summary>
+    
+    
+      <category term="手把手教你配置Ubuntu server服务器" scheme="https://huanghailiang.github.io/tags/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu-server%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设置服务器网络------by邵碧尧</title>
+    <link href="https://huanghailiang.github.io/2017/07/23/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu%20server%E6%9C%8D%E5%8A%A1%E5%99%A8_3/"/>
+    <id>https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_3/</id>
+    <published>2017-07-23T08:15:31.000Z</published>
+    <updated>2017-08-16T02:14:29.950Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu ser
+    
+    </summary>
+    
+    
+      <category term="手把手教你配置Ubuntu server服务器" scheme="https://huanghailiang.github.io/tags/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu-server%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务器多硬盘挂载------by邵碧尧</title>
+    <link href="https://huanghailiang.github.io/2017/07/23/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu%20server%E6%9C%8D%E5%8A%A1%E5%99%A8_2/"/>
+    <id>https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_2/</id>
+    <published>2017-07-23T08:13:31.000Z</published>
+    <updated>2017-08-16T02:14:29.949Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu ser
+    
+    </summary>
+    
+    
+      <category term="手把手教你配置Ubuntu server服务器" scheme="https://huanghailiang.github.io/tags/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu-server%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu server 16.04 安装教程------by邵碧尧</title>
+    <link href="https://huanghailiang.github.io/2017/07/23/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu%20server%E6%9C%8D%E5%8A%A1%E5%99%A8_1/"/>
+    <id>https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_1/</id>
+    <published>2017-07-23T08:10:31.000Z</published>
+    <updated>2017-08-16T02:14:29.948Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu ser
+    
+    </summary>
+    
+    
+      <category term="手把手教你配置Ubuntu server服务器" scheme="https://huanghailiang.github.io/tags/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu-server%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu密钥登录教程------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/07/22/ubuntu%E5%AF%86%E9%92%A5%E7%99%BB%E5%BD%95%E6%95%99%E7%A8%8B/"/>
+    <id>https://huanghailiang.github.io/2017/07/22/ubuntu密钥登录教程/</id>
+    <published>2017-07-22T09:48:31.000Z</published>
+    <updated>2017-08-16T02:14:29.946Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#ubuntu密钥登录教程&lt;/p&gt;
+&lt;p&gt;##上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&lt;/p&gt;
+&lt;p&gt;###本文使用XShell进行远程连接&lt;/p&gt;
+&lt;p&gt;###使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&lt;/p&gt;
+&lt;p&gt;#X
+    
+    </summary>
+    
+    
+      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 系统设置密钥登陆------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/07/22/Ubuntu%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE%E5%AF%86%E9%92%A5%E7%99%BB%E9%99%86/"/>
+    <id>https://huanghailiang.github.io/2017/07/22/Ubuntu 系统设置密钥登陆/</id>
+    <published>2017-07-22T09:48:31.000Z</published>
+    <updated>2017-08-16T02:14:29.941Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Ubuntu-系统设置密钥登陆&quot;&gt;&lt;a href=&quot;#Ubuntu-系统设置密钥登陆&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu 系统设置密钥登陆&quot;&gt;&lt;/a&gt;Ubuntu 系统设置密钥登陆&lt;/h1&gt;&lt;p&gt;本文主要参考文档&lt;br&gt;    &lt;a
+    
+    </summary>
+    
+    
+      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>双系统时ubuntu更改开机引导------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/07/22/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6ubuntu%E6%9B%B4%E6%94%B9%E5%BC%80%E6%9C%BA%E5%BC%95%E5%AF%BC/"/>
+    <id>https://huanghailiang.github.io/2017/07/22/双系统时ubuntu更改开机引导/</id>
+    <published>2017-07-22T09:46:31.000Z</published>
+    <updated>2017-08-16T02:14:29.947Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们在windows上安装ubuntu双系统的时候，ubuntu的引导会默认先进入ubuntu系统，这对于那些想使用ubuntu但是并不常用ubuntu系统的人有一些不方便。&lt;br&gt;在网上我有看到EaseBCD这个软件可以用来管理启动项的。&lt;br&gt;但是因为个人之前和身边的朋
+    
+    </summary>
+    
+    
+      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu环境下降低gcc和g++的版本------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/"/>
+    <id>https://huanghailiang.github.io/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/</id>
+    <published>2017-07-22T09:45:31.000Z</published>
+    <updated>2017-08-16T02:14:29.944Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有时候我们在跑别人的程序的时候发现自己编译器的版本过高以至于不能运行，这个时候我们就需要降低编译器的版本。&lt;/p&gt;
+&lt;h1 id=&quot;首先安装低版本的编译器&quot;&gt;&lt;a href=&quot;#首先安装低版本的编译器&quot; class=&quot;headerlink&quot; title=&quot;首先安装低版本的编
+    
+    </summary>
+    
+    
+      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu16.04 Server install CUDA------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/07/22/ubuntu16-04-Server-install-CUDA/"/>
+    <id>https://huanghailiang.github.io/2017/07/22/ubuntu16-04-Server-install-CUDA/</id>
+    <published>2017-07-22T09:27:31.000Z</published>
+    <updated>2017-08-16T02:14:29.945Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ubuntu16-04-Server-安装CUDA&quot;&gt;&lt;a href=&quot;#ubuntu16-04-Server-安装CUDA&quot; class=&quot;headerlink&quot; title=&quot;ubuntu16.04 Server 安装CUDA&quot;&gt;&lt;/a&gt;ubuntu16.04
+    
+    </summary>
+    
+    
+      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Thanks</title>
+    <link href="https://huanghailiang.github.io/2017/07/22/thanks/"/>
+    <id>https://huanghailiang.github.io/2017/07/22/thanks/</id>
+    <published>2017-07-22T05:11:11.000Z</published>
+    <updated>2017-08-16T02:14:29.943Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Thanks for JingJing’s help to me!&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="start" scheme="https://huanghailiang.github.io/tags/start/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://huanghailiang.github.io/2017/07/21/hello-world/"/>
+    <id>https://huanghailiang.github.io/2017/07/21/hello-world/</id>
+    <published>2017-07-20T16:00:00.000Z</published>
+    <updated>2017-08-16T02:14:29.942Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+      <category term="start" scheme="https://huanghailiang.github.io/tags/start/"/>
+    
+  </entry>
+  
+</feed>

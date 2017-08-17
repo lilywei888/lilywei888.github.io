@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Ubuntu," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -96,18 +96,13 @@
 
 
 
-<meta name="description" content="Ubuntu 系统设置密钥登陆本文主要参考文档    http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html    http://blog.csdn.net/kenhins/article/details/51585565自己简单整理留作备份以备后期查看">
-<meta name="keywords" content="Ubuntu">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu 系统设置密钥登陆------by黄海亮">
-<meta property="og:url" content="https://huanghailiang.github.io/2017/07/22/Ubuntu 系统设置密钥登陆/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Darren">
+<meta property="og:url" content="https://huanghailiang.github.io/page/3/index.html">
 <meta property="og:site_name" content="Darren">
-<meta property="og:description" content="Ubuntu 系统设置密钥登陆本文主要参考文档    http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html    http://blog.csdn.net/kenhins/article/details/51585565自己简单整理留作备份以备后期查看">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-17T05:19:44.224Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu 系统设置密钥登陆------by黄海亮">
-<meta name="twitter:description" content="Ubuntu 系统设置密钥登陆本文主要参考文档    http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html    http://blog.csdn.net/kenhins/article/details/51585565自己简单整理留作备份以备后期查看">
+<meta name="twitter:title" content="Darren">
 
 
 
@@ -136,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://huanghailiang.github.io/2017/07/22/Ubuntu 系统设置密钥登陆/"/>
+  <link rel="canonical" href="https://huanghailiang.github.io/page/3/"/>
 
 
 
 
 
-  <title>Ubuntu 系统设置密钥登陆------by黄海亮 | Darren</title>
+  <title>Darren</title>
   
 
 
@@ -161,7 +156,9 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,9 +241,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -259,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://huanghailiang.github.io/2017/07/22/Ubuntu 系统设置密钥登陆/">
+    <link itemprop="mainEntityOfPage" href="https://huanghailiang.github.io/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Darren">
@@ -276,7 +273,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Ubuntu 系统设置密钥登陆------by黄海亮</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/" itemprop="url">ubuntu环境下降低gcc和g++的版本------by黄海亮</a></h1>
         
 
         <div class="post-meta">
@@ -288,7 +287,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:48:31+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:45:31+08:00">
                 2017-07-22
               </time>
             
@@ -326,30 +325,19 @@
       
 
       
-        <h1 id="Ubuntu-系统设置密钥登陆"><a href="#Ubuntu-系统设置密钥登陆" class="headerlink" title="Ubuntu 系统设置密钥登陆"></a>Ubuntu 系统设置密钥登陆</h1><p>本文主要参考文档<br>    <a href="http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html" target="_blank" rel="external">http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html</a><br>    <a href="http://blog.csdn.net/kenhins/article/details/51585565" target="_blank" rel="external">http://blog.csdn.net/kenhins/article/details/51585565</a><br>自己简单整理留作备份以备后期查看<br><a id="more"></a><br>个人感觉用密钥登陆比用密码登陆安全很多，所以一旦生成密码之后一定不要将自己的密钥给别人，否者别人将很轻松的登陆你的账户，当然我发现如果你使用XShell远程连接ubuntu服务器的时候你可以再给密钥加上一层密码的。</p>
-<h2 id="密钥的生成"><a href="#密钥的生成" class="headerlink" title="密钥的生成"></a>密钥的生成</h2><p>这一步如果你使用XShell的话其实很简单，在上面的工具中有一个“新建用户密钥生成向导”，进去你自己一定会的，这里就不多说了</p>
-<p>#设置密钥登陆<br>首先需要修改一些配置文件</p>
-<pre><code>vim /etc/ssh/sshd_config
-</code></pre><p>进入sshd_config文件后需要更改几个地方</p>
-<pre><code>PubkeyAuthentication yes    #启用公告密钥配对认证方式 
-AuthorizedKeysFile  %h/.ssh/authorized_keys    #设定PublicKey文件路径
-RSAAuthentication yes  #允许RSA密钥
-PasswordAuthentication no #禁止密码验证登录,如果启用的话,RSA认证登录就没有意义了
-#禁用root账户登录，非必要，但为了安全性，请配置
-PermitRootLogin no
-</code></pre><p>其实我在配置的时候发现其中有些找了很多遍都没有找到，然后我就直接手动照着输入一遍也是可以的。</p>
-<p>然后保存配置，重新启动服务</p>
-<pre><code>service sshd restart
-</code></pre><p>#配置密钥<br>由上面的配置文件我们可以看出来密钥放置的位置应该在用户根目录下的.ssh/authorized_keys中，如果系统本身就有authorize_keys，那么你就可以直接将你的公钥复制进来但是一般情况下刚装好的新机器没有这个目录，这就需要我们先生成一个(这里我们可以直接进入你要创建的账户去进行，可以使用指令 su 需要创建的用户名)</p>
-<pre><code>ssh-keygen
-</code></pre><p>输入该指令后一路回车即可<br>回头用指令</p>
-<pre><code>ll
-</code></pre><p>你可以发现在当前用户的更目录下就会生成一个 .ssh的文件夹,然后再进入这个文件夹操作</p>
-<pre><code>cd ~/.ssh
-vim authorized_keys
-</code></pre><p>把自己生成的公钥复制进来就可以了<br>然后保存，并且更改文件模式</p>
-<pre><code>chmod 600 authorized_keys
-</code></pre><h3 id="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"><a href="#注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的" class="headerlink" title="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"></a>注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的</h3>
+        
+          <p>有时候我们在跑别人的程序的时候发现自己编译器的版本过高以至于不能运行，这个时候我们就需要降低编译器的版本。</p>
+<h1 id="首先安装低版本的编译器"><a href="#首先安装低版本的编译器" class="headerlink" title="首先安装低版本的编译器"></a>首先安装低版本的编译器</h1><p>这里由于本人用的ubuntu16.04所以编译器自带的是gcc-5.4和g++-5.4,但是需要低版本的，经过测试现在还可以安装4.7的版本</p>
+<pre><code>sudo apt-get install gcc-4.7 gcc-4.7-multilib g++-4.7 g++-4.7-multilib
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
@@ -364,40 +352,14 @@ vim authorized_keys
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/07/22/ubuntu密钥登录教程/" rel="next" title="ubuntu密钥登录教程------by黄海亮">
-                <i class="fa fa-chevron-left"></i> ubuntu密钥登录教程------by黄海亮
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/23/手把手教你配置Ubuntu server服务器_1/" rel="prev" title="Ubuntu server 16.04 安装教程------by邵碧尧">
-                Ubuntu server 16.04 安装教程------by邵碧尧 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -407,11 +369,383 @@ vim authorized_keys
   </article>
 
 
+    
+      
 
-    <div class="post-spread">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huanghailiang.github.io/2017/07/22/ubuntu16-04-Server-install-CUDA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Darren">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Darren">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/22/ubuntu16-04-Server-install-CUDA/" itemprop="url">ubuntu16.04 Server install CUDA------by黄海亮</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:27:31+08:00">
+                2017-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="ubuntu16-04-Server-安装CUDA"><a href="#ubuntu16-04-Server-安装CUDA" class="headerlink" title="ubuntu16.04 Server 安装CUDA"></a>ubuntu16.04 Server 安装CUDA</h1><p>在安装CUDA的时候经常会遇到CUDA安装失败的情况，一般遇到的不允许第三方软件的安装，或者是自带的驱动nouveau的存在。</p>
+<h2 id="允许第三方软件的安装"><a href="#允许第三方软件的安装" class="headerlink" title="允许第三方软件的安装"></a>允许第三方软件的安装</h2><p>这个需要自己重启电脑进入bios系统中去关闭UEFI的安全启动/安全引导<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/22/ubuntu16-04-Server-install-CUDA/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huanghailiang.github.io/2017/07/22/thanks/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Darren">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Darren">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/22/thanks/" itemprop="url">Thanks</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T13:11:11+08:00">
+                2017-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Thanks for JingJing’s help to me!</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huanghailiang.github.io/2017/07/21/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Darren">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Darren">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/21/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T00:00:00+08:00">
+                2017-07-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/21/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
 
 
           </div>
@@ -419,10 +753,6 @@ vim authorized_keys
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -443,17 +773,8 @@ vim authorized_keys
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -544,22 +865,6 @@ vim authorized_keys
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ubuntu-系统设置密钥登陆"><span class="nav-number">1.</span> <span class="nav-text">Ubuntu 系统设置密钥登陆</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#密钥的生成"><span class="nav-number">1.1.</span> <span class="nav-text">密钥的生成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"><span class="nav-number">1.1.1.</span> <span class="nav-text">注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -683,10 +988,10 @@ vim authorized_keys
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-
+  
 
   
 

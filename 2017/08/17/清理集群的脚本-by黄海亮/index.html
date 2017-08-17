@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Ubuntu," />
+  <meta name="keywords" content="Hadoop脚本编写," />
 
 
 
@@ -96,20 +96,18 @@
 
 
 
-<meta name="description" content="ubuntu16.04 Server 安装CUDA在安装CUDA的时候经常会遇到CUDA安装失败的情况，一般遇到的不允许第三方软件的安装，或者是自带的驱动nouveau的存在。 允许第三方软件的安装这个需要自己重启电脑进入bios系统中去关闭UEFI的安全启动/安全引导">
-<meta name="keywords" content="Ubuntu">
+<meta name="description" content="清理集群的脚本该脚本旨在重新配置hadoop的时候我们需要清理一下集群中的东西，比如记录等。">
+<meta name="keywords" content="Hadoop脚本编写">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ubuntu16.04 Server install CUDA------by黄海亮">
-<meta property="og:url" content="https://huanghailiang.github.io/2017/07/22/ubuntu16-04-Server-install-CUDA/index.html">
+<meta property="og:title" content="清理集群的脚本------by黄海亮">
+<meta property="og:url" content="https://huanghailiang.github.io/2017/08/17/清理集群的脚本-by黄海亮/index.html">
 <meta property="og:site_name" content="Darren">
-<meta property="og:description" content="ubuntu16.04 Server 安装CUDA在安装CUDA的时候经常会遇到CUDA安装失败的情况，一般遇到的不允许第三方软件的安装，或者是自带的驱动nouveau的存在。 允许第三方软件的安装这个需要自己重启电脑进入bios系统中去关闭UEFI的安全启动/安全引导">
+<meta property="og:description" content="清理集群的脚本该脚本旨在重新配置hadoop的时候我们需要清理一下集群中的东西，比如记录等。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://img.blog.csdn.net/20170715165538644?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-08-17T05:20:03.159Z">
+<meta property="og:updated_time" content="2017-08-17T05:57:40.154Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ubuntu16.04 Server install CUDA------by黄海亮">
-<meta name="twitter:description" content="ubuntu16.04 Server 安装CUDA在安装CUDA的时候经常会遇到CUDA安装失败的情况，一般遇到的不允许第三方软件的安装，或者是自带的驱动nouveau的存在。 允许第三方软件的安装这个需要自己重启电脑进入bios系统中去关闭UEFI的安全启动/安全引导">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20170715165538644?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta name="twitter:title" content="清理集群的脚本------by黄海亮">
+<meta name="twitter:description" content="清理集群的脚本该脚本旨在重新配置hadoop的时候我们需要清理一下集群中的东西，比如记录等。">
 
 
 
@@ -138,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://huanghailiang.github.io/2017/07/22/ubuntu16-04-Server-install-CUDA/"/>
+  <link rel="canonical" href="https://huanghailiang.github.io/2017/08/17/清理集群的脚本-by黄海亮/"/>
 
 
 
 
 
-  <title>ubuntu16.04 Server install CUDA------by黄海亮 | Darren</title>
+  <title>清理集群的脚本------by黄海亮 | Darren</title>
   
 
 
@@ -261,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://huanghailiang.github.io/2017/07/22/ubuntu16-04-Server-install-CUDA/">
+    <link itemprop="mainEntityOfPage" href="https://huanghailiang.github.io/2017/08/17/清理集群的脚本-by黄海亮/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Darren">
@@ -278,7 +276,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ubuntu16.04 Server install CUDA------by黄海亮</h1>
+          <h1 class="post-title" itemprop="name headline">清理集群的脚本------by黄海亮</h1>
         
 
         <div class="post-meta">
@@ -290,8 +288,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:27:31+08:00">
-                2017-07-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-17T13:56:08+08:00">
+                2017-08-17
               </time>
             
 
@@ -328,52 +326,9 @@
       
 
       
-        <h1 id="ubuntu16-04-Server-安装CUDA"><a href="#ubuntu16-04-Server-安装CUDA" class="headerlink" title="ubuntu16.04 Server 安装CUDA"></a>ubuntu16.04 Server 安装CUDA</h1><p>在安装CUDA的时候经常会遇到CUDA安装失败的情况，一般遇到的不允许第三方软件的安装，或者是自带的驱动nouveau的存在。</p>
-<h2 id="允许第三方软件的安装"><a href="#允许第三方软件的安装" class="headerlink" title="允许第三方软件的安装"></a>允许第三方软件的安装</h2><p>这个需要自己重启电脑进入bios系统中去关闭UEFI的安全启动/安全引导<br><a id="more"></a></p>
-<h2 id="关闭自带的驱动nouveau"><a href="#关闭自带的驱动nouveau" class="headerlink" title="关闭自带的驱动nouveau"></a>关闭自带的驱动nouveau</h2><pre><code>sudo vim /etc/modprobe.d/blacklist.conf
-</code></pre><p>在该文件中添加以下几行：</p>
-<pre><code>blacklist vga16fb 
-blacklist rivafb 
-blacklist rivatv 
-blacklist nvidiafb
-options nouveau modeset=0
-</code></pre><p>添加完以后保存该文件<br>接着更新该文件，使配置有用</p>
-<pre><code>sudo update-initramfs -u
-</code></pre><p>最后查看nouveau驱动禁止是否成功，如果没有内容则说明禁用成功。</p>
-<h3 id="如果nouveau驱动禁用后没有效果，可以进行强制移除该驱动（如果上面的方法禁用成功可以不使用该方法）"><a href="#如果nouveau驱动禁用后没有效果，可以进行强制移除该驱动（如果上面的方法禁用成功可以不使用该方法）" class="headerlink" title="如果nouveau驱动禁用后没有效果，可以进行强制移除该驱动（如果上面的方法禁用成功可以不使用该方法）"></a>如果nouveau驱动禁用后没有效果，可以进行强制移除该驱动（如果上面的方法禁用成功可以不使用该方法）</h3><p>将这个驱动备份出来然后移除</p>
-<pre><code>mv /lib/modules/3.0.0-12-generic/kernel/drivers/gpu/drm/nouveau/nouveau.ko /lib/modules/3.0.0-12-generic/kernel/drivers/gpu/drm/nouveau/nouveau.ko.org
-</code></pre><p>重新加载</p>
-<pre><code>update-initramfs -u
-</code></pre><p>重启发现字体已经变大了，卸载成功。</p>
-<h2 id="CUDA的安装"><a href="#CUDA的安装" class="headerlink" title="CUDA的安装"></a>CUDA的安装</h2><p>因为本文说的ubuntu Server所以安装完一般使没有图形界面的，所以不需要去禁用图形界面，如果不是server版本的话一般还需要禁用图形界面的（可以用ctrl+alt+F1进入文本界面，F1~F6都可以F7是退出文本界面）。<br>禁用图形界面的语句：</p>
-<pre><code>sudo service lightdm stop
-</code></pre><p>打开图形界面的语句：</p>
-<pre><code>sudo service lightdm start
-</code></pre><p>nouveau禁用成功了，bios中的UEFI也已经关了，这个时候就可以安心的装CUDA了。<br>首先需要安装依赖项：</p>
-<pre><code>sudo apt-get install build-essential pkg-config linux-headers-$(uname -r)
-或者下面的方法也可以（用了上面的语句下面的语句就不需要了）：
-sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler 
-sudo apt-get install --no-install-recommends libboost-all-dev
-sudo apt-get install libopenblas-dev liblapack-dev libatlas-base-dev
-sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
-</code></pre><p>下载CUDA的安装包<br><a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="external">https://developer.nvidia.com/cuda-downloads</a><br>可以去NVIDIA的官网去下载，可以根据需求下载。<br>本文下载的runfile，其他形式的文本运行方法在下载界面有介绍的。<br>下载好后用U盘或者SCP等上传到服务器上，接下来进入cuda安装包的地方执行，当然这里根据你的安装包的型号。</p>
-<pre><code>sudo sh cuda_8.0.61_375.26_linux.run
-</code></pre><p>执行以后会有一堆文本让你读，很多，不过可以直接按q退出，然后按照要求先accept，然后再按照自己的需求安装，因为上面没有手动安装过nvidia的驱动，所以这里需要选择安装驱动的，否则cuda即使安装上了也没有用的。选择完了就开始安装了，安装完成后会有一个Summary显示安装的情况的。<br><img src="http://img.blog.csdn.net/20170715165538644?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>到此基本安装完了，可以使用下面的语句去检测nvidia驱动是否安装成功：</p>
-<pre><code>cat /proc/driver/nvidia/version
-</code></pre><p>如果可以弹出来驱动的版本信息等，说明安装成功，否者没有安装成功。</p>
-<p>安装完后此时查找cuda是找不到的，因为还没有配置环境变量。<br>接下来配置环境变量：</p>
-<pre><code>echo &apos;export PATH=/usr/local/cuda/bin:$PATH&apos; &gt;&gt; ~/.bashrc
-echo &apos;export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH&apos; &gt;&gt; ~/.bashrc
-source ~/.bashrc
-</code></pre><p>配置完环境变量后再检查一下cuda是否安装成功</p>
-<pre><code>nvcc -V
-</code></pre><p>提示上面的必须是大写的V，小写的v是不能够被识别的。</p>
-<p>##如果要卸载或者重装<br>卸载或者重新安装了。这个时候需要先卸载之前安装的。这个在用run文件安装的时候，最后那个summary已经告诉我们如何卸载了。</p>
-<pre><code>To uninstall the CUDA Toolkit. run the uninstall scrip in /usr/local/cuda-8.0/bin
-To uninstall the NVIDIA Driver. run nvidia-unistall
-</code></pre><p>可以先按照上面的提示去卸载CUDA和NVIDIA驱动，当然还有其他的方法</p>
-<pre><code>sudo apt-get --purge remove &lt;package_name&gt;
-</code></pre><h3 id="本文参考网络上各种资源自己配置完自己实验室电脑后整理所得，做一个备忘所用，当然也希望对大家有用。"><a href="#本文参考网络上各种资源自己配置完自己实验室电脑后整理所得，做一个备忘所用，当然也希望对大家有用。" class="headerlink" title="本文参考网络上各种资源自己配置完自己实验室电脑后整理所得，做一个备忘所用，当然也希望对大家有用。"></a>本文参考网络上各种资源自己配置完自己实验室电脑后整理所得，做一个备忘所用，当然也希望对大家有用。</h3>
+        <h1 id="清理集群的脚本"><a href="#清理集群的脚本" class="headerlink" title="清理集群的脚本"></a>清理集群的脚本</h1><p>该脚本旨在重新配置hadoop的时候我们需要清理一下集群中的东西，比如记录等。</p>
+<a id="more"></a>
+<h1 id="clear-sh源代码例子"><a href="#clear-sh源代码例子" class="headerlink" title="clear.sh源代码例子"></a>clear.sh源代码例子</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line">stop-all.sh</div><div class="line">xrm.sh /tmp/hadoop</div><div class="line">xrm.sh /hadoop/logs</div><div class="line"><span class="built_in">echo</span> <span class="string">"clean done!"</span></div><div class="line">(主要为了清除tmp下面的文件hadoop还有logs)</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -390,7 +345,7 @@ To uninstall the NVIDIA Driver. run nvidia-unistall
       
         <div class="post-tags">
           
-            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+            <a href="/tags/Hadoop脚本编写/" rel="tag"># Hadoop脚本编写</a>
           
         </div>
       
@@ -403,8 +358,8 @@ To uninstall the NVIDIA Driver. run nvidia-unistall
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/22/thanks/" rel="next" title="Thanks">
-                <i class="fa fa-chevron-left"></i> Thanks
+              <a href="/2017/08/17/初始化集群-by黄海亮/" rel="next" title="初始化集群------by黄海亮">
+                <i class="fa fa-chevron-left"></i> 初始化集群------by黄海亮
               </a>
             
           </div>
@@ -413,8 +368,8 @@ To uninstall the NVIDIA Driver. run nvidia-unistall
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/" rel="prev" title="ubuntu环境下降低gcc和g++的版本------by黄海亮">
-                ubuntu环境下降低gcc和g++的版本------by黄海亮 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/17/文件脚本编写问题-by黄海亮/" rel="prev" title="文件脚本编写问题------by黄海亮">
+                文件脚本编写问题------by黄海亮 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -578,7 +533,7 @@ To uninstall the NVIDIA Driver. run nvidia-unistall
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ubuntu16-04-Server-安装CUDA"><span class="nav-number">1.</span> <span class="nav-text">ubuntu16.04 Server 安装CUDA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#允许第三方软件的安装"><span class="nav-number">1.1.</span> <span class="nav-text">允许第三方软件的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭自带的驱动nouveau"><span class="nav-number">1.2.</span> <span class="nav-text">关闭自带的驱动nouveau</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如果nouveau驱动禁用后没有效果，可以进行强制移除该驱动（如果上面的方法禁用成功可以不使用该方法）"><span class="nav-number">1.2.1.</span> <span class="nav-text">如果nouveau驱动禁用后没有效果，可以进行强制移除该驱动（如果上面的方法禁用成功可以不使用该方法）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CUDA的安装"><span class="nav-number">1.3.</span> <span class="nav-text">CUDA的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本文参考网络上各种资源自己配置完自己实验室电脑后整理所得，做一个备忘所用，当然也希望对大家有用。"><span class="nav-number">1.3.1.</span> <span class="nav-text">本文参考网络上各种资源自己配置完自己实验室电脑后整理所得，做一个备忘所用，当然也希望对大家有用。</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#清理集群的脚本"><span class="nav-number">1.</span> <span class="nav-text">清理集群的脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#clear-sh源代码例子"><span class="nav-number">2.</span> <span class="nav-text">clear.sh源代码例子</span></a></li></ol></div>
             
 
           </div>

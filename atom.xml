@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huanghailiang.github.io/"/>
-  <updated>2017-08-17T05:17:57.647Z</updated>
+  <updated>2017-08-17T05:59:24.075Z</updated>
   <id>https://huanghailiang.github.io/</id>
   
   <author>
@@ -14,6 +14,152 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文件脚本编写问题------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/08/17/%E6%96%87%E4%BB%B6%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E9%97%AE%E9%A2%98-by%E9%BB%84%E6%B5%B7%E4%BA%AE/"/>
+    <id>https://huanghailiang.github.io/2017/08/17/文件脚本编写问题-by黄海亮/</id>
+    <published>2017-08-17T05:58:01.000Z</published>
+    <updated>2017-08-17T05:59:24.075Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;文件脚本编写问题&quot;&gt;&lt;a href=&quot;#文件脚本编写问题&quot; class=&quot;headerlink&quot; title=&quot;文件脚本编写问题&quot;&gt;&lt;/a&gt;文件脚本编写问题&lt;/h1&gt;&lt;p&gt;在编写脚本的时候我们可能会遇到一些各种各样的小问题，比如放置位置，以及使用权限等。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>清理集群的脚本------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/08/17/%E6%B8%85%E7%90%86%E9%9B%86%E7%BE%A4%E7%9A%84%E8%84%9A%E6%9C%AC-by%E9%BB%84%E6%B5%B7%E4%BA%AE/"/>
+    <id>https://huanghailiang.github.io/2017/08/17/清理集群的脚本-by黄海亮/</id>
+    <published>2017-08-17T05:56:08.000Z</published>
+    <updated>2017-08-17T05:57:40.154Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;清理集群的脚本&quot;&gt;&lt;a href=&quot;#清理集群的脚本&quot; class=&quot;headerlink&quot; title=&quot;清理集群的脚本&quot;&gt;&lt;/a&gt;清理集群的脚本&lt;/h1&gt;&lt;p&gt;该脚本旨在重新配置hadoop的时候我们需要清理一下集群中的东西，比如记录等。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>初始化集群------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/08/17/%E5%88%9D%E5%A7%8B%E5%8C%96%E9%9B%86%E7%BE%A4-by%E9%BB%84%E6%B5%B7%E4%BA%AE/"/>
+    <id>https://huanghailiang.github.io/2017/08/17/初始化集群-by黄海亮/</id>
+    <published>2017-08-17T05:52:50.000Z</published>
+    <updated>2017-08-17T05:55:47.594Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;初始化集群&quot;&gt;&lt;a href=&quot;#初始化集群&quot; class=&quot;headerlink&quot; title=&quot;初始化集群&quot;&gt;&lt;/a&gt;初始化集群&lt;/h1&gt;&lt;p&gt;该脚本主要时对第一次使用集群的时候进行一个初始化。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>所有节点 文件删除脚本编写------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/08/17/%E6%89%80%E6%9C%89%E8%8A%82%E7%82%B9-%E6%96%87%E4%BB%B6%E5%88%A0%E9%99%A4%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99-by%E9%BB%84%E6%B5%B7%E4%BA%AE/"/>
+    <id>https://huanghailiang.github.io/2017/08/17/所有节点-文件删除脚本编写-by黄海亮/</id>
+    <published>2017-08-17T05:49:47.000Z</published>
+    <updated>2017-08-17T05:53:10.578Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;所有节点-文件删除脚本编写&quot;&gt;&lt;a href=&quot;#所有节点-文件删除脚本编写&quot; class=&quot;headerlink&quot; title=&quot;所有节点 文件删除脚本编写&quot;&gt;&lt;/a&gt;所有节点 文件删除脚本编写&lt;/h1&gt;&lt;p&gt;该脚本旨在删除所有节点上相同的东西，比如hadoop的重新配置等，还有删除hadoop的log等文件，都比较方便。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>所有节点 文件拷贝脚本编写------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/08/17/%E6%89%80%E6%9C%89%E8%8A%82%E7%82%B9-%E6%96%87%E4%BB%B6%E6%8B%B7%E8%B4%9D%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99-by%E9%BB%84%E6%B5%B7%E4%BA%AE/"/>
+    <id>https://huanghailiang.github.io/2017/08/17/所有节点-文件拷贝脚本编写-by黄海亮/</id>
+    <published>2017-08-17T05:46:18.000Z</published>
+    <updated>2017-08-17T05:49:22.810Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;所有节点-文件拷贝脚本编写&quot;&gt;&lt;a href=&quot;#所有节点-文件拷贝脚本编写&quot; class=&quot;headerlink&quot; title=&quot;所有节点 文件拷贝脚本编写&quot;&gt;&lt;/a&gt;所有节点 文件拷贝脚本编写&lt;/h1&gt;&lt;p&gt;该脚本旨在往每个节点拷贝数据，之前我们的拷贝是需要自己一个节点一个节点链接然后拷贝，但是如果我们每个节点都拷贝同样的数据时，这样做显然很麻烦，如果节点多的话还很浪费时间，这样我们就可以通过该脚本自己循环拷贝。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>所有节点执行同一指令的操作------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/08/17/%E6%89%80%E6%9C%89%E8%8A%82%E7%82%B9%E6%89%A7%E8%A1%8C%E5%90%8C%E4%B8%80%E6%8C%87%E4%BB%A4%E7%9A%84%E6%93%8D%E4%BD%9C-by%E9%BB%84%E6%B5%B7%E4%BA%AE/"/>
+    <id>https://huanghailiang.github.io/2017/08/17/所有节点执行同一指令的操作-by黄海亮/</id>
+    <published>2017-08-17T05:43:26.000Z</published>
+    <updated>2017-08-17T05:45:59.041Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;所有节点执行同一指令的操作&quot;&gt;&lt;a href=&quot;#所有节点执行同一指令的操作&quot; class=&quot;headerlink&quot; title=&quot;所有节点执行同一指令的操作&quot;&gt;&lt;/a&gt;所有节点执行同一指令的操作&lt;/h1&gt;&lt;p&gt;该脚本旨在对每个节点都执行同一个指令，这样就不用每次都shell到每个子节点上去执行了，较为方便。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>所有节点 文件查看脚本编写------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/08/17/%E6%89%80%E6%9C%89%E8%8A%82%E7%82%B9-%E6%96%87%E4%BB%B6%E6%9F%A5%E7%9C%8B%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
+    <id>https://huanghailiang.github.io/2017/08/17/所有节点-文件查看脚本编写/</id>
+    <published>2017-08-17T05:39:11.000Z</published>
+    <updated>2017-08-17T05:43:49.873Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;所有节点-文件查看脚本编写&quot;&gt;&lt;a href=&quot;#所有节点-文件查看脚本编写&quot; class=&quot;headerlink&quot; title=&quot;所有节点 文件查看脚本编写&quot;&gt;&lt;/a&gt;所有节点 文件查看脚本编写&lt;/h1&gt;&lt;p&gt;该脚本用于一次查看所有集群节点相同位置下的文件，类似于手动在每个节点上输入ls指令进行查看。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>扩展Slave的时候需要注意的一些问题------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/08/17/%E6%89%A9%E5%B1%95Slave%E7%9A%84%E6%97%B6%E5%80%99%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/"/>
+    <id>https://huanghailiang.github.io/2017/08/17/扩展Slave的时候需要注意的一些问题/</id>
+    <published>2017-08-17T05:35:31.000Z</published>
+    <updated>2017-08-17T05:37:39.161Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;扩展Slave的时候需要注意的一些问题&quot;&gt;&lt;a href=&quot;#扩展Slave的时候需要注意的一些问题&quot; class=&quot;headerlink&quot; title=&quot;扩展Slave的时候需要注意的一些问题&quot;&gt;&lt;/a&gt;扩展Slave的时候需要注意的一些问题&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;扩展的时候可以先直接按照Hadoop集群安装配置教程先进行。&lt;/li&gt;
+&lt;li&gt;这里需要更改 &lt;strong&gt;&lt;em&gt;/usr/local/hadoop/etc/hadoop&lt;/em&gt;&lt;/strong&gt; 路径下的 slave文件中的参数，需要把添加的节点加进去。
+    
+    </summary>
+    
+    
+      <category term="Hadoop" scheme="https://huanghailiang.github.io/tags/Hadoop/"/>
+    
+  </entry>
   
   <entry>
     <title>Hadoop安装_单机伪分布式配置------by黄海亮</title>
@@ -209,24 +355,6 @@
   </entry>
   
   <entry>
-    <title>ubuntu密钥登录教程------by黄海亮</title>
-    <link href="https://huanghailiang.github.io/2017/07/22/ubuntu%E5%AF%86%E9%92%A5%E7%99%BB%E5%BD%95%E6%95%99%E7%A8%8B/"/>
-    <id>https://huanghailiang.github.io/2017/07/22/ubuntu密钥登录教程/</id>
-    <published>2017-07-22T09:48:31.000Z</published>
-    <updated>2017-08-17T05:21:06.384Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ubuntu密钥登录教程&quot;&gt;&lt;a href=&quot;#ubuntu密钥登录教程&quot; class=&quot;headerlink&quot; title=&quot;ubuntu密钥登录教程&quot;&gt;&lt;/a&gt;ubuntu密钥登录教程&lt;/h1&gt;&lt;h2 id=&quot;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot;&gt;&lt;a href=&quot;#上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot; class=&quot;headerlink&quot; title=&quot;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot;&gt;&lt;/a&gt;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&lt;/h2&gt;&lt;h3 id=&quot;本文使用XShell进行远程连接&quot;&gt;&lt;a href=&quot;#本文使用XShell进行远程连接&quot; class=&quot;headerlink&quot; title=&quot;本文使用XShell进行远程连接&quot;&gt;&lt;/a&gt;本文使用XShell进行远程连接&lt;/h3&gt;&lt;h3 id=&quot;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot;&gt;&lt;a href=&quot;#使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot; class=&quot;headerlink&quot; title=&quot;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot;&gt;&lt;/a&gt;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&lt;/h3&gt;
-    
-    </summary>
-    
-    
-      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Ubuntu 系统设置密钥登陆------by黄海亮</title>
     <link href="https://huanghailiang.github.io/2017/07/22/Ubuntu%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE%E5%AF%86%E9%92%A5%E7%99%BB%E9%99%86/"/>
     <id>https://huanghailiang.github.io/2017/07/22/Ubuntu 系统设置密钥登陆/</id>
@@ -236,6 +364,24 @@
     <summary type="html">
     
       &lt;h1 id=&quot;Ubuntu-系统设置密钥登陆&quot;&gt;&lt;a href=&quot;#Ubuntu-系统设置密钥登陆&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu 系统设置密钥登陆&quot;&gt;&lt;/a&gt;Ubuntu 系统设置密钥登陆&lt;/h1&gt;&lt;p&gt;本文主要参考文档&lt;br&gt;    &lt;a href=&quot;http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html&lt;/a&gt;&lt;br&gt;    &lt;a href=&quot;http://blog.csdn.net/kenhins/article/details/51585565&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/kenhins/article/details/51585565&lt;/a&gt;&lt;br&gt;自己简单整理留作备份以备后期查看&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu密钥登录教程------by黄海亮</title>
+    <link href="https://huanghailiang.github.io/2017/07/22/ubuntu%E5%AF%86%E9%92%A5%E7%99%BB%E5%BD%95%E6%95%99%E7%A8%8B/"/>
+    <id>https://huanghailiang.github.io/2017/07/22/ubuntu密钥登录教程/</id>
+    <published>2017-07-22T09:48:31.000Z</published>
+    <updated>2017-08-17T05:21:06.384Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ubuntu密钥登录教程&quot;&gt;&lt;a href=&quot;#ubuntu密钥登录教程&quot; class=&quot;headerlink&quot; title=&quot;ubuntu密钥登录教程&quot;&gt;&lt;/a&gt;ubuntu密钥登录教程&lt;/h1&gt;&lt;h2 id=&quot;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot;&gt;&lt;a href=&quot;#上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot; class=&quot;headerlink&quot; title=&quot;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot;&gt;&lt;/a&gt;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&lt;/h2&gt;&lt;h3 id=&quot;本文使用XShell进行远程连接&quot;&gt;&lt;a href=&quot;#本文使用XShell进行远程连接&quot; class=&quot;headerlink&quot; title=&quot;本文使用XShell进行远程连接&quot;&gt;&lt;/a&gt;本文使用XShell进行远程连接&lt;/h3&gt;&lt;h3 id=&quot;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot;&gt;&lt;a href=&quot;#使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot; class=&quot;headerlink&quot; title=&quot;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot;&gt;&lt;/a&gt;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&lt;/h3&gt;
     
     </summary>
     
@@ -259,83 +405,6 @@
     
     
       <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu环境下降低gcc和g++的版本------by黄海亮</title>
-    <link href="https://huanghailiang.github.io/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/"/>
-    <id>https://huanghailiang.github.io/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/</id>
-    <published>2017-07-22T09:45:31.000Z</published>
-    <updated>2017-08-17T05:20:22.951Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;有时候我们在跑别人的程序的时候发现自己编译器的版本过高以至于不能运行，这个时候我们就需要降低编译器的版本。&lt;/p&gt;
-&lt;h1 id=&quot;首先安装低版本的编译器&quot;&gt;&lt;a href=&quot;#首先安装低版本的编译器&quot; class=&quot;headerlink&quot; title=&quot;首先安装低版本的编译器&quot;&gt;&lt;/a&gt;首先安装低版本的编译器&lt;/h1&gt;&lt;p&gt;这里由于本人用的ubuntu16.04所以编译器自带的是gcc-5.4和g++-5.4,但是需要低版本的，经过测试现在还可以安装4.7的版本&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt-get install gcc-4.7 gcc-4.7-multilib g++-4.7 g++-4.7-multilib
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu16.04 Server install CUDA------by黄海亮</title>
-    <link href="https://huanghailiang.github.io/2017/07/22/ubuntu16-04-Server-install-CUDA/"/>
-    <id>https://huanghailiang.github.io/2017/07/22/ubuntu16-04-Server-install-CUDA/</id>
-    <published>2017-07-22T09:27:31.000Z</published>
-    <updated>2017-08-17T05:20:03.159Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ubuntu16-04-Server-安装CUDA&quot;&gt;&lt;a href=&quot;#ubuntu16-04-Server-安装CUDA&quot; class=&quot;headerlink&quot; title=&quot;ubuntu16.04 Server 安装CUDA&quot;&gt;&lt;/a&gt;ubuntu16.04 Server 安装CUDA&lt;/h1&gt;&lt;p&gt;在安装CUDA的时候经常会遇到CUDA安装失败的情况，一般遇到的不允许第三方软件的安装，或者是自带的驱动nouveau的存在。&lt;/p&gt;
-&lt;h2 id=&quot;允许第三方软件的安装&quot;&gt;&lt;a href=&quot;#允许第三方软件的安装&quot; class=&quot;headerlink&quot; title=&quot;允许第三方软件的安装&quot;&gt;&lt;/a&gt;允许第三方软件的安装&lt;/h2&gt;&lt;p&gt;这个需要自己重启电脑进入bios系统中去关闭UEFI的安全启动/安全引导&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Thanks</title>
-    <link href="https://huanghailiang.github.io/2017/07/22/thanks/"/>
-    <id>https://huanghailiang.github.io/2017/07/22/thanks/</id>
-    <published>2017-07-22T05:11:11.000Z</published>
-    <updated>2017-08-16T02:14:29.943Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Thanks for JingJing’s help to me!&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-      <category term="start" scheme="https://huanghailiang.github.io/tags/start/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://huanghailiang.github.io/2017/07/21/hello-world/"/>
-    <id>https://huanghailiang.github.io/2017/07/21/hello-world/</id>
-    <published>2017-07-20T16:00:00.000Z</published>
-    <updated>2017-08-17T05:19:30.808Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="start" scheme="https://huanghailiang.github.io/tags/start/"/>
     
   </entry>
   

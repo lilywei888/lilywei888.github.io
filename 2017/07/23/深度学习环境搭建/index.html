@@ -106,7 +106,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://img.blog.csdn.net/20170717163846347?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUm9nZXIxNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170717164703121?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUm9nZXIxNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-08-16T02:14:29.955Z">
+<meta property="og:updated_time" content="2017-08-17T05:21:35.936Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深度学习环境搭建------by邵碧尧">
 <meta name="twitter:description" content="深度学习环境搭建开始接触深度学习一年多时间了，总是有种技术发展飞快，没等你掌握现有技术更牛X的技术又出来了。身处AI浪潮中，到现在越发有种感觉：深度学习可能很多问题都能解决，但我们自己并没有那么多精力去研究那么多方面，自然语言处理，自动驾驶，人脸识别等等，选定一个方向深入研究才是正解。至少目前是这么理解的，不对希望朋友指正！ 如今深度学习的框架很多，Caffe，TensorFlow，Torch等都">
@@ -330,7 +330,7 @@
 
       
         <h1 id="深度学习环境搭建"><a href="#深度学习环境搭建" class="headerlink" title="深度学习环境搭建"></a>深度学习环境搭建</h1><p>开始接触深度学习一年多时间了，总是有种技术发展飞快，没等你掌握现有技术更牛X的技术又出来了。身处AI浪潮中，到现在越发有种感觉：深度学习可能很多问题都能解决，但我们自己并没有那么多精力去研究那么多方面，自然语言处理，自动驾驶，人脸识别等等，选定一个方向深入研究才是正解。至少目前是这么理解的，不对希望朋友指正！</p>
-<p>如今深度学习的框架很多，Caffe，TensorFlow，Torch等都各有各的优势，开始深度学习不可避免要配置深度学习的工作环境，如果不知道方法也许在开头就会花费很多时间，写这篇博客的目的就是帮助大家更快上手。下面介绍Caffe在Ubuntu 16.04上的搭建过程（Ubuntu 14.04同样可以）</p>
+<p>如今深度学习的框架很多，Caffe，TensorFlow，Torch等都各有各的优势，开始深度学习不可避免要配置深度学习的工作环境，如果不知道方法也许在开头就会花费很多时间，写这篇博客的目的就是帮助大家更快上手。下面介绍Caffe在Ubuntu 16.04上的搭建过程（Ubuntu 14.04同样可以）<br><a id="more"></a></p>
 <h2 id="Caffe"><a href="#Caffe" class="headerlink" title="Caffe"></a>Caffe</h2><p>Caffe的环境搭建在几个框架中是最麻烦的，因为Caffe用到的依赖库很多，如果配置GPU版有时候显卡驱动和CUDA也能把你折腾好久。CPU版和GPU版主要差别就是在NVIDIA显卡驱动和CUDA的安装上，其他框架要用到NVIDIA显卡其实差别也就是这样，因此这也算服务器基础。两个版本有区别的地方会注明。</p>
 <h3 id="Nvidia-driver"><a href="#Nvidia-driver" class="headerlink" title="Nvidia driver"></a>Nvidia driver</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">lspci | grep -i nvidia</div><div class="line"></div><div class="line">sudo add-apt-repository ppa:graphics-drivers/ppa</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line"></div><div class="line">sudo apt-get install nvidia-352 % 版本自己查询</div><div class="line"></div><div class="line">sudo shutdown -r now</div></pre></td></tr></table></figure>
 <p>重启后用下面命令查看驱动版本</p>

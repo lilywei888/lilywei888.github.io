@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huanghailiang.github.io/"/>
-  <updated>2017-08-16T12:50:52.202Z</updated>
+  <updated>2017-08-17T05:17:57.647Z</updated>
   <id>https://huanghailiang.github.io/</id>
   
   <author>
@@ -20,11 +20,21 @@
     <link href="https://huanghailiang.github.io/2017/08/16/Hadoop%E5%AE%89%E8%A3%85_%E5%8D%95%E6%9C%BA%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/"/>
     <id>https://huanghailiang.github.io/2017/08/16/Hadoop安装_单机伪分布式配置/</id>
     <published>2017-08-16T12:34:00.000Z</published>
-    <updated>2017-08-16T12:50:52.202Z</updated>
+    <updated>2017-08-17T05:17:57.647Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Hadoop安装-单机伪分布式配置&quot;&gt;&lt;a href=&quot;#Hadoop安装-单机伪分布式配置&quot; class=&quot;headerlink&quot; title=&quot;Hadoop安装_单机伪分布式配置&quot;&gt;&lt;/a&gt;Hadoop安装_单机伪分布式配置&lt;/h1&gt;&lt;h2 id=&quot;创建had
+      &lt;h1 id=&quot;Hadoop安装-单机伪分布式配置&quot;&gt;&lt;a href=&quot;#Hadoop安装-单机伪分布式配置&quot; class=&quot;headerlink&quot; title=&quot;Hadoop安装_单机伪分布式配置&quot;&gt;&lt;/a&gt;Hadoop安装_单机伪分布式配置&lt;/h1&gt;&lt;h2 id=&quot;创建hadoop账户&quot;&gt;&lt;a href=&quot;#创建hadoop账户&quot; class=&quot;headerlink&quot; title=&quot;创建hadoop账户&quot;&gt;&lt;/a&gt;创建hadoop账户&lt;/h2&gt;&lt;p&gt;添加用户：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo useradd -m hadoop -s /bin/bash
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;给用户设置密码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo passwd hadoop
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;给用户管理员权限：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo adduser hadoop sudo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;更新apt&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装vim:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install vim
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -38,11 +48,18 @@
     <link href="https://huanghailiang.github.io/2017/08/16/Hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/"/>
     <id>https://huanghailiang.github.io/2017/08/16/Hadoop集群安装配置教程/</id>
     <published>2017-08-16T12:28:00.000Z</published>
-    <updated>2017-08-16T12:50:52.203Z</updated>
+    <updated>2017-08-17T05:19:08.047Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;hadoop集群安装&quot;&gt;&lt;a href=&quot;#hadoop集群安装&quot; class=&quot;headerlink&quot; title=&quot;hadoop集群安装&quot;&gt;&lt;/a&gt;hadoop集群安装&lt;/h1&gt;&lt;h2 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;head
+      &lt;h1 id=&quot;hadoop集群安装&quot;&gt;&lt;a href=&quot;#hadoop集群安装&quot; class=&quot;headerlink&quot; title=&quot;hadoop集群安装&quot;&gt;&lt;/a&gt;hadoop集群安装&lt;/h1&gt;&lt;h2 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h2&gt;&lt;p&gt;Hadoop 集群的安装配置大致为如下流程:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1、选定一台机器作为 Master
+2、在 Master 节点上配置 hadoop 用户、安装 SSH server、安装 Java 环境
+3、在 Master 节点上安装 Hadoop，并完成配置
+4、在其他 Slave 节点上配置 hadoop 用户、安装 SSH server、安装 Java 环境
+5、将 Master 节点上的 /usr/local/hadoop 目录复制到其他 Slave 节点上
+6、在 Master 节点上开启 Hadoop
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -56,11 +73,13 @@
     <link href="https://huanghailiang.github.io/2017/08/15/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%8D%9A%E5%AE%A2/"/>
     <id>https://huanghailiang.github.io/2017/08/15/搭建自己的github博客/</id>
     <published>2017-08-15T02:06:00.000Z</published>
-    <updated>2017-08-16T02:14:29.954Z</updated>
+    <updated>2017-08-17T05:21:26.719Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;可以根据博客中的hello-world文件中讲述的安装&quot;&gt;&lt;a href=&quot;#可以根据博客中的hello-world文件中讲述的安装&quot; class=&quot;headerlink&quot; title=&quot;可以根据博客中的hello-world文件中讲述的安装&quot;&gt;&lt;/a&gt;可以根据博
+      &lt;h1 id=&quot;可以根据博客中的hello-world文件中讲述的安装&quot;&gt;&lt;a href=&quot;#可以根据博客中的hello-world文件中讲述的安装&quot; class=&quot;headerlink&quot; title=&quot;可以根据博客中的hello-world文件中讲述的安装&quot;&gt;&lt;/a&gt;可以根据博客中的hello-world文件中讲述的安装&lt;/h1&gt;&lt;h2 id=&quot;下面是一些详细的步骤&quot;&gt;&lt;a href=&quot;#下面是一些详细的步骤&quot; class=&quot;headerlink&quot; title=&quot;下面是一些详细的步骤&quot;&gt;&lt;/a&gt;下面是一些详细的步骤&lt;/h2&gt;&lt;p&gt;1、安装node,可以去node的官网直接下载 &lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://nodejs.org/en/&lt;/a&gt; （这里我下载的是node-v6.11.1-x64）&lt;br&gt;2、安装hexo，可以打开cmd终端输入&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g hexo-cli
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -74,11 +93,12 @@
     <link href="https://huanghailiang.github.io/2017/07/23/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     <id>https://huanghailiang.github.io/2017/07/23/深度学习环境搭建/</id>
     <published>2017-07-23T08:27:31.000Z</published>
-    <updated>2017-08-16T02:14:29.955Z</updated>
+    <updated>2017-08-17T05:21:35.936Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;深度学习环境搭建&quot;&gt;&lt;a href=&quot;#深度学习环境搭建&quot; class=&quot;headerlink&quot; title=&quot;深度学习环境搭建&quot;&gt;&lt;/a&gt;深度学习环境搭建&lt;/h1&gt;&lt;p&gt;开始接触深度学习一年多时间了，总是有种技术发展飞快，没等你掌握现有技术更牛X的技术又出来了。
+      &lt;h1 id=&quot;深度学习环境搭建&quot;&gt;&lt;a href=&quot;#深度学习环境搭建&quot; class=&quot;headerlink&quot; title=&quot;深度学习环境搭建&quot;&gt;&lt;/a&gt;深度学习环境搭建&lt;/h1&gt;&lt;p&gt;开始接触深度学习一年多时间了，总是有种技术发展飞快，没等你掌握现有技术更牛X的技术又出来了。身处AI浪潮中，到现在越发有种感觉：深度学习可能很多问题都能解决，但我们自己并没有那么多精力去研究那么多方面，自然语言处理，自动驾驶，人脸识别等等，选定一个方向深入研究才是正解。至少目前是这么理解的，不对希望朋友指正！&lt;/p&gt;
+&lt;p&gt;如今深度学习的框架很多，Caffe，TensorFlow，Torch等都各有各的优势，开始深度学习不可避免要配置深度学习的工作环境，如果不知道方法也许在开头就会花费很多时间，写这篇博客的目的就是帮助大家更快上手。下面介绍Caffe在Ubuntu 16.04上的搭建过程（Ubuntu 14.04同样可以）&lt;br&gt;
     
     </summary>
     
@@ -92,11 +112,11 @@
     <link href="https://huanghailiang.github.io/2017/07/23/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu%20server%E6%9C%8D%E5%8A%A1%E5%99%A8_5/"/>
     <id>https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_5/</id>
     <published>2017-07-23T08:25:31.000Z</published>
-    <updated>2017-08-16T02:14:29.953Z</updated>
+    <updated>2017-08-17T05:22:39.743Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu ser
+      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu server服务器&lt;/h1&gt;&lt;h2 id=&quot;安装远程图形界面x2go&quot;&gt;&lt;a href=&quot;#安装远程图形界面x2go&quot; class=&quot;headerlink&quot; title=&quot;安装远程图形界面x2go&quot;&gt;&lt;/a&gt;安装远程图形界面x2go&lt;/h2&gt;&lt;p&gt;Ubuntu server 安装完成只有命令行界面，一般的工作在Windows下用 &lt;a href=&quot;https://www.netsarang.com/products/xsh_overview.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;xshell&lt;/a&gt; 和 &lt;a href=&quot;https://winscp.net/eng/index.php&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;winscp&lt;/a&gt; ，一个输命令行，一个进行界面化文件管理，还是挺方便的， 但部分用户还是希望有个图形界面更加方便科研工作开展，这里推荐x2go这个轻量化桌面，安装也比较方便，下面就来介绍。&lt;br&gt;
     
     </summary>
     
@@ -110,11 +130,12 @@
     <link href="https://huanghailiang.github.io/2017/07/23/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu%20server%E6%9C%8D%E5%8A%A1%E5%99%A8_4/"/>
     <id>https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_4/</id>
     <published>2017-07-23T08:16:31.000Z</published>
-    <updated>2017-08-16T02:14:29.951Z</updated>
+    <updated>2017-08-17T05:22:32.776Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu ser
+      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu server服务器&lt;/h1&gt;&lt;h2 id=&quot;管理服务器用户&quot;&gt;&lt;a href=&quot;#管理服务器用户&quot; class=&quot;headerlink&quot; title=&quot;管理服务器用户&quot;&gt;&lt;/a&gt;管理服务器用户&lt;/h2&gt;&lt;p&gt;管理服务器用户，一项一项开始说，首先要管理，当然要现有用户咯。添加用户我是用adduser 命令，相当于一个简单的交互过程，命令如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo adduser username&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -128,11 +149,11 @@
     <link href="https://huanghailiang.github.io/2017/07/23/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu%20server%E6%9C%8D%E5%8A%A1%E5%99%A8_3/"/>
     <id>https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_3/</id>
     <published>2017-07-23T08:15:31.000Z</published>
-    <updated>2017-08-16T02:14:29.950Z</updated>
+    <updated>2017-08-17T05:22:16.192Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu ser
+      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu server服务器&lt;/h1&gt;&lt;h2 id=&quot;设置服务器网络&quot;&gt;&lt;a href=&quot;#设置服务器网络&quot; class=&quot;headerlink&quot; title=&quot;设置服务器网络&quot;&gt;&lt;/a&gt;设置服务器网络&lt;/h2&gt;&lt;p&gt;之前两篇讲了服务器系统安装和硬盘挂载，这篇总结下网络设置。具体开始讲之前先说说如何实现其他人可以访问服务器。一种方法是由一个网口出来接路由器，用户都连接到路由器的网络上，不管是通过有线还是WiFi，把用户都归到同一个网络下。另一种方法就比较bug了，像清华大学那样，整个学校有线网和无线的Tsinghua都是同一个网络，所以就不需要路由器了，之前不知道还倒腾了很久。又有人要问了，那如何让外网的人可以访问服务器呢？不好意思，我没有研究过，另一个原因也是担心网络安全的问题，毕竟没有学过相关的知识，所以搭个服务器内部用就完了。如果有大神在这方面比较有研究，我也非常欢迎交流。（邮箱：shaobiyao@gmail.com）&lt;br&gt;
     
     </summary>
     
@@ -146,11 +167,13 @@
     <link href="https://huanghailiang.github.io/2017/07/23/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu%20server%E6%9C%8D%E5%8A%A1%E5%99%A8_2/"/>
     <id>https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_2/</id>
     <published>2017-07-23T08:13:31.000Z</published>
-    <updated>2017-08-16T02:14:29.949Z</updated>
+    <updated>2017-08-17T05:22:02.720Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu ser
+      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu server服务器&lt;/h1&gt;&lt;h2 id=&quot;服务器多硬盘挂载&quot;&gt;&lt;a href=&quot;#服务器多硬盘挂载&quot; class=&quot;headerlink&quot; title=&quot;服务器多硬盘挂载&quot;&gt;&lt;/a&gt;服务器多硬盘挂载&lt;/h2&gt;&lt;p&gt;现在科研中需要处理的数据量经常性会非常大，因此服务器基本都会采用固态硬盘加机械硬盘的解决方案来实现服务器性能和成本的平衡，系统装在固态中，用户数据和数据集存放在机械硬盘中。接下来就讲下如何挂载硬盘&lt;/p&gt;
+&lt;p&gt;参考网页：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://zwkufo.blog.163.com/blog/static/258825120141283942244/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://zwkufo.blog.163.com/blog/static/258825120141283942244/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.jianshu.com/p/5c12289dbcd1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/5c12289dbcd1&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
@@ -164,11 +187,19 @@
     <link href="https://huanghailiang.github.io/2017/07/23/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu%20server%E6%9C%8D%E5%8A%A1%E5%99%A8_1/"/>
     <id>https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_1/</id>
     <published>2017-07-23T08:10:31.000Z</published>
-    <updated>2017-08-16T02:14:29.948Z</updated>
+    <updated>2017-08-17T05:21:46.455Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu ser
+      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu server服务器&lt;/h1&gt;&lt;p&gt;近期实验室来了台新的服务器，第一次从头到尾把配置过程走了一遍，特来此总结一番，希望可以帮助到想入坑的童鞋。我将从以下几个方面来总结配置服务器的过程(系统版本为Ubuntu server 16.04)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ubuntu server 16.04 安装教程&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;服务器多硬盘挂载&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;设置服务器网络&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;管理服务器用户&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安装远程图形界面&lt;em&gt;x2go&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
     
     </summary>
     
@@ -182,11 +213,11 @@
     <link href="https://huanghailiang.github.io/2017/07/22/Ubuntu%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE%E5%AF%86%E9%92%A5%E7%99%BB%E9%99%86/"/>
     <id>https://huanghailiang.github.io/2017/07/22/Ubuntu 系统设置密钥登陆/</id>
     <published>2017-07-22T09:48:31.000Z</published>
-    <updated>2017-08-16T02:14:29.941Z</updated>
+    <updated>2017-08-17T05:19:44.224Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Ubuntu-系统设置密钥登陆&quot;&gt;&lt;a href=&quot;#Ubuntu-系统设置密钥登陆&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu 系统设置密钥登陆&quot;&gt;&lt;/a&gt;Ubuntu 系统设置密钥登陆&lt;/h1&gt;&lt;p&gt;本文主要参考文档&lt;br&gt;    &lt;a
+      &lt;h1 id=&quot;Ubuntu-系统设置密钥登陆&quot;&gt;&lt;a href=&quot;#Ubuntu-系统设置密钥登陆&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu 系统设置密钥登陆&quot;&gt;&lt;/a&gt;Ubuntu 系统设置密钥登陆&lt;/h1&gt;&lt;p&gt;本文主要参考文档&lt;br&gt;    &lt;a href=&quot;http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html&lt;/a&gt;&lt;br&gt;    &lt;a href=&quot;http://blog.csdn.net/kenhins/article/details/51585565&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/kenhins/article/details/51585565&lt;/a&gt;&lt;br&gt;自己简单整理留作备份以备后期查看&lt;br&gt;
     
     </summary>
     
@@ -200,15 +231,11 @@
     <link href="https://huanghailiang.github.io/2017/07/22/ubuntu%E5%AF%86%E9%92%A5%E7%99%BB%E5%BD%95%E6%95%99%E7%A8%8B/"/>
     <id>https://huanghailiang.github.io/2017/07/22/ubuntu密钥登录教程/</id>
     <published>2017-07-22T09:48:31.000Z</published>
-    <updated>2017-08-16T02:14:29.946Z</updated>
+    <updated>2017-08-17T05:21:06.384Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;#ubuntu密钥登录教程&lt;/p&gt;
-&lt;p&gt;##上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&lt;/p&gt;
-&lt;p&gt;###本文使用XShell进行远程连接&lt;/p&gt;
-&lt;p&gt;###使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&lt;/p&gt;
-&lt;p&gt;#X
+      &lt;h1 id=&quot;ubuntu密钥登录教程&quot;&gt;&lt;a href=&quot;#ubuntu密钥登录教程&quot; class=&quot;headerlink&quot; title=&quot;ubuntu密钥登录教程&quot;&gt;&lt;/a&gt;ubuntu密钥登录教程&lt;/h1&gt;&lt;h2 id=&quot;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot;&gt;&lt;a href=&quot;#上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot; class=&quot;headerlink&quot; title=&quot;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot;&gt;&lt;/a&gt;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&lt;/h2&gt;&lt;h3 id=&quot;本文使用XShell进行远程连接&quot;&gt;&lt;a href=&quot;#本文使用XShell进行远程连接&quot; class=&quot;headerlink&quot; title=&quot;本文使用XShell进行远程连接&quot;&gt;&lt;/a&gt;本文使用XShell进行远程连接&lt;/h3&gt;&lt;h3 id=&quot;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot;&gt;&lt;a href=&quot;#使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot; class=&quot;headerlink&quot; title=&quot;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot;&gt;&lt;/a&gt;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&lt;/h3&gt;
     
     </summary>
     
@@ -222,11 +249,11 @@
     <link href="https://huanghailiang.github.io/2017/07/22/%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6ubuntu%E6%9B%B4%E6%94%B9%E5%BC%80%E6%9C%BA%E5%BC%95%E5%AF%BC/"/>
     <id>https://huanghailiang.github.io/2017/07/22/双系统时ubuntu更改开机引导/</id>
     <published>2017-07-22T09:46:31.000Z</published>
-    <updated>2017-08-16T02:14:29.947Z</updated>
+    <updated>2017-08-17T05:22:53.432Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;我们在windows上安装ubuntu双系统的时候，ubuntu的引导会默认先进入ubuntu系统，这对于那些想使用ubuntu但是并不常用ubuntu系统的人有一些不方便。&lt;br&gt;在网上我有看到EaseBCD这个软件可以用来管理启动项的。&lt;br&gt;但是因为个人之前和身边的朋
+      &lt;p&gt;我们在windows上安装ubuntu双系统的时候，ubuntu的引导会默认先进入ubuntu系统，这对于那些想使用ubuntu但是并不常用ubuntu系统的人有一些不方便。&lt;br&gt;在网上我有看到EaseBCD这个软件可以用来管理启动项的。&lt;br&gt;但是因为个人之前和身边的朋友使用过，感觉其实并没有解决用户的问题，不安装EaseBCD的时候只用进入一次选择界面，而安装完EaseBCD的时候我们竟然需要进入两次引导界面，这就很不方便。（此处之争对ubuntu其他的双系统也许EaseBCD会更加方便些）另外之前一个朋友发现这个地方很不方便，于是就卸载了EaseBCD结果他的系统完全进不去了，最后在大神的指导下才修复进入了windows系统。&lt;br&gt;
     
     </summary>
     
@@ -240,12 +267,14 @@
     <link href="https://huanghailiang.github.io/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/"/>
     <id>https://huanghailiang.github.io/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/</id>
     <published>2017-07-22T09:45:31.000Z</published>
-    <updated>2017-08-16T02:14:29.944Z</updated>
+    <updated>2017-08-17T05:20:22.951Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;有时候我们在跑别人的程序的时候发现自己编译器的版本过高以至于不能运行，这个时候我们就需要降低编译器的版本。&lt;/p&gt;
-&lt;h1 id=&quot;首先安装低版本的编译器&quot;&gt;&lt;a href=&quot;#首先安装低版本的编译器&quot; class=&quot;headerlink&quot; title=&quot;首先安装低版本的编
+&lt;h1 id=&quot;首先安装低版本的编译器&quot;&gt;&lt;a href=&quot;#首先安装低版本的编译器&quot; class=&quot;headerlink&quot; title=&quot;首先安装低版本的编译器&quot;&gt;&lt;/a&gt;首先安装低版本的编译器&lt;/h1&gt;&lt;p&gt;这里由于本人用的ubuntu16.04所以编译器自带的是gcc-5.4和g++-5.4,但是需要低版本的，经过测试现在还可以安装4.7的版本&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install gcc-4.7 gcc-4.7-multilib g++-4.7 g++-4.7-multilib
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -259,11 +288,12 @@
     <link href="https://huanghailiang.github.io/2017/07/22/ubuntu16-04-Server-install-CUDA/"/>
     <id>https://huanghailiang.github.io/2017/07/22/ubuntu16-04-Server-install-CUDA/</id>
     <published>2017-07-22T09:27:31.000Z</published>
-    <updated>2017-08-16T02:14:29.945Z</updated>
+    <updated>2017-08-17T05:20:03.159Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;ubuntu16-04-Server-安装CUDA&quot;&gt;&lt;a href=&quot;#ubuntu16-04-Server-安装CUDA&quot; class=&quot;headerlink&quot; title=&quot;ubuntu16.04 Server 安装CUDA&quot;&gt;&lt;/a&gt;ubuntu16.04
+      &lt;h1 id=&quot;ubuntu16-04-Server-安装CUDA&quot;&gt;&lt;a href=&quot;#ubuntu16-04-Server-安装CUDA&quot; class=&quot;headerlink&quot; title=&quot;ubuntu16.04 Server 安装CUDA&quot;&gt;&lt;/a&gt;ubuntu16.04 Server 安装CUDA&lt;/h1&gt;&lt;p&gt;在安装CUDA的时候经常会遇到CUDA安装失败的情况，一般遇到的不允许第三方软件的安装，或者是自带的驱动nouveau的存在。&lt;/p&gt;
+&lt;h2 id=&quot;允许第三方软件的安装&quot;&gt;&lt;a href=&quot;#允许第三方软件的安装&quot; class=&quot;headerlink&quot; title=&quot;允许第三方软件的安装&quot;&gt;&lt;/a&gt;允许第三方软件的安装&lt;/h2&gt;&lt;p&gt;这个需要自己重启电脑进入bios系统中去关闭UEFI的安全启动/安全引导&lt;br&gt;
     
     </summary>
     
@@ -296,11 +326,11 @@
     <link href="https://huanghailiang.github.io/2017/07/21/hello-world/"/>
     <id>https://huanghailiang.github.io/2017/07/21/hello-world/</id>
     <published>2017-07-20T16:00:00.000Z</published>
-    <updated>2017-08-16T02:14:29.942Z</updated>
+    <updated>2017-08-17T05:19:30.808Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;
     
     </summary>
     

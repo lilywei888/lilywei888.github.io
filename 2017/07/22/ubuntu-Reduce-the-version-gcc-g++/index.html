@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Darren">
 <meta property="og:description" content="有时候我们在跑别人的程序的时候发现自己编译器的版本过高以至于不能运行，这个时候我们就需要降低编译器的版本。 首先安装低版本的编译器这里由于本人用的ubuntu16.04所以编译器自带的是gcc-5.4和g++-5.4,但是需要低版本的，经过测试现在还可以安装4.7的版本 sudo apt-get install gcc-4.7 gcc-4.7-multilib g++-4.7 g++-4.7-mu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-16T02:14:29.944Z">
+<meta property="og:updated_time" content="2017-08-17T05:20:22.951Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu环境下降低gcc和g++的版本------by黄海亮">
 <meta name="twitter:description" content="有时候我们在跑别人的程序的时候发现自己编译器的版本过高以至于不能运行，这个时候我们就需要降低编译器的版本。 首先安装低版本的编译器这里由于本人用的ubuntu16.04所以编译器自带的是gcc-5.4和g++-5.4,但是需要低版本的，经过测试现在还可以安装4.7的版本 sudo apt-get install gcc-4.7 gcc-4.7-multilib g++-4.7 g++-4.7-mu">
@@ -329,7 +329,8 @@
         <p>有时候我们在跑别人的程序的时候发现自己编译器的版本过高以至于不能运行，这个时候我们就需要降低编译器的版本。</p>
 <h1 id="首先安装低版本的编译器"><a href="#首先安装低版本的编译器" class="headerlink" title="首先安装低版本的编译器"></a>首先安装低版本的编译器</h1><p>这里由于本人用的ubuntu16.04所以编译器自带的是gcc-5.4和g++-5.4,但是需要低版本的，经过测试现在还可以安装4.7的版本</p>
 <pre><code>sudo apt-get install gcc-4.7 gcc-4.7-multilib g++-4.7 g++-4.7-multilib
-</code></pre><h1 id="配置级别"><a href="#配置级别" class="headerlink" title="配置级别"></a>配置级别</h1><pre><code>sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 50
+</code></pre><a id="more"></a>
+<h1 id="配置级别"><a href="#配置级别" class="headerlink" title="配置级别"></a>配置级别</h1><pre><code>sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 50
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 40
 </code></pre><p>接着输入</p>
 <pre><code>sudo update-alternatives --config gcc

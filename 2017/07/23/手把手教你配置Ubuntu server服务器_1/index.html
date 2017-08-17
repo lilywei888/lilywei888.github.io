@@ -96,13 +96,13 @@
 
 
 
-<meta name="description" content="手把手教你配置Ubuntu server服务器近期实验室来了台新的服务器，第一次从头到尾把配置过程走了一遍，特来此总结一番，希望可以帮助到想入坑的童鞋。我将从以下几个方面来总结配置服务器的过程(系统版本为Ubuntu server 16.04)  Ubuntu server 16.04 安装教程 服务器多硬盘挂载 设置服务器网络 管理服务器用户 安装远程图形界面x2go   Ubuntu serv">
+<meta name="description" content="手把手教你配置Ubuntu server服务器近期实验室来了台新的服务器，第一次从头到尾把配置过程走了一遍，特来此总结一番，希望可以帮助到想入坑的童鞋。我将从以下几个方面来总结配置服务器的过程(系统版本为Ubuntu server 16.04)  Ubuntu server 16.04 安装教程 服务器多硬盘挂载 设置服务器网络 管理服务器用户 安装远程图形界面x2go">
 <meta name="keywords" content="手把手教你配置Ubuntu server服务器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu server 16.04 安装教程------by邵碧尧">
 <meta property="og:url" content="https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_1/index.html">
 <meta property="og:site_name" content="Darren">
-<meta property="og:description" content="手把手教你配置Ubuntu server服务器近期实验室来了台新的服务器，第一次从头到尾把配置过程走了一遍，特来此总结一番，希望可以帮助到想入坑的童鞋。我将从以下几个方面来总结配置服务器的过程(系统版本为Ubuntu server 16.04)  Ubuntu server 16.04 安装教程 服务器多硬盘挂载 设置服务器网络 管理服务器用户 安装远程图形界面x2go   Ubuntu serv">
+<meta property="og:description" content="手把手教你配置Ubuntu server服务器近期实验室来了台新的服务器，第一次从头到尾把配置过程走了一遍，特来此总结一番，希望可以帮助到想入坑的童鞋。我将从以下几个方面来总结配置服务器的过程(系统版本为Ubuntu server 16.04)  Ubuntu server 16.04 安装教程 服务器多硬盘挂载 设置服务器网络 管理服务器用户 安装远程图形界面x2go">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://img.blog.csdn.net/20170706160133736?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUm9nZXIxNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170706160043376?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUm9nZXIxNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
@@ -125,10 +125,10 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20170706164143362?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUm9nZXIxNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170706164247665?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUm9nZXIxNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170706164317696?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUm9nZXIxNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-08-16T02:14:29.948Z">
+<meta property="og:updated_time" content="2017-08-17T05:21:46.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu server 16.04 安装教程------by邵碧尧">
-<meta name="twitter:description" content="手把手教你配置Ubuntu server服务器近期实验室来了台新的服务器，第一次从头到尾把配置过程走了一遍，特来此总结一番，希望可以帮助到想入坑的童鞋。我将从以下几个方面来总结配置服务器的过程(系统版本为Ubuntu server 16.04)  Ubuntu server 16.04 安装教程 服务器多硬盘挂载 设置服务器网络 管理服务器用户 安装远程图形界面x2go   Ubuntu serv">
+<meta name="twitter:description" content="手把手教你配置Ubuntu server服务器近期实验室来了台新的服务器，第一次从头到尾把配置过程走了一遍，特来此总结一番，希望可以帮助到想入坑的童鞋。我将从以下几个方面来总结配置服务器的过程(系统版本为Ubuntu server 16.04)  Ubuntu server 16.04 安装教程 服务器多硬盘挂载 设置服务器网络 管理服务器用户 安装远程图形界面x2go">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20170706160133736?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvUm9nZXIxNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
@@ -357,6 +357,7 @@
 <li><strong>安装远程图形界面<em>x2go</em></strong></li>
 </ul>
 <hr>
+<a id="more"></a>
 <h2 id="Ubuntu-server-16-04-安装教程"><a href="#Ubuntu-server-16-04-安装教程" class="headerlink" title="Ubuntu server 16.04 安装教程"></a>Ubuntu server 16.04 安装教程</h2><hr>
 <h3 id="Ubuntu-server-16-04-启动U盘制作"><a href="#Ubuntu-server-16-04-启动U盘制作" class="headerlink" title="Ubuntu server 16.04 启动U盘制作"></a>Ubuntu server 16.04 启动U盘制作</h3><p>用装系统，没启用U盘怎么行呢！Ubuntu系统的启动U盘制作非常简单，首先从<a href="https://www.ubuntu.com/download/server" target="_blank" rel="external">官网</a>下载对应版本的系统镜像文件，下一步你需要一个空白的U盘，用于写入镜像文件，如果U盘中有资料千万做好备份。写入镜像文件的软件可以使用<a href="https://cn.ultraiso.net/xiazai.html" target="_blank" rel="external">软碟通</a>。</p>
 <p>用软碟通打开镜像文件</p>

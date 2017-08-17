@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Darren">
 <meta property="og:description" content="hadoop集群安装准备工作Hadoop 集群的安装配置大致为如下流程: 1、选定一台机器作为 Master 2、在 Master 节点上配置 hadoop 用户、安装 SSH server、安装 Java 环境 3、在 Master 节点上安装 Hadoop，并完成配置 4、在其他 Slave 节点上配置 hadoop 用户、安装 SSH server、安装 Java 环境 5、将 Master">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-16T12:50:52.203Z">
+<meta property="og:updated_time" content="2017-08-17T05:19:08.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hadoop集群安装配置教程------by黄海亮">
 <meta name="twitter:description" content="hadoop集群安装准备工作Hadoop 集群的安装配置大致为如下流程: 1、选定一台机器作为 Master 2、在 Master 节点上配置 hadoop 用户、安装 SSH server、安装 Java 环境 3、在 Master 节点上安装 Hadoop，并完成配置 4、在其他 Slave 节点上配置 hadoop 用户、安装 SSH server、安装 Java 环境 5、将 Master">
@@ -333,7 +333,8 @@
 4、在其他 Slave 节点上配置 hadoop 用户、安装 SSH server、安装 Java 环境
 5、将 Master 节点上的 /usr/local/hadoop 目录复制到其他 Slave 节点上
 6、在 Master 节点上开启 Hadoop
-</code></pre><h2 id="创建hadoop账户"><a href="#创建hadoop账户" class="headerlink" title="创建hadoop账户"></a>创建hadoop账户</h2><p>添加用户：</p>
+</code></pre><a id="more"></a>
+<h2 id="创建hadoop账户"><a href="#创建hadoop账户" class="headerlink" title="创建hadoop账户"></a>创建hadoop账户</h2><p>添加用户：</p>
 <pre><code>sudo useradd -m hadoop -s /bin/bash
 </code></pre><p>给用户设置密码：</p>
 <pre><code>sudo passwd hadoop

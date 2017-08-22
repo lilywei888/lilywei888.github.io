@@ -237,18 +237,18 @@
     <link href="https://huanghailiang.github.io/2017/08/15/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%8D%9A%E5%AE%A2/"/>
     <id>https://huanghailiang.github.io/2017/08/15/搭建自己的github博客/</id>
     <published>2017-08-15T02:06:00.000Z</published>
-    <updated>2017-08-17T07:19:27.086Z</updated>
+    <updated>2017-08-22T12:41:13.770Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;可以根据博客中的hello-world文件中讲述的安装&quot;&gt;&lt;a href=&quot;#可以根据博客中的hello-world文件中讲述的安装&quot; class=&quot;headerlink&quot; title=&quot;可以根据博客中的hello-world文件中讲述的安装&quot;&gt;&lt;/a&gt;可以根据博客中的hello-world文件中讲述的安装&lt;/h1&gt;&lt;h2 id=&quot;下面是一些详细的步骤&quot;&gt;&lt;a href=&quot;#下面是一些详细的步骤&quot; class=&quot;headerlink&quot; title=&quot;下面是一些详细的步骤&quot;&gt;&lt;/a&gt;下面是一些详细的步骤&lt;/h2&gt;&lt;p&gt;1、安装node,可以去node的官网直接下载 &lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://nodejs.org/en/&lt;/a&gt; （这里我下载的是node-v6.11.1-x64）&lt;br&gt;2、安装hexo，可以打开cmd终端输入&lt;/p&gt;
+      &lt;h1 id=&quot;可以根据博客中的hello-world文件中讲述的安装&quot;&gt;&lt;a href=&quot;#可以根据博客中的hello-world文件中讲述的安装&quot; class=&quot;headerlink&quot; title=&quot;可以根据博客中的hello-world文件中讲述的安装&quot;&gt;&lt;/a&gt;可以根据博客中的hello-world文件中讲述的安装&lt;/h1&gt;&lt;h1 id=&quot;下面是一些详细的步骤&quot;&gt;&lt;a href=&quot;#下面是一些详细的步骤&quot; class=&quot;headerlink&quot; title=&quot;下面是一些详细的步骤&quot;&gt;&lt;/a&gt;下面是一些详细的步骤&lt;/h1&gt;&lt;p&gt;1、安装node,可以去node的官网直接下载 &lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://nodejs.org/en/&lt;/a&gt; （这里我下载的是node-v6.11.1-x64）&lt;br&gt;2、安装hexo，可以打开cmd终端输入&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;npm install -g hexo-cli
 &lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
     
-      <category term="Start a blog" scheme="https://huanghailiang.github.io/tags/Start-a-blog/"/>
+      <category term="搭建自己的github博客" scheme="https://huanghailiang.github.io/tags/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   

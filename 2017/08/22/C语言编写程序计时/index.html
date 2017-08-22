@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Ubuntu," />
+  <meta name="keywords" content="常用的C语言小程序代码," />
 
 
 
@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="我们在windows上安装ubuntu双系统的时候，ubuntu的引导会默认先进入ubuntu系统，这对于那些想使用ubuntu但是并不常用ubuntu系统的人有一些不方便。在网上我有看到EaseBCD这个软件可以用来管理启动项的。但是因为个人之前和身边的朋友使用过，感觉其实并没有解决用户的问题，不安装EaseBCD的时候只用进入一次选择界面，而安装完EaseBCD的时候我们竟然需要进入两次引导界">
-<meta name="keywords" content="Ubuntu">
+<meta name="description" content="C语言编写程序计时在我们编程的时候，有时候需要我们去监测程序运行的时间问题，尤其是在做加速或者做优化的时候，一个程序运行的时间也许就是我们判断程序好坏的标准，所以我们有时候要进行计时。（因为用到了，所以做个记录方便下次查看）">
+<meta name="keywords" content="常用的C语言小程序代码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="双系统时ubuntu更改开机引导">
-<meta property="og:url" content="https://huanghailiang.github.io/2017/07/22/双系统时ubuntu更改开机引导/index.html">
+<meta property="og:title" content="C语言编写程序计时">
+<meta property="og:url" content="https://huanghailiang.github.io/2017/08/22/C语言编写程序计时/index.html">
 <meta property="og:site_name" content="Darren">
-<meta property="og:description" content="我们在windows上安装ubuntu双系统的时候，ubuntu的引导会默认先进入ubuntu系统，这对于那些想使用ubuntu但是并不常用ubuntu系统的人有一些不方便。在网上我有看到EaseBCD这个软件可以用来管理启动项的。但是因为个人之前和身边的朋友使用过，感觉其实并没有解决用户的问题，不安装EaseBCD的时候只用进入一次选择界面，而安装完EaseBCD的时候我们竟然需要进入两次引导界">
+<meta property="og:description" content="C语言编写程序计时在我们编程的时候，有时候需要我们去监测程序运行的时间问题，尤其是在做加速或者做优化的时候，一个程序运行的时间也许就是我们判断程序好坏的标准，所以我们有时候要进行计时。（因为用到了，所以做个记录方便下次查看）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-17T07:19:57.716Z">
+<meta property="og:updated_time" content="2017-08-22T12:55:00.386Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="双系统时ubuntu更改开机引导">
-<meta name="twitter:description" content="我们在windows上安装ubuntu双系统的时候，ubuntu的引导会默认先进入ubuntu系统，这对于那些想使用ubuntu但是并不常用ubuntu系统的人有一些不方便。在网上我有看到EaseBCD这个软件可以用来管理启动项的。但是因为个人之前和身边的朋友使用过，感觉其实并没有解决用户的问题，不安装EaseBCD的时候只用进入一次选择界面，而安装完EaseBCD的时候我们竟然需要进入两次引导界">
+<meta name="twitter:title" content="C语言编写程序计时">
+<meta name="twitter:description" content="C语言编写程序计时在我们编程的时候，有时候需要我们去监测程序运行的时间问题，尤其是在做加速或者做优化的时候，一个程序运行的时间也许就是我们判断程序好坏的标准，所以我们有时候要进行计时。（因为用到了，所以做个记录方便下次查看）">
 
 
 
@@ -136,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://huanghailiang.github.io/2017/07/22/双系统时ubuntu更改开机引导/"/>
+  <link rel="canonical" href="https://huanghailiang.github.io/2017/08/22/C语言编写程序计时/"/>
 
 
 
 
 
-  <title>双系统时ubuntu更改开机引导 | Darren</title>
+  <title>C语言编写程序计时 | Darren</title>
   
 
 
@@ -269,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://huanghailiang.github.io/2017/07/22/双系统时ubuntu更改开机引导/">
+    <link itemprop="mainEntityOfPage" href="https://huanghailiang.github.io/2017/08/22/C语言编写程序计时/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Darren">
@@ -286,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">双系统时ubuntu更改开机引导</h1>
+          <h1 class="post-title" itemprop="name headline">C语言编写程序计时</h1>
         
 
         <div class="post-meta">
@@ -298,8 +298,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T17:46:31+08:00">
-                2017-07-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-22T20:45:04+08:00">
+                2017-08-22
               </time>
             
 
@@ -336,11 +336,10 @@
       
 
       
-        <p>我们在windows上安装ubuntu双系统的时候，ubuntu的引导会默认先进入ubuntu系统，这对于那些想使用ubuntu但是并不常用ubuntu系统的人有一些不方便。<br>在网上我有看到EaseBCD这个软件可以用来管理启动项的。<br>但是因为个人之前和身边的朋友使用过，感觉其实并没有解决用户的问题，不安装EaseBCD的时候只用进入一次选择界面，而安装完EaseBCD的时候我们竟然需要进入两次引导界面，这就很不方便。（此处之争对ubuntu其他的双系统也许EaseBCD会更加方便些）另外之前一个朋友发现这个地方很不方便，于是就卸载了EaseBCD结果他的系统完全进不去了，最后在大神的指导下才修复进入了windows系统。<br><a id="more"></a><br>说了这么多到底如何更改启动项呢？其实使用ubuntu自带的系统文件就可以了。</p>
-<h1 id="根据ubuntu自带的系统文件就可以修改启动顺序"><a href="#根据ubuntu自带的系统文件就可以修改启动顺序" class="headerlink" title="根据ubuntu自带的系统文件就可以修改启动顺序"></a>根据ubuntu自带的系统文件就可以修改启动顺序</h1><p>进入系统文件</p>
-<pre><code>sudo vim /etc/default/grub
-</code></pre><p>进去之后找到GRUB_DEFAULT，它代表启动顺序。<br>然后后面的数字需要根据自己电脑开机时显示的顺序进行选择<br>当然里面还有很多的文件，还可以修改其他的参数，比如，选择界面等待的时间等（默认是10s,如果觉得开机时间太久了，可以自行更改的）</p>
-
+        <h1 id="C语言编写程序计时"><a href="#C语言编写程序计时" class="headerlink" title="C语言编写程序计时"></a>C语言编写程序计时</h1><p>在我们编程的时候，有时候需要我们去监测程序运行的时间问题，尤其是在做加速或者做优化的时候，一个程序运行的时间也许就是我们判断程序好坏的标准，所以我们有时候要进行计时。（因为用到了，所以做个记录方便下次查看）</p>
+<a id="more"></a>
+<h2 id="在windows上进行计时"><a href="#在windows上进行计时" class="headerlink" title="在windows上进行计时"></a>在windows上进行计时</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span></span></div><div class="line"></div><div class="line"><span class="keyword">clock_t</span> start_time, finish_time;<span class="comment">/*计时*/</span></div><div class="line"><span class="keyword">double</span> cord_time;<span class="comment">/*计时*/</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	start_time = clock();<span class="comment">/*****************************计时开始***********************************/</span></div><div class="line">    <span class="comment">/*******************/</span></div><div class="line">    <span class="comment">/*这里编写程序*/</span></div><div class="line">    <span class="comment">/*******************/</span></div><div class="line">    finish_time = clock();<span class="comment">/***************************计时结束***********************************/</span></div><div class="line">     <span class="comment">//显示总的用时</span></div><div class="line">	cord_time = (<span class="keyword">double</span>)(finish_time - start_time) ;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"time=%f ms\n"</span>, cord_time);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="在linux上进行计时"><a href="#在linux上进行计时" class="headerlink" title="在linux上进行计时"></a>在linux上进行计时</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/time.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">time_substract</span><span class="params">(struct timeval *result, struct timeval *begin,struct timeval *end)</span></span></div><div class="line"><span class="function"></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(begin-&gt;tv_sec &gt; end-&gt;tv_sec)    <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    <span class="keyword">if</span>((begin-&gt;tv_sec == end-&gt;tv_sec) &amp;&amp; (begin-&gt;tv_usec &gt; end-&gt;tv_usec)) <span class="keyword">return</span> <span class="number">-2</span>;</div><div class="line">    result-&gt;tv_sec = (end-&gt;tv_sec - begin-&gt;tv_sec);</div><div class="line">    result-&gt;tv_usec = (end-&gt;tv_usec - begin-&gt;tv_usec);</div><div class="line">    <span class="keyword">if</span>(result-&gt;tv_usec &lt; <span class="number">0</span>)</div><div class="line">    &#123;</div><div class="line">        result-&gt;tv_sec--;</div><div class="line">        result-&gt;tv_usec += <span class="number">1000000</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">timeval</span> <span class="title">start</span>,<span class="title">stop</span>,<span class="title">diff</span>;</span></div><div class="line">    <span class="built_in">memset</span>(&amp;start,<span class="number">0</span>,<span class="keyword">sizeof</span>(struct timeval));</div><div class="line">    <span class="built_in">memset</span>(&amp;stop,<span class="number">0</span>,<span class="keyword">sizeof</span>(struct timeval));</div><div class="line">    <span class="built_in">memset</span>(&amp;diff,<span class="number">0</span>,<span class="keyword">sizeof</span>(struct timeval));</div><div class="line">    gettimeofday(&amp;start,<span class="number">0</span>);</div><div class="line">    <span class="comment">/*******************/</span></div><div class="line">    <span class="comment">/*这里编写程序*/</span></div><div class="line">    <span class="comment">/*******************/</span></div><div class="line">    gettimeofday(&amp;stop,<span class="number">0</span>);</div><div class="line">    time_substract(&amp;diff,&amp;start,&amp;stop);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"Total time : %d s,%d us\n"</span>,(<span class="keyword">int</span>)diff.tv_sec,(<span class="keyword">int</span>)diff.tv_usec);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -357,7 +356,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+            <a href="/tags/常用的C语言小程序代码/" rel="tag"># 常用的C语言小程序代码</a>
           
         </div>
       
@@ -370,8 +369,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/22/ubuntu-Reduce-the-version-gcc-g++/" rel="next" title="ubuntu环境下降低gcc和g++的版本">
-                <i class="fa fa-chevron-left"></i> ubuntu环境下降低gcc和g++的版本
+              <a href="/2017/08/22/C-语言TXT文件的读写/" rel="next" title="C 语言TXT文件的读写">
+                <i class="fa fa-chevron-left"></i> C 语言TXT文件的读写
               </a>
             
           </div>
@@ -379,10 +378,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/22/ubuntu密钥登录教程/" rel="prev" title="ubuntu密钥登录教程">
-                ubuntu密钥登录教程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -545,7 +540,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#根据ubuntu自带的系统文件就可以修改启动顺序"><span class="nav-number">1.</span> <span class="nav-text">根据ubuntu自带的系统文件就可以修改启动顺序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C语言编写程序计时"><span class="nav-number">1.</span> <span class="nav-text">C语言编写程序计时</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在windows上进行计时"><span class="nav-number">1.1.</span> <span class="nav-text">在windows上进行计时</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在linux上进行计时"><span class="nav-number">1.2.</span> <span class="nav-text">在linux上进行计时</span></a></li></ol></li></ol></div>
             
 
           </div>

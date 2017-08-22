@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huanghailiang.github.io/"/>
-  <updated>2017-08-22T12:36:17.106Z</updated>
+  <updated>2017-08-22T12:55:00.386Z</updated>
   <id>https://huanghailiang.github.io/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C语言编写程序计时</title>
+    <link href="https://huanghailiang.github.io/2017/08/22/C%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%97%B6/"/>
+    <id>https://huanghailiang.github.io/2017/08/22/C语言编写程序计时/</id>
+    <published>2017-08-22T12:45:04.000Z</published>
+    <updated>2017-08-22T12:55:00.386Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;C语言编写程序计时&quot;&gt;&lt;a href=&quot;#C语言编写程序计时&quot; class=&quot;headerlink&quot; title=&quot;C语言编写程序计时&quot;&gt;&lt;/a&gt;C语言编写程序计时&lt;/h1&gt;&lt;p&gt;在我们编程的时候，有时候需要我们去监测程序运行的时间问题，尤其是在做加速或者做优化的时候，一个程序运行的时间也许就是我们判断程序好坏的标准，所以我们有时候要进行计时。（因为用到了，所以做个记录方便下次查看）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="常用的C语言小程序代码" scheme="https://huanghailiang.github.io/tags/%E5%B8%B8%E7%94%A8%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>C 语言TXT文件的读写</title>
@@ -382,24 +400,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;Ubuntu-系统设置密钥登陆&quot;&gt;&lt;a href=&quot;#Ubuntu-系统设置密钥登陆&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu 系统设置密钥登陆&quot;&gt;&lt;/a&gt;Ubuntu 系统设置密钥登陆&lt;/h1&gt;&lt;p&gt;本文主要参考文档&lt;br&gt;    &lt;a href=&quot;http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html&lt;/a&gt;&lt;br&gt;    &lt;a href=&quot;http://blog.csdn.net/kenhins/article/details/51585565&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/kenhins/article/details/51585565&lt;/a&gt;&lt;br&gt;自己简单整理留作备份以备后期查看&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu密钥登录教程</title>
-    <link href="https://huanghailiang.github.io/2017/07/22/ubuntu%E5%AF%86%E9%92%A5%E7%99%BB%E5%BD%95%E6%95%99%E7%A8%8B/"/>
-    <id>https://huanghailiang.github.io/2017/07/22/ubuntu密钥登录教程/</id>
-    <published>2017-07-22T09:48:31.000Z</published>
-    <updated>2017-08-17T07:19:16.621Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ubuntu密钥登录教程&quot;&gt;&lt;a href=&quot;#ubuntu密钥登录教程&quot; class=&quot;headerlink&quot; title=&quot;ubuntu密钥登录教程&quot;&gt;&lt;/a&gt;ubuntu密钥登录教程&lt;/h1&gt;&lt;h2 id=&quot;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot;&gt;&lt;a href=&quot;#上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot; class=&quot;headerlink&quot; title=&quot;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot;&gt;&lt;/a&gt;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&lt;/h2&gt;&lt;h3 id=&quot;本文使用XShell进行远程连接&quot;&gt;&lt;a href=&quot;#本文使用XShell进行远程连接&quot; class=&quot;headerlink&quot; title=&quot;本文使用XShell进行远程连接&quot;&gt;&lt;/a&gt;本文使用XShell进行远程连接&lt;/h3&gt;&lt;h3 id=&quot;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot;&gt;&lt;a href=&quot;#使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot; class=&quot;headerlink&quot; title=&quot;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot;&gt;&lt;/a&gt;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&lt;/h3&gt;
     
     </summary>
     

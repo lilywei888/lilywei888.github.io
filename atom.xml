@@ -391,15 +391,15 @@
   </entry>
   
   <entry>
-    <title>ubuntu密钥登录教程</title>
-    <link href="https://huanghailiang.github.io/2017/07/22/ubuntu%E5%AF%86%E9%92%A5%E7%99%BB%E5%BD%95%E6%95%99%E7%A8%8B/"/>
-    <id>https://huanghailiang.github.io/2017/07/22/ubuntu密钥登录教程/</id>
+    <title>Ubuntu 系统设置密钥登陆</title>
+    <link href="https://huanghailiang.github.io/2017/07/22/Ubuntu%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE%E5%AF%86%E9%92%A5%E7%99%BB%E9%99%86/"/>
+    <id>https://huanghailiang.github.io/2017/07/22/Ubuntu 系统设置密钥登陆/</id>
     <published>2017-07-22T09:48:31.000Z</published>
-    <updated>2017-08-17T07:19:16.621Z</updated>
+    <updated>2017-08-17T07:18:55.045Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;ubuntu密钥登录教程&quot;&gt;&lt;a href=&quot;#ubuntu密钥登录教程&quot; class=&quot;headerlink&quot; title=&quot;ubuntu密钥登录教程&quot;&gt;&lt;/a&gt;ubuntu密钥登录教程&lt;/h1&gt;&lt;h2 id=&quot;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot;&gt;&lt;a href=&quot;#上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot; class=&quot;headerlink&quot; title=&quot;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&quot;&gt;&lt;/a&gt;上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。&lt;/h2&gt;&lt;h3 id=&quot;本文使用XShell进行远程连接&quot;&gt;&lt;a href=&quot;#本文使用XShell进行远程连接&quot; class=&quot;headerlink&quot; title=&quot;本文使用XShell进行远程连接&quot;&gt;&lt;/a&gt;本文使用XShell进行远程连接&lt;/h3&gt;&lt;h3 id=&quot;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot;&gt;&lt;a href=&quot;#使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot; class=&quot;headerlink&quot; title=&quot;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&quot;&gt;&lt;/a&gt;使用WinSCP来进行ubuntu与ubuntu之间的文件的传输&lt;/h3&gt;
+      &lt;h1 id=&quot;Ubuntu-系统设置密钥登陆&quot;&gt;&lt;a href=&quot;#Ubuntu-系统设置密钥登陆&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu 系统设置密钥登陆&quot;&gt;&lt;/a&gt;Ubuntu 系统设置密钥登陆&lt;/h1&gt;&lt;p&gt;本文主要参考文档&lt;br&gt;    &lt;a href=&quot;http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html&lt;/a&gt;&lt;br&gt;    &lt;a href=&quot;http://blog.csdn.net/kenhins/article/details/51585565&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/kenhins/article/details/51585565&lt;/a&gt;&lt;br&gt;自己简单整理留作备份以备后期查看&lt;br&gt;
     
     </summary>
     

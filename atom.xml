@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huanghailiang.github.io/"/>
-  <updated>2017-08-25T07:30:23.587Z</updated>
+  <updated>2017-08-25T08:11:23.590Z</updated>
   <id>https://huanghailiang.github.io/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vim操作</title>
+    <link href="https://huanghailiang.github.io/2017/08/25/vim%E6%93%8D%E4%BD%9C/"/>
+    <id>https://huanghailiang.github.io/2017/08/25/vim操作/</id>
+    <published>2017-08-25T08:07:16.000Z</published>
+    <updated>2017-08-25T08:11:23.590Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;vim的基本操作&quot;&gt;&lt;a href=&quot;#vim的基本操作&quot; class=&quot;headerlink&quot; title=&quot;vim的基本操作&quot;&gt;&lt;/a&gt;vim的基本操作&lt;/h1&gt;&lt;p&gt;本人在实验楼学习的时候摘抄下来的，留作自己的笔记。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="ubuntu基本操作" scheme="https://huanghailiang.github.io/tags/ubuntu%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>服务器安装问题补充（安装时Select and install software失败）</title>
@@ -375,32 +393,6 @@
       &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu server服务器&lt;/h1&gt;&lt;h2 id=&quot;服务器多硬盘挂载&quot;&gt;&lt;a href=&quot;#服务器多硬盘挂载&quot; class=&quot;headerlink&quot; title=&quot;服务器多硬盘挂载&quot;&gt;&lt;/a&gt;服务器多硬盘挂载&lt;/h2&gt;&lt;p&gt;现在科研中需要处理的数据量经常性会非常大，因此服务器基本都会采用固态硬盘加机械硬盘的解决方案来实现服务器性能和成本的平衡，系统装在固态中，用户数据和数据集存放在机械硬盘中。接下来就讲下如何挂载硬盘&lt;/p&gt;
 &lt;p&gt;参考网页：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://zwkufo.blog.163.com/blog/static/258825120141283942244/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://zwkufo.blog.163.com/blog/static/258825120141283942244/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.jianshu.com/p/5c12289dbcd1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/5c12289dbcd1&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="手把手教你配置Ubuntu server服务器" scheme="https://huanghailiang.github.io/tags/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu-server%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu server 16.04 安装教程------by邵碧尧</title>
-    <link href="https://huanghailiang.github.io/2017/07/23/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu%20server%E6%9C%8D%E5%8A%A1%E5%99%A8_1/"/>
-    <id>https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_1/</id>
-    <published>2017-07-23T08:10:31.000Z</published>
-    <updated>2017-08-17T05:21:46.455Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu server服务器&lt;/h1&gt;&lt;p&gt;近期实验室来了台新的服务器，第一次从头到尾把配置过程走了一遍，特来此总结一番，希望可以帮助到想入坑的童鞋。我将从以下几个方面来总结配置服务器的过程(系统版本为Ubuntu server 16.04)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Ubuntu server 16.04 安装教程&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;服务器多硬盘挂载&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;设置服务器网络&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;管理服务器用户&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;安装远程图形界面&lt;em&gt;x2go&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
     
     </summary>
     

@@ -105,7 +105,7 @@
 <meta property="og:description" content="服务器安装问题补充之前写好的服务器安装教程已经写好了，针对与大部分服务器的安装应该都可以正常安装了，但是近期安装实验室服务器的时候遇到了问题。安装时Select and install software失败，这个问题在以前没有遇到过，不过也有可能时启动盘做的有问题吧，不过是刚从ubuntu官网上下载的系统做的启动盘，有点迷，不过先记录一下好了。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://huanghailiang.github.io/images/服务器安装问题补充.jpg">
-<meta property="og:updated_time" content="2017-08-25T07:30:23.587Z">
+<meta property="og:updated_time" content="2017-08-26T07:18:04.825Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器安装问题补充（安装时Select and install software失败）">
 <meta name="twitter:description" content="服务器安装问题补充之前写好的服务器安装教程已经写好了，针对与大部分服务器的安装应该都可以正常安装了，但是近期安装实验室服务器的时候遇到了问题。安装时Select and install software失败，这个问题在以前没有遇到过，不过也有可能时启动盘做的有问题吧，不过是刚从ubuntu官网上下载的系统做的启动盘，有点迷，不过先记录一下好了。">
@@ -354,6 +354,17 @@
 <h4 id="无法自动补全命令"><a href="#无法自动补全命令" class="headerlink" title="无法自动补全命令"></a>无法自动补全命令</h4><p>为了提高我们的效率我们一般会用Tab键进行补全的，这个时候我在进行安装的时候install并不能自动补全，所以我进行如下操作：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt install bash-completion</div></pre></td></tr></table></figure>
 <p>然后重启就可以了，问题解决。</p>
+<h1 id="服务器的远程配置"><a href="#服务器的远程配置" class="headerlink" title="服务器的远程配置"></a>服务器的远程配置</h1><p>正常安装ubuntu系统的时候在出错的这一步我们其实是可以选择打开ssh远程登陆的，但是此时系统安装这一步出错了，我们应该怎么打开ssh远程登陆的，毕竟对于服务器我们不能每个人都坐在服务器前面插个显示器来用。</p>
+<h2 id="首先安装ssh"><a href="#首先安装ssh" class="headerlink" title="首先安装ssh"></a>首先安装ssh</h2><pre><code>sudo apt-get install openssh-server
+</code></pre><p>理论上来说安装了ssh以后服务器的ssh会自动打开的，如果不放心可以查看一下</p>
+<pre><code>ps -e |grep ssh
+</code></pre><p>如果看到sshd那说明ssh-server已经启动了。<br>如果没有则可以这样启动：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /etc/init.d/ssh start</div></pre></td></tr></table></figure>
+<p>或者<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service ssh start</div></pre></td></tr></table></figure></p>
+<p>ssh-server配置文件位于/etc/ssh/sshd_config，在这里可以定义SSH的服务端口，默认端口是22，你可以自己定义成其他端口号<br>然后重启SSH服务：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo /etc/init.d/ssh stop</div><div class="line">sudo /etc/init.d/ssh start</div></pre></td></tr></table></figure></p>
+<h2 id="禁用root登陆"><a href="#禁用root登陆" class="headerlink" title="禁用root登陆"></a>禁用root登陆</h2><p>其实这个也可以不禁用的，但是为了安全，我们一般都是禁用root直接远程登陆的。<br>禁用的方法：<br>修改/etc/ssh/ssh_config文件<br>将其中的PermitRootLogin改成no就可以了，不过如果配置文件中没有这个的话，也可以直接手动输入。<br>然后重启ssh服务就可以了</p>
+<pre><code>/etc/rc.d/sshd restart
+</code></pre><p>当然如果为了安全的话，其实我们可以直接禁用掉密码登陆，采取用密钥登陆的方式，这样更安全。因为其实你的密码很容易被别人截获的，这个可以参看之前的博客进行设置。<br>另外补充一句：其实咱们使用的账户及密码等信息保存在 /etc/passwd 以及 /etc/shadow 中，密码采用crypt（）算法加密保存了而已。</p>
 
       
     </div>
@@ -559,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#服务器安装问题补充"><span class="nav-number">1.</span> <span class="nav-text">服务器安装问题补充</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#先跳过该步骤"><span class="nav-number">1.1.</span> <span class="nav-text">先跳过该步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跳过后的问题及解决方案"><span class="nav-number">1.2.</span> <span class="nav-text">跳过后的问题及解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.2.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题解决"><span class="nav-number">1.2.2.</span> <span class="nav-text">问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无法找到安装包"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">无法找到安装包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#无法自动补全命令"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">无法自动补全命令</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#服务器安装问题补充"><span class="nav-number">1.</span> <span class="nav-text">服务器安装问题补充</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#先跳过该步骤"><span class="nav-number">1.1.</span> <span class="nav-text">先跳过该步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跳过后的问题及解决方案"><span class="nav-number">1.2.</span> <span class="nav-text">跳过后的问题及解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.2.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题解决"><span class="nav-number">1.2.2.</span> <span class="nav-text">问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无法找到安装包"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">无法找到安装包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#无法自动补全命令"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">无法自动补全命令</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务器的远程配置"><span class="nav-number">2.</span> <span class="nav-text">服务器的远程配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#首先安装ssh"><span class="nav-number">2.1.</span> <span class="nav-text">首先安装ssh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#禁用root登陆"><span class="nav-number">2.2.</span> <span class="nav-text">禁用root登陆</span></a></li></ol></li></ol></div>
             
 
           </div>

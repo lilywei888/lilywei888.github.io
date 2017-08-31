@@ -1089,33 +1089,6 @@ type: tags
     </entry>
     
     <entry>
-      <title><![CDATA[ubuntu密钥登录教程]]></title>
-      <url>/2017/07/22/ubuntu%E5%AF%86%E9%92%A5%E7%99%BB%E5%BD%95%E6%95%99%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<h1 id="ubuntu密钥登录教程"><a href="#ubuntu密钥登录教程" class="headerlink" title="ubuntu密钥登录教程"></a>ubuntu密钥登录教程</h1><h2 id="上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。"><a href="#上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。" class="headerlink" title="上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。"></a>上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。</h2><h3 id="本文使用XShell进行远程连接"><a href="#本文使用XShell进行远程连接" class="headerlink" title="本文使用XShell进行远程连接"></a>本文使用XShell进行远程连接</h3><h3 id="使用WinSCP来进行ubuntu与ubuntu之间的文件的传输"><a href="#使用WinSCP来进行ubuntu与ubuntu之间的文件的传输" class="headerlink" title="使用WinSCP来进行ubuntu与ubuntu之间的文件的传输"></a>使用WinSCP来进行ubuntu与ubuntu之间的文件的传输</h3><a id="more"></a>
-<h1 id="XShell"><a href="#XShell" class="headerlink" title="XShell"></a>XShell</h1><p>首先现在登录时输入密码那一栏已经变成了灰色，这个时候只能使用密匙登录了。<br><img src="http://img.blog.csdn.net/20170716230052647?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>拿到密钥的第一步可以先添加密钥<br><img src="http://img.blog.csdn.net/20170716230143712?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p><img src="http://img.blog.csdn.net/20170716230209146?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>找到自己密钥的路径即可<br><img src="http://img.blog.csdn.net/20170716230239310?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>密钥导入进来以后那个文件就可以不要了，当然如果还有其他地方需要的话还需要导入其他的地方，不过如果误删了不要方，旁边还有导出呢。<br>导入成功以后可以进入属性<br><img src="http://img.blog.csdn.net/20170716230314907?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>大家可以更改密码，初始密码都为空的，这个地方相当于你再给你的密钥又手动加了一层密码，当然也可以不加，因为我发现加了以后登录的时候还要你自己输入一遍。<br>属性上面还有一公钥，这个里面就是我们放到服务器中的东西，这个东西不要给别人，当然我给你们的密匙你们更不能给别人，否者别人就可以轻松的登录你的账号了。<br>剩下的登录方法更以前一样。</p>
-<h1 id="WinSCP"><a href="#WinSCP" class="headerlink" title="WinSCP"></a>WinSCP</h1><p>同样此时winscp用密码也登录不上了<br><img src="http://img.blog.csdn.net/20170716230438986?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>确认</p>
-<p>直接在之前建立的那个里面更改就好，点击编辑<br><img src="http://img.blog.csdn.net/20170716230513915?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>然后点高级<br><img src="http://img.blog.csdn.net/20170716230529320?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>验证<br><img src="http://img.blog.csdn.net/20170716230551613?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>然后添加密钥文件的路径<br><img src="http://img.blog.csdn.net/20170716230616590?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>右下角选择所有文件<br><img src="http://img.blog.csdn.net/20170716230644369?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>选择密匙<br>然后有一个格式转换，选择确定<br><img src="http://img.blog.csdn.net/20170716230702329?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>然后保存确定保存就完了，大功告成可以链接了。</p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> Ubuntu </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Ubuntu 系统设置密钥登陆]]></title>
       <url>/2017/07/22/Ubuntu%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE%E5%AF%86%E9%92%A5%E7%99%BB%E9%99%86/</url>
       <content type="html"><![CDATA[<h1 id="Ubuntu-系统设置密钥登陆"><a href="#Ubuntu-系统设置密钥登陆" class="headerlink" title="Ubuntu 系统设置密钥登陆"></a>Ubuntu 系统设置密钥登陆</h1><p>本文主要参考文档<br>    <a href="http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html" target="_blank" rel="external">http://www.downgle.com/zt/zqxouw0qwvstzrouysrloolz.html</a><br>    <a href="http://blog.csdn.net/kenhins/article/details/51585565" target="_blank" rel="external">http://blog.csdn.net/kenhins/article/details/51585565</a><br>自己简单整理留作备份以备后期查看<br><a id="more"></a><br>个人感觉用密钥登陆比用密码登陆安全很多，所以一旦生成密码之后一定不要将自己的密钥给别人，否者别人将很轻松的登陆你的账户，当然我发现如果你使用XShell远程连接ubuntu服务器的时候你可以再给密钥加上一层密码的。</p>
@@ -1142,6 +1115,33 @@ vim authorized_keys
 </code></pre><p>把自己生成的公钥复制进来就可以了<br>然后保存，并且更改文件模式</p>
 <pre><code>chmod 600 authorized_keys
 </code></pre><h3 id="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"><a href="#注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的" class="headerlink" title="注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的"></a>注意：有些时候复制的时候可能不全，尤其前面缺少几个字母，这个需要自己检查一下，否则登陆会不成功的</h3>]]></content>
+      
+        
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ubuntu密钥登录教程]]></title>
+      <url>/2017/07/22/ubuntu%E5%AF%86%E9%92%A5%E7%99%BB%E5%BD%95%E6%95%99%E7%A8%8B/</url>
+      <content type="html"><![CDATA[<h1 id="ubuntu密钥登录教程"><a href="#ubuntu密钥登录教程" class="headerlink" title="ubuntu密钥登录教程"></a>ubuntu密钥登录教程</h1><h2 id="上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。"><a href="#上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。" class="headerlink" title="上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。"></a>上文已经讲诉了ubuntu系统设置密匙登陆，接下来讲解一下如何登陆。</h2><h3 id="本文使用XShell进行远程连接"><a href="#本文使用XShell进行远程连接" class="headerlink" title="本文使用XShell进行远程连接"></a>本文使用XShell进行远程连接</h3><h3 id="使用WinSCP来进行ubuntu与ubuntu之间的文件的传输"><a href="#使用WinSCP来进行ubuntu与ubuntu之间的文件的传输" class="headerlink" title="使用WinSCP来进行ubuntu与ubuntu之间的文件的传输"></a>使用WinSCP来进行ubuntu与ubuntu之间的文件的传输</h3><a id="more"></a>
+<h1 id="XShell"><a href="#XShell" class="headerlink" title="XShell"></a>XShell</h1><p>首先现在登录时输入密码那一栏已经变成了灰色，这个时候只能使用密匙登录了。<br><img src="http://img.blog.csdn.net/20170716230052647?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>拿到密钥的第一步可以先添加密钥<br><img src="http://img.blog.csdn.net/20170716230143712?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20170716230209146?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>找到自己密钥的路径即可<br><img src="http://img.blog.csdn.net/20170716230239310?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>密钥导入进来以后那个文件就可以不要了，当然如果还有其他地方需要的话还需要导入其他的地方，不过如果误删了不要方，旁边还有导出呢。<br>导入成功以后可以进入属性<br><img src="http://img.blog.csdn.net/20170716230314907?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>大家可以更改密码，初始密码都为空的，这个地方相当于你再给你的密钥又手动加了一层密码，当然也可以不加，因为我发现加了以后登录的时候还要你自己输入一遍。<br>属性上面还有一公钥，这个里面就是我们放到服务器中的东西，这个东西不要给别人，当然我给你们的密匙你们更不能给别人，否者别人就可以轻松的登录你的账号了。<br>剩下的登录方法更以前一样。</p>
+<h1 id="WinSCP"><a href="#WinSCP" class="headerlink" title="WinSCP"></a>WinSCP</h1><p>同样此时winscp用密码也登录不上了<br><img src="http://img.blog.csdn.net/20170716230438986?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>确认</p>
+<p>直接在之前建立的那个里面更改就好，点击编辑<br><img src="http://img.blog.csdn.net/20170716230513915?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>然后点高级<br><img src="http://img.blog.csdn.net/20170716230529320?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>验证<br><img src="http://img.blog.csdn.net/20170716230551613?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>然后添加密钥文件的路径<br><img src="http://img.blog.csdn.net/20170716230616590?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>右下角选择所有文件<br><img src="http://img.blog.csdn.net/20170716230644369?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>选择密匙<br>然后有一个格式转换，选择确定<br><img src="http://img.blog.csdn.net/20170716230702329?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGFycmVuODE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>然后保存确定保存就完了，大功告成可以链接了。</p>
+]]></content>
       
         
         <tags>

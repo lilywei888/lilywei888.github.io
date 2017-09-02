@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huanghailiang.github.io/"/>
-  <updated>2017-09-02T09:11:36.621Z</updated>
+  <updated>2017-09-02T09:43:21.157Z</updated>
   <id>https://huanghailiang.github.io/</id>
   
   <author>
@@ -16,11 +16,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>图片转换成字符图</title>
+    <link href="https://huanghailiang.github.io/2017/09/02/%E5%9B%BE%E7%89%87%E8%BD%AC%E6%8D%A2%E6%88%90%E5%AD%97%E7%AC%A6%E5%9B%BE/"/>
+    <id>https://huanghailiang.github.io/2017/09/02/图片转换成字符图/</id>
+    <published>2017-09-02T09:33:11.000Z</published>
+    <updated>2017-09-02T09:43:21.157Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;图片转换成字符图&quot;&gt;&lt;a href=&quot;#图片转换成字符图&quot; class=&quot;headerlink&quot; title=&quot;图片转换成字符图&quot;&gt;&lt;/a&gt;图片转换成字符图&lt;/h1&gt;&lt;p&gt;因为之前写到了一些好玩的注释模板，当然网上有很多很多好玩的图片，我们不可能完全收集过来，当然也不可能正好有你自己所需要的图片，所以我们需要一个自己将图片转换成字符图的一个代码，这样我们就可以很方便的得到自己想得到的一些字符图。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="娱乐" scheme="https://huanghailiang.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>注释模板（仅供娱乐）</title>
     <link href="https://huanghailiang.github.io/2017/09/02/%E6%B3%A8%E9%87%8A%E6%A8%A1%E6%9D%BF%EF%BC%88%E4%BB%85%E4%BE%9B%E5%A8%B1%E4%B9%90%EF%BC%89/"/>
     <id>https://huanghailiang.github.io/2017/09/02/注释模板（仅供娱乐）/</id>
     <published>2017-09-02T08:57:39.000Z</published>
-    <updated>2017-09-02T09:11:36.621Z</updated>
+    <updated>2017-09-02T09:33:34.260Z</updated>
     
     <summary type="html">
     
@@ -29,7 +47,7 @@
     </summary>
     
     
-      <category term="注释模板（仅供娱乐）" scheme="https://huanghailiang.github.io/tags/%E6%B3%A8%E9%87%8A%E6%A8%A1%E6%9D%BF%EF%BC%88%E4%BB%85%E4%BE%9B%E5%A8%B1%E4%B9%90%EF%BC%89/"/>
+      <category term="娱乐" scheme="https://huanghailiang.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
     
   </entry>
   
@@ -373,24 +391,6 @@
     
       &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu server服务器&lt;/h1&gt;&lt;h2 id=&quot;管理服务器用户&quot;&gt;&lt;a href=&quot;#管理服务器用户&quot; class=&quot;headerlink&quot; title=&quot;管理服务器用户&quot;&gt;&lt;/a&gt;管理服务器用户&lt;/h2&gt;&lt;p&gt;管理服务器用户，一项一项开始说，首先要管理，当然要现有用户咯。添加用户我是用adduser 命令，相当于一个简单的交互过程，命令如下：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo adduser username&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="手把手教你配置Ubuntu server服务器" scheme="https://huanghailiang.github.io/tags/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu-server%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设置服务器网络------by邵碧尧</title>
-    <link href="https://huanghailiang.github.io/2017/07/23/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu%20server%E6%9C%8D%E5%8A%A1%E5%99%A8_3/"/>
-    <id>https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_3/</id>
-    <published>2017-07-23T08:15:31.000Z</published>
-    <updated>2017-08-17T05:22:16.192Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu server服务器&lt;/h1&gt;&lt;h2 id=&quot;设置服务器网络&quot;&gt;&lt;a href=&quot;#设置服务器网络&quot; class=&quot;headerlink&quot; title=&quot;设置服务器网络&quot;&gt;&lt;/a&gt;设置服务器网络&lt;/h2&gt;&lt;p&gt;之前两篇讲了服务器系统安装和硬盘挂载，这篇总结下网络设置。具体开始讲之前先说说如何实现其他人可以访问服务器。一种方法是由一个网口出来接路由器，用户都连接到路由器的网络上，不管是通过有线还是WiFi，把用户都归到同一个网络下。另一种方法就比较bug了，像清华大学那样，整个学校有线网和无线的Tsinghua都是同一个网络，所以就不需要路由器了，之前不知道还倒腾了很久。又有人要问了，那如何让外网的人可以访问服务器呢？不好意思，我没有研究过，另一个原因也是担心网络安全的问题，毕竟没有学过相关的知识，所以搭个服务器内部用就完了。如果有大神在这方面比较有研究，我也非常欢迎交流。（邮箱：shaobiyao@gmail.com）&lt;br&gt;
     
     </summary>
     

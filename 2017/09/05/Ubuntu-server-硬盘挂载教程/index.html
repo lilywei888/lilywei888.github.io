@@ -114,7 +114,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://huanghailiang.github.io/images/硬盘挂载教程1.png">
 <meta property="og:image" content="https://huanghailiang.github.io/images/硬盘挂载教程2.png">
-<meta property="og:updated_time" content="2017-09-05T01:44:52.647Z">
+<meta property="og:updated_time" content="2017-09-05T01:52:21.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu server 硬盘挂载教程">
 <meta name="twitter:description" content="Ubuntu server 硬盘挂载教程在我们使用服务器的时候，因为使用的人比较多，而且目前做机器学习的人比较多，然而机器学习那边需要训练一些数据，训练集比较大，这就对于我们服务器的存储能力是一个较大的体验，所以一块硬盘已经不能满足我们的需求，我们需要使用多块硬盘来一起存储我们的数据，但是Ubuntu系统要识别多块硬盘需要我们自己配置。">
@@ -423,7 +423,8 @@
 <p>  sudo mount –t ext4 /dev/sdb(想要挂载的硬盘) /devdata(目标挂载点)</p>
 <p>  结束后可以用sudo df –l 查看是否成功</p>
 <p>  5、 配置系统启动自动挂载，修改/etc/fstab文件，添加</p>
-<h1 id="devdata-was-on-dev-sdb"><a href="#devdata-was-on-dev-sdb" class="headerlink" title="/devdata was on /dev/sdb"></a>/devdata was on /dev/sdb</h1><p>  UUID=37eaa526-5d96-4237-8468-603df5216ce9  /devdata(挂载点)   ext4   defaults     0     0</p>
+<p>  /devdata was on /dev/sdb</p>
+<p>  UUID=37eaa526-5d96-4237-8468-603df5216ce9  /devdata(挂载点)   ext4   defaults     0     0</p>
 <p>  UUID通过sudo blkid 可以查看</p>
 <p>  其实好像输入/dev/sdb也是可以的，例如我在实验室服务器上面的挂载如下：</p>
 <img src="/images/硬盘挂载教程2.png">
@@ -633,7 +634,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ubuntu-server-硬盘挂载教程"><span class="nav-number">1.</span> <span class="nav-text">Ubuntu server 硬盘挂载教程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#硬盘挂载"><span class="nav-number">2.</span> <span class="nav-text">硬盘挂载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#devdata-was-on-dev-sdb"><span class="nav-number">3.</span> <span class="nav-text">/devdata was on /dev/sdb</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ubuntu-server-硬盘挂载教程"><span class="nav-number">1.</span> <span class="nav-text">Ubuntu server 硬盘挂载教程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#硬盘挂载"><span class="nav-number">2.</span> <span class="nav-text">硬盘挂载</span></a></li></ol></div>
             
 
           </div>

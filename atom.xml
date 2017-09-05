@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huanghailiang.github.io/"/>
-  <updated>2017-09-03T13:19:26.142Z</updated>
+  <updated>2017-09-05T01:37:45.121Z</updated>
   <id>https://huanghailiang.github.io/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu server 硬盘挂载教程</title>
+    <link href="https://huanghailiang.github.io/2017/09/05/Ubuntu-server-%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E6%95%99%E7%A8%8B/"/>
+    <id>https://huanghailiang.github.io/2017/09/05/Ubuntu-server-硬盘挂载教程/</id>
+    <published>2017-09-05T00:38:49.000Z</published>
+    <updated>2017-09-05T01:37:45.121Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Ubuntu-server-硬盘挂载教程&quot;&gt;&lt;a href=&quot;#Ubuntu-server-硬盘挂载教程&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu server 硬盘挂载教程&quot;&gt;&lt;/a&gt;Ubuntu server 硬盘挂载教程&lt;/h1&gt;&lt;p&gt;在我们使用服务器的时候，因为使用的人比较多，而且目前做机器学习的人比较多，然而机器学习那边需要训练一些数据，训练集比较大，这就对于我们服务器的存储能力是一个较大的体验，所以一块硬盘已经不能满足我们的需求，我们需要使用多块硬盘来一起存储我们的数据，但是Ubuntu系统要识别多块硬盘需要我们自己配置。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>Git本地库的建立与使用</title>
@@ -378,24 +396,6 @@
     
     
       <category term="深度学习环境搭建" scheme="https://huanghailiang.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装远程图形界面x2go------by邵碧尧</title>
-    <link href="https://huanghailiang.github.io/2017/07/23/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu%20server%E6%9C%8D%E5%8A%A1%E5%99%A8_5/"/>
-    <id>https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_5/</id>
-    <published>2017-07-23T08:25:31.000Z</published>
-    <updated>2017-08-17T05:22:39.743Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;手把手教你配置Ubuntu-server服务器&quot;&gt;&lt;a href=&quot;#手把手教你配置Ubuntu-server服务器&quot; class=&quot;headerlink&quot; title=&quot;手把手教你配置Ubuntu server服务器&quot;&gt;&lt;/a&gt;手把手教你配置Ubuntu server服务器&lt;/h1&gt;&lt;h2 id=&quot;安装远程图形界面x2go&quot;&gt;&lt;a href=&quot;#安装远程图形界面x2go&quot; class=&quot;headerlink&quot; title=&quot;安装远程图形界面x2go&quot;&gt;&lt;/a&gt;安装远程图形界面x2go&lt;/h2&gt;&lt;p&gt;Ubuntu server 安装完成只有命令行界面，一般的工作在Windows下用 &lt;a href=&quot;https://www.netsarang.com/products/xsh_overview.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;xshell&lt;/a&gt; 和 &lt;a href=&quot;https://winscp.net/eng/index.php&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;winscp&lt;/a&gt; ，一个输命令行，一个进行界面化文件管理，还是挺方便的， 但部分用户还是希望有个图形界面更加方便科研工作开展，这里推荐x2go这个轻量化桌面，安装也比较方便，下面就来介绍。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="手把手教你配置Ubuntu server服务器" scheme="https://huanghailiang.github.io/tags/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu-server%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   

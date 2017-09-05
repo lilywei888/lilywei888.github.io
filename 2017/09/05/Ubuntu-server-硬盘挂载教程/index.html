@@ -112,13 +112,13 @@
 <meta property="og:site_name" content="Darren">
 <meta property="og:description" content="Ubuntu server 硬盘挂载教程在我们使用服务器的时候，因为使用的人比较多，而且目前做机器学习的人比较多，然而机器学习那边需要训练一些数据，训练集比较大，这就对于我们服务器的存储能力是一个较大的体验，所以一块硬盘已经不能满足我们的需求，我们需要使用多块硬盘来一起存储我们的数据，但是Ubuntu系统要识别多块硬盘需要我们自己配置。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://huanghailiang.github.io/images/Ubuntu">
-<meta property="og:image" content="https://huanghailiang.github.io/images/Ubuntu">
-<meta property="og:updated_time" content="2017-09-05T01:37:45.121Z">
+<meta property="og:image" content="https://huanghailiang.github.io/images/硬盘挂载教程1.png">
+<meta property="og:image" content="https://huanghailiang.github.io/images/硬盘挂载教程2.png">
+<meta property="og:updated_time" content="2017-09-05T01:44:52.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu server 硬盘挂载教程">
 <meta name="twitter:description" content="Ubuntu server 硬盘挂载教程在我们使用服务器的时候，因为使用的人比较多，而且目前做机器学习的人比较多，然而机器学习那边需要训练一些数据，训练集比较大，这就对于我们服务器的存储能力是一个较大的体验，所以一块硬盘已经不能满足我们的需求，我们需要使用多块硬盘来一起存储我们的数据，但是Ubuntu系统要识别多块硬盘需要我们自己配置。">
-<meta name="twitter:image" content="https://huanghailiang.github.io/images/Ubuntu">
+<meta name="twitter:image" content="https://huanghailiang.github.io/images/硬盘挂载教程1.png">
 
 
 
@@ -416,7 +416,7 @@
 <p>参考网址：<a href="http://zwkufo.blog.163.com/blog/static/258825120141283942244/" target="_blank" rel="external">http://zwkufo.blog.163.com/blog/static/258825120141283942244/</a></p>
 <p><strong><em>由于前3种方法我没有亲自尝试，所以这里暂时先不说了，不过网上教程也有的，后面如果有机会的话，我可能会补充进来。所以这里我就简单说一些第四种方法好了。</em></strong></p>
 <h1 id="硬盘挂载"><a href="#硬盘挂载" class="headerlink" title="硬盘挂载"></a>硬盘挂载</h1><p>  1、 sudo fdisk –lu (查看当前硬盘及分区情况) 可以看到类似界面</p>
-<img src="/images/Ubuntu" title="server 硬盘挂载教程1.png">
+<img src="/images/硬盘挂载教程1.png">
 <p>  2、 sudo fdisk /dev/sdb(这里为想要挂载的硬盘名称)，利用该命令可以对硬盘进行分区，具体可以参考网址中的讲解更加详细</p>
 <p>  3、 sudo mkfs –t ext4 /dev/sdb(硬盘格式化，-t ext4 表示将分区格式化成ext4文件系统类型)</p>
 <p>  4、 sudo df –l(显示硬盘挂载情况)</p>
@@ -426,7 +426,7 @@
 <h1 id="devdata-was-on-dev-sdb"><a href="#devdata-was-on-dev-sdb" class="headerlink" title="/devdata was on /dev/sdb"></a>/devdata was on /dev/sdb</h1><p>  UUID=37eaa526-5d96-4237-8468-603df5216ce9  /devdata(挂载点)   ext4   defaults     0     0</p>
 <p>  UUID通过sudo blkid 可以查看</p>
 <p>  其实好像输入/dev/sdb也是可以的，例如我在实验室服务器上面的挂载如下：</p>
-<img src="/images/Ubuntu" title="server 硬盘挂载教程2.png">
+<img src="/images/硬盘挂载教程2.png">
 
       
     </div>

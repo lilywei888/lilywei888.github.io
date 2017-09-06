@@ -38,11 +38,11 @@
     <link href="https://huanghailiang.github.io/2017/09/06/%E7%94%9F%E6%88%90%E5%93%88%E8%BE%BE%E7%8E%9B%E7%9F%A9%E9%98%B5/"/>
     <id>https://huanghailiang.github.io/2017/09/06/生成哈达玛矩阵/</id>
     <published>2017-09-06T07:17:40.000Z</published>
-    <updated>2017-09-06T07:36:22.137Z</updated>
+    <updated>2017-09-06T07:41:47.668Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;哈达玛矩阵是什么&quot;&gt;&lt;a href=&quot;#哈达玛矩阵是什么&quot; class=&quot;headerlink&quot; title=&quot;哈达玛矩阵是什么&quot;&gt;&lt;/a&gt;哈达玛矩阵是什么&lt;/h1&gt;&lt;p&gt;哈达玛（Hadamard)矩阵是由+1和-1元素构成的正交方阵。所谓正交方阵，指它的任意两行
+      &lt;h1 id=&quot;哈达玛矩阵是什么&quot;&gt;&lt;a href=&quot;#哈达玛矩阵是什么&quot; class=&quot;headerlink&quot; title=&quot;哈达玛矩阵是什么&quot;&gt;&lt;/a&gt;哈达玛矩阵是什么&lt;/h1&gt;&lt;p&gt;哈达玛（Hadamard)矩阵是由+1和-1元素构成的正交方阵。所谓正交方阵，指它的任意两行（或两列）都是正交的，且任意一行（列）的所有元素的平方和等于方阵的阶数。即：设A为n阶由+1和-1元素构成的方阵，若AA‘=nI（这里A’为A的转置，I为单位方阵），则称A为n阶Hadamard矩阵。&lt;br&gt;　　已有人证明，Hadamard矩阵的阶数都是4的倍数。&lt;/p&gt;
     
     </summary>
     

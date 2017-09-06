@@ -86,7 +86,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="手把手教你配置Ubuntu server服务器," />
+  <meta name="keywords" content="常用的C语言小程序代码," />
 
 
 
@@ -104,18 +104,18 @@
 
 
 
-<meta name="description" content="手把手教你配置Ubuntu server服务器设置服务器网络之前两篇讲了服务器系统安装和硬盘挂载，这篇总结下网络设置。具体开始讲之前先说说如何实现其他人可以访问服务器。一种方法是由一个网口出来接路由器，用户都连接到路由器的网络上，不管是通过有线还是WiFi，把用户都归到同一个网络下。另一种方法就比较bug了，像清华大学那样，整个学校有线网和无线的Tsinghua都是同一个网络，所以就不需要路由器了">
-<meta name="keywords" content="手把手教你配置Ubuntu server服务器">
+<meta name="description" content="C语言读取系统当前时间之前编程的时候我们需要来读取当前的时间，或者使用当前的时间对文件进行一个命名等，所以做一个笔记用来备忘。">
+<meta name="keywords" content="常用的C语言小程序代码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设置服务器网络------by邵碧尧">
-<meta property="og:url" content="https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_3/index.html">
+<meta property="og:title" content="C语言读取系统当前时间">
+<meta property="og:url" content="https://huanghailiang.github.io/2017/09/06/C语言读取系统当前时间/index.html">
 <meta property="og:site_name" content="Darren">
-<meta property="og:description" content="手把手教你配置Ubuntu server服务器设置服务器网络之前两篇讲了服务器系统安装和硬盘挂载，这篇总结下网络设置。具体开始讲之前先说说如何实现其他人可以访问服务器。一种方法是由一个网口出来接路由器，用户都连接到路由器的网络上，不管是通过有线还是WiFi，把用户都归到同一个网络下。另一种方法就比较bug了，像清华大学那样，整个学校有线网和无线的Tsinghua都是同一个网络，所以就不需要路由器了">
+<meta property="og:description" content="C语言读取系统当前时间之前编程的时候我们需要来读取当前的时间，或者使用当前的时间对文件进行一个命名等，所以做一个笔记用来备忘。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-17T05:22:16.192Z">
+<meta property="og:updated_time" content="2017-09-06T07:14:30.159Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设置服务器网络------by邵碧尧">
-<meta name="twitter:description" content="手把手教你配置Ubuntu server服务器设置服务器网络之前两篇讲了服务器系统安装和硬盘挂载，这篇总结下网络设置。具体开始讲之前先说说如何实现其他人可以访问服务器。一种方法是由一个网口出来接路由器，用户都连接到路由器的网络上，不管是通过有线还是WiFi，把用户都归到同一个网络下。另一种方法就比较bug了，像清华大学那样，整个学校有线网和无线的Tsinghua都是同一个网络，所以就不需要路由器了">
+<meta name="twitter:title" content="C语言读取系统当前时间">
+<meta name="twitter:description" content="C语言读取系统当前时间之前编程的时候我们需要来读取当前的时间，或者使用当前的时间对文件进行一个命名等，所以做一个笔记用来备忘。">
 
 
 
@@ -145,14 +145,14 @@
 
 
 
-  <link rel="canonical" href="https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_3/"/>
+  <link rel="canonical" href="https://huanghailiang.github.io/2017/09/06/C语言读取系统当前时间/"/>
 
 
 
 
 
 
-  <title>设置服务器网络------by邵碧尧 | Darren</title>
+  <title>C语言读取系统当前时间 | Darren</title>
   
 
 
@@ -323,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://huanghailiang.github.io/2017/07/23/手把手教你配置Ubuntu server服务器_3/">
+    <link itemprop="mainEntityOfPage" href="https://huanghailiang.github.io/2017/09/06/C语言读取系统当前时间/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Darren">
@@ -340,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">设置服务器网络------by邵碧尧</h1>
+          <h1 class="post-title" itemprop="name headline">C语言读取系统当前时间</h1>
         
 
         <div class="post-meta">
@@ -352,8 +352,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-23T16:15:31+08:00">
-                2017-07-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-06T15:03:02+08:00">
+                2017-09-06
               </time>
             
 
@@ -370,7 +370,7 @@
 
           
           
-             <span id="/2017/07/23/手把手教你配置Ubuntu server服务器_3/" class="leancloud_visitors" data-flag-title="设置服务器网络------by邵碧尧">
+             <span id="/2017/09/06/C语言读取系统当前时间/" class="leancloud_visitors" data-flag-title="C语言读取系统当前时间">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -401,15 +401,15 @@
       
 
       
-        <h1 id="手把手教你配置Ubuntu-server服务器"><a href="#手把手教你配置Ubuntu-server服务器" class="headerlink" title="手把手教你配置Ubuntu server服务器"></a>手把手教你配置Ubuntu server服务器</h1><h2 id="设置服务器网络"><a href="#设置服务器网络" class="headerlink" title="设置服务器网络"></a>设置服务器网络</h2><p>之前两篇讲了服务器系统安装和硬盘挂载，这篇总结下网络设置。具体开始讲之前先说说如何实现其他人可以访问服务器。一种方法是由一个网口出来接路由器，用户都连接到路由器的网络上，不管是通过有线还是WiFi，把用户都归到同一个网络下。另一种方法就比较bug了，像清华大学那样，整个学校有线网和无线的Tsinghua都是同一个网络，所以就不需要路由器了，之前不知道还倒腾了很久。又有人要问了，那如何让外网的人可以访问服务器呢？不好意思，我没有研究过，另一个原因也是担心网络安全的问题，毕竟没有学过相关的知识，所以搭个服务器内部用就完了。如果有大神在这方面比较有研究，我也非常欢迎交流。（邮箱：shaobiyao@gmail.com）<br><a id="more"></a><br>说回来，先解决基本问题再说</p>
-<p>sudo vim /etc/network/interfaces</p>
-<p>修改如下部分：</p>
-<p>auto eth0（这个名称每台机器不一样，可以通过ifconfig -a查询）<br>iface eth0 inet static<br>address 192.168.0.117 #选用同一个网络下不冲突的ip<br>gateway 192.168.0.1 #gateway and netmask 可以通过查看同一网络下的Windows电脑的信息获得，都一样的<br>netmask 255.255.255.0</p>
-<p>sudo vim /etc/resolvconf/resolv.conf.d/base(网上有说修改/etc/resolv.conf的，这个文件修改完会被系统覆盖，等于白改)<br>nameserver XXX.XXX.XXX.XXX #和同一网络中Windows的电脑一样</p>
-<p>重启网卡：</p>
-<p>sudo /etc/init.d/network restart</p>
-<p>用ping www.baidu.com测试是否成功</p>
-
+        <h1 id="C语言读取系统当前时间"><a href="#C语言读取系统当前时间" class="headerlink" title="C语言读取系统当前时间"></a>C语言读取系统当前时间</h1><p>之前编程的时候我们需要来读取当前的时间，或者使用当前的时间对文件进行一个命名等，所以做一个笔记用来备忘。</p>
+<a id="more"></a>
+<h2 id="读取时间代码"><a href="#读取时间代码" class="headerlink" title="读取时间代码"></a>读取时间代码</h2><p><strong>C语言读取系统时间的代码如下：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;  </span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;  </span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">time_t</span> timep,Tim;</div><div class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">tm</span> *<span class="title">p</span>;</span></div><div class="line">	time(&amp;timep);</div><div class="line">	p =  localtime(&amp;timep); <span class="comment">//此函数获得的tm结构体的时间，是已经进行过时区转化为本地时间     </span></div><div class="line">	<span class="comment">//p = gmtime(&amp;timep); //把日期和时间转换为格林威治(GMT)时间的函数 </span></div><div class="line">	<span class="keyword">int</span> Year = <span class="number">1900</span> + p-&gt;tm_year;</div><div class="line">	<span class="keyword">int</span> Month = <span class="number">1</span> + p-&gt;tm_mon;</div><div class="line">	<span class="keyword">int</span> Day = p-&gt;tm_mday;</div><div class="line">	<span class="keyword">int</span> Hour = p-&gt;tm_hour;</div><div class="line">	<span class="keyword">int</span> Minute = p-&gt;tm_min;</div><div class="line">	<span class="keyword">int</span> Second = p-&gt;tm_sec;	</div><div class="line">	<span class="keyword">char</span> year[<span class="number">20</span>];</div><div class="line">	<span class="keyword">char</span> month[<span class="number">20</span>];</div><div class="line">	<span class="keyword">char</span> day[<span class="number">20</span>];</div><div class="line">	<span class="keyword">char</span> hour[<span class="number">20</span>];</div><div class="line">	<span class="keyword">char</span> minute[<span class="number">20</span>];</div><div class="line">	<span class="keyword">char</span> second[<span class="number">20</span>];	</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"year=%d\n"</span>,Year);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"month=%d\n"</span>, Month);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"day=%d\n"</span>, Day);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"hour=%d\n"</span>, Hour);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"minute=%d\n"</span>, Minute);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"second=%d\n"</span>, Second);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上为简单的系统时间读取。<br>在Windows环境下好像运行是有问题的，这个时候需要在预编译头那里添加 _CRT_SECURE_NO_WARNINGS即可。</p>
+<p><strong>localtime</strong>函数获得的tm结构体的时间，是已经进行过时区转化为本地时间，然而gmtime函数是把日期和时间转换为格林威治(GMT)时间的函数。</p>
+<h2 id="要用这个时间对文件进行命名"><a href="#要用这个时间对文件进行命名" class="headerlink" title="要用这个时间对文件进行命名"></a>要用这个时间对文件进行命名</h2><p>在我们进行编程的时候有时候需要对文件进行命名，有时候一个程序是不停的循环运行的，我们还要区分程序跑出来的文件结果，所以这个时候我们如果使用时间来对文件命名的话就会方便很多，而且一定不会因为重名而被覆盖。</p>
+<p>这个时候我们可以用sprintf和strcat这两个函数进行一个组合。<br>简单的例子如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">   <span class="keyword">char</span> name[<span class="number">100</span>] = <span class="string">"1616_"</span>;</div><div class="line"><span class="keyword">char</span> year[<span class="number">20</span>];</div><div class="line"><span class="keyword">char</span> month[<span class="number">20</span>];</div><div class="line"><span class="keyword">char</span> day[<span class="number">20</span>];</div><div class="line"><span class="keyword">char</span> hour[<span class="number">20</span>];</div><div class="line"><span class="keyword">char</span> minute[<span class="number">20</span>];</div><div class="line"><span class="keyword">char</span> second[<span class="number">20</span>];</div><div class="line"><span class="keyword">char</span> txt[<span class="number">5</span>] = <span class="string">".txt"</span>;	</div><div class="line"><span class="built_in">sprintf</span>(year, <span class="string">"%d"</span>, Year);</div><div class="line"><span class="built_in">sprintf</span>(month, <span class="string">"%d"</span>, Month);</div><div class="line"><span class="built_in">sprintf</span>(day, <span class="string">"%d"</span>, Day);</div><div class="line"><span class="built_in">sprintf</span>(hour, <span class="string">"%d"</span>, Hour);</div><div class="line"><span class="built_in">sprintf</span>(minute, <span class="string">"%d"</span>, Minute);</div><div class="line"><span class="built_in">sprintf</span>(second, <span class="string">"%d"</span>, Second);</div><div class="line"><span class="built_in">strcat</span>(name, year);</div><div class="line"><span class="built_in">strcat</span>(name, month);</div><div class="line"><span class="built_in">strcat</span>(name, day);</div><div class="line"><span class="built_in">strcat</span>(name, hour);</div><div class="line"><span class="built_in">strcat</span>(name, minute);</div><div class="line"><span class="built_in">strcat</span>(name, second);</div><div class="line"><span class="built_in">strcat</span>(name, txt);</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -426,7 +426,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/手把手教你配置Ubuntu-server服务器/" rel="tag"># 手把手教你配置Ubuntu server服务器</a>
+            <a href="/tags/常用的C语言小程序代码/" rel="tag"># 常用的C语言小程序代码</a>
           
         </div>
       
@@ -439,8 +439,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/23/手把手教你配置Ubuntu server服务器_2/" rel="next" title="服务器多硬盘挂载------by邵碧尧">
-                <i class="fa fa-chevron-left"></i> 服务器多硬盘挂载------by邵碧尧
+              <a href="/2017/09/05/2048/" rel="next" title="用C语言自己写2048">
+                <i class="fa fa-chevron-left"></i> 用C语言自己写2048
               </a>
             
           </div>
@@ -449,8 +449,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/23/手把手教你配置Ubuntu server服务器_4/" rel="prev" title="管理服务器用户------by邵碧尧">
-                管理服务器用户------by邵碧尧 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/06/生成哈达玛矩阵/" rel="prev" title="生成哈达玛矩阵">
+                生成哈达玛矩阵 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -619,7 +619,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#手把手教你配置Ubuntu-server服务器"><span class="nav-number">1.</span> <span class="nav-text">手把手教你配置Ubuntu server服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置服务器网络"><span class="nav-number">1.1.</span> <span class="nav-text">设置服务器网络</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C语言读取系统当前时间"><span class="nav-number">1.</span> <span class="nav-text">C语言读取系统当前时间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#读取时间代码"><span class="nav-number">1.1.</span> <span class="nav-text">读取时间代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#要用这个时间对文件进行命名"><span class="nav-number">1.2.</span> <span class="nav-text">要用这个时间对文件进行命名</span></a></li></ol></li></ol></div>
             
 
           </div>

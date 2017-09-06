@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huanghailiang.github.io/"/>
-  <updated>2017-09-05T12:52:18.287Z</updated>
+  <updated>2017-09-06T07:36:18.640Z</updated>
   <id>https://huanghailiang.github.io/</id>
   
   <author>
@@ -14,6 +14,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>快速哈达玛变换</title>
+    <link href="https://huanghailiang.github.io/2017/09/06/%E5%BF%AB%E9%80%9F%E5%93%88%E8%BE%BE%E7%8E%9B%E5%8F%98%E6%8D%A2/"/>
+    <id>https://huanghailiang.github.io/2017/09/06/快速哈达玛变换/</id>
+    <published>2017-09-06T07:24:59.000Z</published>
+    <updated>2017-09-06T07:36:18.640Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;快速哈达玛变换&quot;&gt;&lt;a href=&quot;#快速哈达玛变换&quot; class=&quot;headerlink&quot; title=&quot;快速哈达玛变换&quot;&gt;&lt;/a&gt;快速哈达玛变换&lt;/h1&gt;&lt;p&gt;在生成哈达玛矩阵的文章中我已经提到了沃尔什函数，其实也就是快速哈达玛变换，他是针对与压缩感知中压缩过程中对哈达玛矩阵的行进行一个变换，这么做可以更好的压缩图像，并更好的进行解压。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="常用的C语言小程序代码" scheme="https://huanghailiang.github.io/tags/%E5%B8%B8%E7%94%A8%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>生成哈达玛矩阵</title>
+    <link href="https://huanghailiang.github.io/2017/09/06/%E7%94%9F%E6%88%90%E5%93%88%E8%BE%BE%E7%8E%9B%E7%9F%A9%E9%98%B5/"/>
+    <id>https://huanghailiang.github.io/2017/09/06/生成哈达玛矩阵/</id>
+    <published>2017-09-06T07:17:40.000Z</published>
+    <updated>2017-09-06T07:36:22.137Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;哈达玛矩阵是什么&quot;&gt;&lt;a href=&quot;#哈达玛矩阵是什么&quot; class=&quot;headerlink&quot; title=&quot;哈达玛矩阵是什么&quot;&gt;&lt;/a&gt;哈达玛矩阵是什么&lt;/h1&gt;&lt;p&gt;哈达玛（Hadamard)矩阵是由+1和-1元素构成的正交方阵。所谓正交方阵，指它的任意两行
+    
+    </summary>
+    
+    
+      <category term="常用的C语言小程序代码" scheme="https://huanghailiang.github.io/tags/%E5%B8%B8%E7%94%A8%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言读取系统当前时间</title>
+    <link href="https://huanghailiang.github.io/2017/09/06/C%E8%AF%AD%E8%A8%80%E8%AF%BB%E5%8F%96%E7%B3%BB%E7%BB%9F%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4/"/>
+    <id>https://huanghailiang.github.io/2017/09/06/C语言读取系统当前时间/</id>
+    <published>2017-09-06T07:03:02.000Z</published>
+    <updated>2017-09-06T07:14:30.159Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;C语言读取系统当前时间&quot;&gt;&lt;a href=&quot;#C语言读取系统当前时间&quot; class=&quot;headerlink&quot; title=&quot;C语言读取系统当前时间&quot;&gt;&lt;/a&gt;C语言读取系统当前时间&lt;/h1&gt;&lt;p&gt;之前编程的时候我们需要来读取当前的时间，或者使用当前的时间对文件进行一个命名等，所以做一个笔记用来备忘。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="常用的C语言小程序代码" scheme="https://huanghailiang.github.io/tags/%E5%B8%B8%E7%94%A8%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>用C语言自己写2048</title>
@@ -322,79 +376,6 @@
     
     
       <category term="Hadoop" scheme="https://huanghailiang.github.io/tags/Hadoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hadoop安装_单机伪分布式配置</title>
-    <link href="https://huanghailiang.github.io/2017/08/16/Hadoop%E5%AE%89%E8%A3%85_%E5%8D%95%E6%9C%BA%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/"/>
-    <id>https://huanghailiang.github.io/2017/08/16/Hadoop安装_单机伪分布式配置/</id>
-    <published>2017-08-16T12:34:00.000Z</published>
-    <updated>2017-08-17T07:18:32.951Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Hadoop安装-单机伪分布式配置&quot;&gt;&lt;a href=&quot;#Hadoop安装-单机伪分布式配置&quot; class=&quot;headerlink&quot; title=&quot;Hadoop安装_单机伪分布式配置&quot;&gt;&lt;/a&gt;Hadoop安装_单机伪分布式配置&lt;/h1&gt;&lt;h2 id=&quot;创建hadoop账户&quot;&gt;&lt;a href=&quot;#创建hadoop账户&quot; class=&quot;headerlink&quot; title=&quot;创建hadoop账户&quot;&gt;&lt;/a&gt;创建hadoop账户&lt;/h2&gt;&lt;p&gt;添加用户：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo useradd -m hadoop -s /bin/bash
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;给用户设置密码：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo passwd hadoop
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;给用户管理员权限：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo adduser hadoop sudo
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;更新apt&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt-get update
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装vim:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt-get install vim
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-      <category term="Hadoop" scheme="https://huanghailiang.github.io/tags/Hadoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hadoop集群安装配置教程</title>
-    <link href="https://huanghailiang.github.io/2017/08/16/Hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/"/>
-    <id>https://huanghailiang.github.io/2017/08/16/Hadoop集群安装配置教程/</id>
-    <published>2017-08-16T12:28:00.000Z</published>
-    <updated>2017-08-17T07:18:41.309Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;hadoop集群安装&quot;&gt;&lt;a href=&quot;#hadoop集群安装&quot; class=&quot;headerlink&quot; title=&quot;hadoop集群安装&quot;&gt;&lt;/a&gt;hadoop集群安装&lt;/h1&gt;&lt;h2 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h2&gt;&lt;p&gt;Hadoop 集群的安装配置大致为如下流程:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1、选定一台机器作为 Master
-2、在 Master 节点上配置 hadoop 用户、安装 SSH server、安装 Java 环境
-3、在 Master 节点上安装 Hadoop，并完成配置
-4、在其他 Slave 节点上配置 hadoop 用户、安装 SSH server、安装 Java 环境
-5、将 Master 节点上的 /usr/local/hadoop 目录复制到其他 Slave 节点上
-6、在 Master 节点上开启 Hadoop
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-      <category term="Hadoop" scheme="https://huanghailiang.github.io/tags/Hadoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>建立自己的github博客</title>
-    <link href="https://huanghailiang.github.io/2017/08/15/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://huanghailiang.github.io/2017/08/15/搭建自己的github博客/</id>
-    <published>2017-08-15T02:06:00.000Z</published>
-    <updated>2017-08-22T12:41:13.770Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;可以根据博客中的hello-world文件中讲述的安装&quot;&gt;&lt;a href=&quot;#可以根据博客中的hello-world文件中讲述的安装&quot; class=&quot;headerlink&quot; title=&quot;可以根据博客中的hello-world文件中讲述的安装&quot;&gt;&lt;/a&gt;可以根据博客中的hello-world文件中讲述的安装&lt;/h1&gt;&lt;h1 id=&quot;下面是一些详细的步骤&quot;&gt;&lt;a href=&quot;#下面是一些详细的步骤&quot; class=&quot;headerlink&quot; title=&quot;下面是一些详细的步骤&quot;&gt;&lt;/a&gt;下面是一些详细的步骤&lt;/h1&gt;&lt;p&gt;1、安装node,可以去node的官网直接下载 &lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://nodejs.org/en/&lt;/a&gt; （这里我下载的是node-v6.11.1-x64）&lt;br&gt;2、安装hexo，可以打开cmd终端输入&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g hexo-cli
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-      <category term="搭建自己的github博客" scheme="https://huanghailiang.github.io/tags/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84github%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   

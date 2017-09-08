@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huanghailiang.github.io/"/>
-  <updated>2017-09-06T07:36:18.640Z</updated>
+  <updated>2017-09-08T08:05:52.337Z</updated>
   <id>https://huanghailiang.github.io/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ssh连接服务器中断，如何让命令继续在服务器执行</title>
+    <link href="https://huanghailiang.github.io/2017/09/08/ssh%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AD%E6%96%AD%EF%BC%8C%E5%A6%82%E4%BD%95%E8%AE%A9%E5%91%BD%E4%BB%A4%E7%BB%A7%E7%BB%AD%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%89%A7%E8%A1%8C/"/>
+    <id>https://huanghailiang.github.io/2017/09/08/ssh连接服务器中断，如何让命令继续在服务器执行/</id>
+    <published>2017-09-08T06:43:07.000Z</published>
+    <updated>2017-09-08T08:05:52.337Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ssh连接linux服务器中断后，如何让命令继续在服务器运行&quot;&gt;&lt;a href=&quot;#ssh连接linux服务器中断后，如何让命令继续在服务器运行&quot; class=&quot;headerlink&quot; title=&quot;ssh连接linux服务器中断后，如何让命令继续在服务器运行&quot;&gt;&lt;/a&gt;ssh连接linux服务器中断后，如何让命令继续在服务器运行&lt;/h1&gt;&lt;p&gt;这个问题也许是我们这些小白比较头疼的问题，尤其对于那些做机器学习需要花很久的时间才能训练出一个结果。然而就在这时，因为各种不可抗力我们使用ssh连接服务器时，ssh的窗口突然断开了连接，那么在服务器上跑的程序就也跟着断掉了，之前所有跑的数据也将丢失，这样将会浪费我们大量的时间。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>快速哈达玛变换</title>
@@ -356,26 +374,6 @@
     
     
       <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>扩展Slave的时候需要注意的一些问题</title>
-    <link href="https://huanghailiang.github.io/2017/08/17/%E6%89%A9%E5%B1%95Slave%E7%9A%84%E6%97%B6%E5%80%99%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/"/>
-    <id>https://huanghailiang.github.io/2017/08/17/扩展Slave的时候需要注意的一些问题/</id>
-    <published>2017-08-17T05:35:31.000Z</published>
-    <updated>2017-08-17T07:19:32.156Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;扩展Slave的时候需要注意的一些问题&quot;&gt;&lt;a href=&quot;#扩展Slave的时候需要注意的一些问题&quot; class=&quot;headerlink&quot; title=&quot;扩展Slave的时候需要注意的一些问题&quot;&gt;&lt;/a&gt;扩展Slave的时候需要注意的一些问题&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;扩展的时候可以先直接按照Hadoop集群安装配置教程先进行。&lt;/li&gt;
-&lt;li&gt;这里需要更改 &lt;strong&gt;&lt;em&gt;/usr/local/hadoop/etc/hadoop&lt;/em&gt;&lt;/strong&gt; 路径下的 slave文件中的参数，需要把添加的节点加进去。
-    
-    </summary>
-    
-    
-      <category term="Hadoop" scheme="https://huanghailiang.github.io/tags/Hadoop/"/>
     
   </entry>
   

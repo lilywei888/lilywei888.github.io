@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huanghailiang.github.io/"/>
-  <updated>2017-09-08T08:05:52.337Z</updated>
+  <updated>2017-09-17T04:30:08.919Z</updated>
   <id>https://huanghailiang.github.io/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://huanghailiang.github.io/2017/09/17/test/"/>
+    <id>https://huanghailiang.github.io/2017/09/17/test/</id>
+    <published>2017-09-17T04:28:14.000Z</published>
+    <updated>2017-09-17T04:30:08.919Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最后，我们在一个图片类别的evidence中加入偏置(bias)，加入偏置的目的是加入一些与输入独立无关的信息。所以图片类别的evidence为&lt;/p&gt;
+&lt;p&gt;$$ evidence_{i}=\sum _{j}W_{ij}x_{j}+b_{i} $$&lt;/p&gt;
+&lt;p&gt;其中，\
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>ssh连接服务器中断，如何让命令继续在服务器执行</title>
@@ -351,24 +369,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;所有节点执行同一指令的操作&quot;&gt;&lt;a href=&quot;#所有节点执行同一指令的操作&quot; class=&quot;headerlink&quot; title=&quot;所有节点执行同一指令的操作&quot;&gt;&lt;/a&gt;所有节点执行同一指令的操作&lt;/h1&gt;&lt;p&gt;该脚本旨在对每个节点都执行同一个指令，这样就不用每次都shell到每个子节点上去执行了，较为方便。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>所有节点 文件查看脚本编写</title>
-    <link href="https://huanghailiang.github.io/2017/08/17/%E6%89%80%E6%9C%89%E8%8A%82%E7%82%B9-%E6%96%87%E4%BB%B6%E6%9F%A5%E7%9C%8B%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
-    <id>https://huanghailiang.github.io/2017/08/17/所有节点-文件查看脚本编写/</id>
-    <published>2017-08-17T05:39:11.000Z</published>
-    <updated>2017-08-17T07:19:52.101Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;所有节点-文件查看脚本编写&quot;&gt;&lt;a href=&quot;#所有节点-文件查看脚本编写&quot; class=&quot;headerlink&quot; title=&quot;所有节点 文件查看脚本编写&quot;&gt;&lt;/a&gt;所有节点 文件查看脚本编写&lt;/h1&gt;&lt;p&gt;该脚本用于一次查看所有集群节点相同位置下的文件，类似于手动在每个节点上输入ls指令进行查看。&lt;br&gt;
     
     </summary>
     

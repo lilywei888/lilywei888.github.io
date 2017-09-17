@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huanghailiang.github.io/"/>
-  <updated>2017-09-17T04:54:10.574Z</updated>
+  <updated>2017-09-17T05:17:20.455Z</updated>
   <id>https://huanghailiang.github.io/</id>
   
   <author>
@@ -20,14 +20,13 @@
     <link href="https://huanghailiang.github.io/2017/09/17/test/"/>
     <id>https://huanghailiang.github.io/2017/09/17/test/</id>
     <published>2017-09-17T04:28:14.000Z</published>
-    <updated>2017-09-17T04:54:10.574Z</updated>
+    <updated>2017-09-17T05:17:20.455Z</updated>
     
     <summary type="html">
     
-      &lt;script type=&quot;math/tex; mode=display&quot;&gt;
-\begin{equation}
-\begin{split}
-\frac{\partial^2 f}{\partial{x^2}} &amp;= \frac{\partial(\Delta_x f(i,j))}
+      &lt;p&gt;Simple inline $a = b + c$.&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{\partial u}{\partial t}
+= h^2 \left( \frac{\partial^2 u}{\part
     
     </summary>
     

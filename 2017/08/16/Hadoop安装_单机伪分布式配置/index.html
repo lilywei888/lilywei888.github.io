@@ -420,7 +420,7 @@ ssh-keygen -t rsa              # 会有提示，都按回车就可以
 cat ./id_rsa.pub &gt;&gt; ./authorized_keys  # 加入授权
 </code></pre><p>此时再   ssh localhost   时就可以无密码访问了。</p>
 <h2 id="安装Java环境"><a href="#安装Java环境" class="headerlink" title="安装Java环境"></a>安装Java环境</h2><pre><code>sudo apt-get install openjdk-8-jre openjdk-8-jdk
-dpkg -L openjdk-8-jdk | grep &apos;/bin/javac&apos;
+dpkg -L openjdk-8-jdk | grep &#39;/bin/javac&#39;
 vim ~/.bashrc
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 source ~/.bashrc    # 使变量设置生效
@@ -442,7 +442,7 @@ sudo chown -R hadoop ./hadoop       # 修改文件权限
 <pre><code>cd /usr/local/hadoop
 mkdir ./input
 cp ./etc/hadoop/*.xml ./input   # 将配置文件作为输入文件
-./bin/hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar grep ./input ./output &apos;dfs[a-z.]+&apos;  （和上面一行连着的）
+./bin/hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar grep ./input ./output &#39;dfs[a-z.]+&#39;  （和上面一行连着的）
 cat ./output/*          # 查看运行结果
 rm -r ./output
 </code></pre><h2 id="Hadoop伪分布式配置"><a href="#Hadoop伪分布式配置" class="headerlink" title="Hadoop伪分布式配置"></a>Hadoop伪分布式配置</h2><p>Hadoop 可以在单节点上以伪分布式的方式运行，Hadoop 进程以分离的 Java 进程来运行，节点既作为 NameNode 也作为 DataNode，同时，读取的是 HDFS 中的文件。</p>
@@ -462,7 +462,7 @@ rm -r ./output
 </code></pre><p>复制完成后，可以通过如下命令查看文件列表：</p>
 <pre><code>./bin/hdfs dfs -ls input
 </code></pre><p>伪分布式运行 MapReduce 作业的方式跟单机模式相同，区别在于伪分布式读取的是HDFS中的文件（可以将单机步骤中创建的本地 input 文件夹，输出结果 output 文件夹都删掉来验证这一点）。</p>
-<pre><code>./bin/hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar grep input output &apos;dfs[a-z.]+&apos;
+<pre><code>./bin/hadoop jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar grep input output &#39;dfs[a-z.]+&#39;
 </code></pre><p>查看运行结果的命令（查看的是位于 HDFS 中的输出结果）：</p>
 <pre><code>./bin/hdfs dfs -cat output/*
 </code></pre><p>我们也可以将运行结果取回到本地：</p>
@@ -1348,6 +1348,8 @@ cat ./output/*
   
 
   
+  
+
 
   
 

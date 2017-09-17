@@ -401,10 +401,15 @@
       
         
           
-            <p>最后，我们在一个图片类别的evidence中加入偏置(bias)，加入偏置的目的是加入一些与输入独立无关的信息。所以图片类别的evidence为</p>
-<p>$$ evidence_{i}=\sum _{j}W_{ij}x_{j}+b_{i} $$</p>
-<p>其中，\( W_i \) 和 \( b_i \) 分别为类别 \( i \) 的权值和偏置。</p>
-
+            <script type="math/tex; mode=display">
+\begin{equation}
+\begin{split}
+\frac{\partial^2 f}{\partial{x^2}} &= \frac{\partial(\Delta_x f(i,j))}{\partial x} = \frac{\partial(f(i+1,j)-f(i,j))}{\partial x} \\
+&= \frac{\partial f(i+1,j)}{\partial x} - \frac{\partial f(i,j)}{\partial x} \\
+&= f(i+2,j) -2f(f+1,j) + f(i,j)
+\end{split}
+\nonumber
+\end{equation}</script>
           
         
       
@@ -2412,6 +2417,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

@@ -450,7 +450,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">screen -r 27267</div></pre></td></tr></table></figure>
 <p>如果想杀掉终端可以执行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">kill</span> 27267</div></pre></td></tr></table></figure>
-<p>其他更多的指令可以通过screen –help来进行学习。</p>
+<p>其他更多的指令可以通过screen —help来进行学习。</p>
 <p>当然screen还有更多的快捷键值得我们学习。我们可以通过C-a ? 即先按ctrl+a以后再按？即可查看。</p>
 <p><strong>通过观察我们可以发现它其实恢复了我们ssh断开前的那个界面。（所有的输出也都会在此显示出来）</strong></p>
 <h1 id="注（个人理解）："><a href="#注（个人理解）：" class="headerlink" title="注（个人理解）："></a>注（个人理解）：</h1><p><strong>nohup</strong>虽然可以把所有的输出都写入到nohup.out中间来，但是在面对需要人机交互的时候它就不能正常使用了。另外在我做测试的时候，一旦ssh断开，虽然程序还在后台运行，但是好像并不会再把输出写入到nohup.out文件中，这一点很不好。</p>
@@ -1315,6 +1315,8 @@
   
 
   
+  
+
 
   
 

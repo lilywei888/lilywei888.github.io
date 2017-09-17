@@ -404,6 +404,7 @@
         <h1 id="vim的基本操作"><a href="#vim的基本操作" class="headerlink" title="vim的基本操作"></a>vim的基本操作</h1><p>本人在实验楼学习的时候摘抄下来的，留作自己的笔记。</p>
 <a id="more"></a>
 <h1 id="游标移动"><a href="#游标移动" class="headerlink" title="游标移动"></a>游标移动</h1><p>按Esc进入普通模式，在该模式下使用方向键或者h,j,k,l键可以移动游标。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -438,7 +439,9 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h1 id="进入插入模式"><a href="#进入插入模式" class="headerlink" title="进入插入模式"></a>进入插入模式</h1><p>在普通模式下使用下面的键将进入插入模式，并可以从相应的位置开始输入</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -477,9 +480,11 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h1 id="命令行模式下保存文档"><a href="#命令行模式下保存文档" class="headerlink" title="命令行模式下保存文档"></a>命令行模式下保存文档</h1><p>从普通模式输入:进入命令行模式，输入w回车，保存文档。输入:w 文件名可以将文档另存为其他文件名或存到其它路径下</p>
 <h1 id="命令行模式下退出vim"><a href="#命令行模式下退出vim" class="headerlink" title="命令行模式下退出vim"></a>命令行模式下退出vim</h1><p>从普通模式输入:进入命令行模式，输入wq回车，保存并退出编辑</p>
 <p>以下为其它几种退出方式：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -518,8 +523,10 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h1 id="普通模式下退出vim"><a href="#普通模式下退出vim" class="headerlink" title="普通模式下退出vim"></a>普通模式下退出vim</h1><p>普通模式下输入Shift+zz即可保存退出vim</p>
 <h1 id="普通模式下删除vim文本信息"><a href="#普通模式下删除vim文本信息" class="headerlink" title="普通模式下删除vim文本信息"></a>普通模式下删除vim文本信息</h1><p>进入普通模式，使用下列命令可以进行文本快速删除：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -566,6 +573,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>除此之外，你还可以在命令之前加上数字，表示一次删除多行，如：<br>2dd表示一次删除2行i</p>
 <h1 id="重复执行上次命令"><a href="#重复执行上次命令" class="headerlink" title="重复执行上次命令"></a>重复执行上次命令</h1><p>在普通模式下.(小数点)表示重复上一次的命令操作</p>
 <h1 id="执行指定次数相同的命令"><a href="#执行指定次数相同的命令" class="headerlink" title="执行指定次数相同的命令"></a>执行指定次数相同的命令</h1><p>进入普通模式输入N<command>，N表示重复后面的次数</p>
@@ -573,7 +581,8 @@
 <p>输入3dd，将会删除3行文本</p>
 <p>在普通模式下，你还可以使用dw或者daw(delete a word)删除一个单词，所以你可以很容易的联想到dnw(n替换为相应数字)表示删除n个单词</p>
 <h1 id="游标的快速跳转"><a href="#游标的快速跳转" class="headerlink" title="游标的快速跳转"></a>游标的快速跳转</h1><p>普通模式下，下列命令可以让光标快速调转到指定位置，我们分别讨论快速实现<strong>行间</strong>跳转和<strong>行内</strong>跳转</p>
-<h2 id="行间跳转"><a href="#行间跳转" class="headerlink" title="行间跳转"></a>行间跳转</h2><table>
+<h2 id="行间跳转"><a href="#行间跳转" class="headerlink" title="行间跳转"></a>行间跳转</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
@@ -595,8 +604,10 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong><em>小技巧：你在完成依次跳转后，可以使用Ctrl+o快速回到上一次(跳转前)光标所在位置</em></strong>,这个技巧很实用，比如当你在写代码时，忽然想起有个bug，需要修改，这时候你跳过去改好了，只需要按下Ctrl+o就可以回到你之前的位置。vim中会用很多类似的小技巧就等着你去发掘。</p>
 <h2 id="行内跳转"><a href="#行内跳转" class="headerlink" title="行内跳转"></a>行内跳转</h2><p>普通模式下使用下列命令在行内按照单词为单位进行跳转</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -647,19 +658,21 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h1 id="复制粘贴和剪切"><a href="#复制粘贴和剪切" class="headerlink" title="复制粘贴和剪切"></a>复制粘贴和剪切</h1><h2 id="复制及粘贴文本"><a href="#复制及粘贴文本" class="headerlink" title="复制及粘贴文本"></a>复制及粘贴文本</h2><p>  ● 普通模式中使用y复制</p>
-<pre><code>○ 普通模式中，yy复制游标所在的整行（3yy表示复制3行）
-○ 普通模式中，y^ 复制至行首，或y0。不含光标所在处字符。
-○ 普通模式中，y$ 复制至行尾。含光标所在处字符。
-○ 普通模式中，yw 复制一个单词。
-○ 普通模式中，y2w 复制两个单词。
-○ 普通模式中，yG 复制至文本末。
-○ 普通模式中，y1G 复制至文本开头。
+<pre><code>  ○ 普通模式中，yy复制游标所在的整行（3yy表示复制3行）
+  ○ 普通模式中，y^ 复制至行首，或y0。不含光标所在处字符。
+  ○ 普通模式中，y$ 复制至行尾。含光标所在处字符。
+  ○ 普通模式中，yw 复制一个单词。
+  ○ 普通模式中，y2w 复制两个单词。
+  ○ 普通模式中，yG 复制至文本末。
+  ○ 普通模式中，y1G 复制至文本开头。
 </code></pre><p>  ● 普通模式中使用p粘贴</p>
-<pre><code>○ 普通模式中，p(小写)代表粘贴至光标后（下）
-○ 普通模式中，P(大写)代表粘贴至光标前（上）
+<pre><code>  ○ 普通模式中，p(小写)代表粘贴至光标后（下）
+  ○ 普通模式中，P(大写)代表粘贴至光标前（上）
 </code></pre><h2 id="剪切及粘贴"><a href="#剪切及粘贴" class="headerlink" title="剪切及粘贴"></a>剪切及粘贴</h2><p>其实前面讲得dd删除命令就是剪切，你每次dd删除文档内容后，便可以使用p来粘贴，也这一点可以让我们实现一个很爽快的功能——交换上下行</p>
 <h1 id="字符的替换及撤销-Undo操作"><a href="#字符的替换及撤销-Undo操作" class="headerlink" title="字符的替换及撤销(Undo操作)"></a>字符的替换及撤销(Undo操作)</h1><h2 id="替换和撤销-Undo-命令"><a href="#替换和撤销-Undo-命令" class="headerlink" title="替换和撤销(Undo)命令"></a>替换和撤销(Undo)命令</h2><p>替换和Undo命令都是针对普通模式下的操作</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -702,6 +715,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h1 id="快速缩进"><a href="#快速缩进" class="headerlink" title="快速缩进"></a>快速缩进</h1><p><strong>使用命令进行快速调整缩进操作</strong></p>
 <pre><code>● 普通模式下输入15G，跳转到15行
 ● 普通模式下输入&gt;&gt; 整行将向右缩进（使用，用于格式化代码超爽）
@@ -1607,6 +1621,8 @@
   
 
   
+  
+
 
   
 

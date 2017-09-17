@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huanghailiang.github.io/"/>
-  <updated>2017-09-17T06:26:58.185Z</updated>
+  <updated>2017-09-17T06:29:06.049Z</updated>
   <id>https://huanghailiang.github.io/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="https://huanghailiang.github.io/2017/09/17/%E5%9F%BA%E4%BA%8E%E8%B7%9D%E7%A6%BB%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/"/>
     <id>https://huanghailiang.github.io/2017/09/17/基于距离的计算方法/</id>
     <published>2017-09-17T05:37:46.000Z</published>
-    <updated>2017-09-17T06:26:58.185Z</updated>
+    <updated>2017-09-17T06:29:06.049Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;基于距离的计算方法&quot;&gt;&lt;a href=&quot;#基于距离的计算方法&quot; class=&quot;headerlink&quot; title=&quot;基于距离的计算方法&quot;&gt;&lt;/a&gt;基于距离的计算方法&lt;/h1&gt;&lt;p&gt;在因为之前项目中用到了欧氏距离，所以在网上看了一下，然后感觉还不错就转载到自己的笔记中。&lt;/p&gt;
+      &lt;h1 id=&quot;基于距离的计算方法&quot;&gt;&lt;a href=&quot;#基于距离的计算方法&quot; class=&quot;headerlink&quot; title=&quot;基于距离的计算方法&quot;&gt;&lt;/a&gt;基于距离的计算方法&lt;/h1&gt;&lt;p&gt;在因为之前项目中用到了欧氏距离，所以在网上看了一下，然后感觉还不错就转载到自己的笔记中。顺便测试了一下在博客中直接编写公式。&lt;/p&gt;
 &lt;p&gt;本文转自：&lt;a href=&quot;http://blog.sina.com.cn/s/blog_52510b1d01015nrg.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.sina.com.cn/s/blog_52510b1d01015nrg.html&lt;/a&gt;&lt;/p&gt;
     
     </summary>

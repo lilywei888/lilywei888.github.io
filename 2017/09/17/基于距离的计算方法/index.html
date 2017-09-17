@@ -112,7 +112,7 @@
 <meta property="og:site_name" content="Darren">
 <meta property="og:description" content="基于距离的计算方法在因为之前项目中用到了欧氏距离，所以在网上看了一下，然后感觉还不错就转载到自己的笔记中。顺便测试了一下在博客中直接编写公式。 本文转自：http://blog.sina.com.cn/s/blog_52510b1d01015nrg.html">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-17T06:35:48.161Z">
+<meta property="og:updated_time" content="2017-09-17T06:44:09.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于距离的计算方法">
 <meta name="twitter:description" content="基于距离的计算方法在因为之前项目中用到了欧氏距离，所以在网上看了一下，然后感觉还不错就转载到自己的笔记中。顺便测试了一下在博客中直接编写公式。 本文转自：http://blog.sina.com.cn/s/blog_52510b1d01015nrg.html">
@@ -428,8 +428,9 @@ d_{12}=\sqrt{(a-b)(a-b)^T}</script><p>(4)Matlab计算欧氏距离</p>
 <p>X = [0 0 ; 1 0 ; 0 2]</p>
 <p>D = pdist(X,’euclidean’)</p>
 <p>结果：</p>
-<p>D =<br>    1.0000    2.0000    2.2361</p>
-<h1 id="曼哈顿距离-Manhattan-Distance"><a href="#曼哈顿距离-Manhattan-Distance" class="headerlink" title="曼哈顿距离(Manhattan Distance)"></a>曼哈顿距离(Manhattan Distance)</h1><p>从名字就可以猜出这种距离的计算方法了。想象你在曼哈顿要从一个十字路口开车到另外一个十字路口，驾驶距离是两点间的直线距离吗？显然不是，除非你能穿越大楼。实际驾驶距离就是这个“曼哈顿距离”。而这也是曼哈顿距离名称的来源， 曼哈顿距离也称为<strong>城市街区距离(City Block distance)</strong>。</p>
+<p>D =</p>
+<pre><code>1.0000    2.0000    2.2361
+</code></pre><h1 id="曼哈顿距离-Manhattan-Distance"><a href="#曼哈顿距离-Manhattan-Distance" class="headerlink" title="曼哈顿距离(Manhattan Distance)"></a>曼哈顿距离(Manhattan Distance)</h1><p>从名字就可以猜出这种距离的计算方法了。想象你在曼哈顿要从一个十字路口开车到另外一个十字路口，驾驶距离是两点间的直线距离吗？显然不是，除非你能穿越大楼。实际驾驶距离就是这个“曼哈顿距离”。而这也是曼哈顿距离名称的来源， 曼哈顿距离也称为<strong>城市街区距离(City Block distance)</strong>。</p>
 <p>(1)二维平面两点a(x1,y1)与b(x2,y2)间的曼哈顿距离</p>
 <script type="math/tex; mode=display">
 d_{12}=|x_1-x_2|+|y_1-y_2|</script><p>(2)两个n维向量a(x11,x12,…,x1n)与 b(x21,x22,…,x2n)间的曼哈顿距离</p>
@@ -439,8 +440,9 @@ d_{12}=\sum_{k=1}^n|x_{1k}-x_{2k}|</script><p>(3) Matlab计算曼哈顿距离</p
 <p>X = [0 0 ; 1 0 ; 0 2]</p>
 <p>D = pdist(X, ‘cityblock’)</p>
 <p>结果：</p>
-<p>D =<br>     1     2     3</p>
-<h1 id="标准化欧氏距离-Standardized-Euclidean-distance"><a href="#标准化欧氏距离-Standardized-Euclidean-distance" class="headerlink" title="标准化欧氏距离(Standardized Euclidean distance )"></a>标准化欧氏距离(Standardized Euclidean distance )</h1><p>(1)标准欧氏距离的定义</p>
+<p>D =</p>
+<pre><code> 1     2     3
+</code></pre><h1 id="标准化欧氏距离-Standardized-Euclidean-distance"><a href="#标准化欧氏距离-Standardized-Euclidean-distance" class="headerlink" title="标准化欧氏距离(Standardized Euclidean distance )"></a>标准化欧氏距离(Standardized Euclidean distance )</h1><p>(1)标准欧氏距离的定义</p>
 <p>标准化欧氏距离是针对简单欧氏距离的缺点而作的一种改进方案。标准欧氏距离的思路：既然数据各维分量的分布不一样，好吧！那我先将各个分量都“标准化”到均值、方差相等吧。均值和方差标准化到多少呢？这里先复习点统计学知识吧，假设样本集X的均值(mean)为m，标准差(standard deviation)为s，那么X的“标准化变量”表示为：</p>
 <p>而且标准化变量的数学期望为0，方差为1。因此样本集的标准化过程(standardization)用公式描述就是：</p>
 <script type="math/tex; mode=display">
@@ -453,8 +455,9 @@ d_{12}=\sqrt{\sum_{k=1}^n(\frac{x_{1k}-x_{2k}}{s_k})^2}</script><p>如果将方�
 <p>X = [0 0 ; 1 0 ; 0 2]</p>
 <p>D = pdist(X, ‘seuclidean’,[0.5,1])</p>
 <p>结果：</p>
-<p>D =<br>    2.0000    2.0000    2.8284</p>
-<h1 id="夹角余弦-Cosine"><a href="#夹角余弦-Cosine" class="headerlink" title="夹角余弦(Cosine)"></a>夹角余弦(Cosine)</h1><p>有没有搞错，又不是学几何，怎么扯到夹角余弦了？各位看官稍安勿躁。几何中夹角余弦可用来衡量两个向量方向的差异，机器学习中借用这一概念来衡量样本向量之间的差异。</p>
+<p>D =</p>
+<pre><code>2.0000    2.0000    2.8284
+</code></pre><h1 id="夹角余弦-Cosine"><a href="#夹角余弦-Cosine" class="headerlink" title="夹角余弦(Cosine)"></a>夹角余弦(Cosine)</h1><p>有没有搞错，又不是学几何，怎么扯到夹角余弦了？各位看官稍安勿躁。几何中夹角余弦可用来衡量两个向量方向的差异，机器学习中借用这一概念来衡量样本向量之间的差异。</p>
 <p>(1)在二维空间中向量A(x1,y1)与向量B(x2,y2)的夹角余弦公式：</p>
 <script type="math/tex; mode=display">
 \cos \theta = \frac{x_1x_2+y_1y_2}{\sqrt{x_1^2+y_1^2} \sqrt{x_2^2+y_2^2}}</script><p>(2) 两个n维样本点a(x11,x12,…,x1n)和b(x21,x22,…,x2n)的夹角余弦</p>
@@ -468,8 +471,9 @@ d_{12}=\sqrt{\sum_{k=1}^n(\frac{x_{1k}-x_{2k}}{s_k})^2}</script><p>如果将方�
 <p>X = [1 0 ; 1 1.732 ; -1 0]</p>
 <p>D = 1- pdist(X, ‘cosine’)  % Matlab中的pdist(X, ‘cosine’)得到的是1减夹角余弦的值</p>
 <p>结果：</p>
-<p>D =    0.5000   -1.0000   -0.5000</p>
-
+<p>D =</p>
+<pre><code>    0.5000   -1.0000   -0.5000
+</code></pre>
       
     </div>
     

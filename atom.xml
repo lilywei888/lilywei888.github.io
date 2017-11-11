@@ -1,380 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Darren</title>
-  <subtitle>海亮的笔记本</subtitle>
+  <title>lilywei</title>
+  <subtitle>丽伟的笔记本</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://huanghailiang.github.io/"/>
-  <updated>2017-11-11T03:35:13.600Z</updated>
-  <id>https://huanghailiang.github.io/</id>
+  <link href="https://lilywei888.github.io/"/>
+  <updated>2017-11-11T02:27:13.159Z</updated>
+  <id>https://lilywei888.github.io/</id>
   
   <author>
-    <name>Darren</name>
+    <name>lilywei</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>VXL库的简单使用</title>
-    <link href="https://huanghailiang.github.io/2017/11/07/VXL%E5%BA%93%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
-    <id>https://huanghailiang.github.io/2017/11/07/VXL库的简单使用/</id>
-    <published>2017-11-07T05:58:53.000Z</published>
-    <updated>2017-11-11T03:35:13.600Z</updated>
+    <title>test</title>
+    <link href="https://lilywei888.github.io/2017/11/11/test/"/>
+    <id>https://lilywei888.github.io/2017/11/11/test/</id>
+    <published>2017-11-11T02:13:18.000Z</published>
+    <updated>2017-11-11T02:27:13.159Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;VXL库&quot;&gt;&lt;a href=&quot;#VXL库&quot; class=&quot;headerlink&quot; title=&quot;VXL库&quot;&gt;&lt;/a&gt;VXL库&lt;/h1&gt;&lt;p&gt;该库是进行矩阵运算的一个矩阵库，个人感觉使用起来跟eigen库还是比较像，毕竟都是基于C++编写的矩阵运算库。&lt;br&gt;
+      &lt;h1 id=&quot;perception&quot;&gt;&lt;a href=&quot;#perception&quot; class=&quot;headerlink&quot; title=&quot;perception&quot;&gt;&lt;/a&gt;perception&lt;/h1&gt;&lt;h2 id=&quot;感知机&quot;&gt;&lt;a href=&quot;#感知机&quot; class=&quot;headerlink&quot; title=&quot;感知机&quot;&gt;&lt;/a&gt;感知机&lt;/h2&gt;&lt;p&gt;然后就可以直接写了 keyi &lt;/p&gt;
+&lt;p&gt;下面的符号表示下面的在博客首页不显示也就是我在博客首页的阅读全文那个按钮&lt;/p&gt;
     
     </summary>
     
     
-      <category term="工具的使用" scheme="https://huanghailiang.github.io/tags/%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+      <category term="机器学习" scheme="https://lilywei888.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
-    <title>CMakeLists的编写</title>
-    <link href="https://huanghailiang.github.io/2017/11/01/CMakeLists%E7%9A%84%E7%BC%96%E5%86%99/"/>
-    <id>https://huanghailiang.github.io/2017/11/01/CMakeLists的编写/</id>
-    <published>2017-11-01T07:42:27.000Z</published>
-    <updated>2017-11-11T03:35:13.588Z</updated>
+    <title>Hello World</title>
+    <link href="https://lilywei888.github.io/2017/07/21/hello-world/"/>
+    <id>https://lilywei888.github.io/2017/07/21/hello-world/</id>
+    <published>2017-07-20T16:00:00.000Z</published>
+    <updated>2017-08-17T05:19:30.808Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;CMake工具的理解&quot;&gt;&lt;a href=&quot;#CMake工具的理解&quot; class=&quot;headerlink&quot; title=&quot;CMake工具的理解&quot;&gt;&lt;/a&gt;CMake工具的理解&lt;/h1&gt;&lt;p&gt;CMake是一个很方便的跨平台编译的软件，他可以输出各种各样的makefile或者project文件。&lt;br&gt;
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;
     
     </summary>
     
     
-      <category term="工具的使用" scheme="https://huanghailiang.github.io/tags/%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GPU监测时问题解决</title>
-    <link href="https://huanghailiang.github.io/2017/10/19/GPU%E7%9B%91%E6%B5%8B%E6%97%B6%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
-    <id>https://huanghailiang.github.io/2017/10/19/GPU监测时问题解决/</id>
-    <published>2017-10-19T04:56:00.000Z</published>
-    <updated>2017-11-11T03:35:13.595Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;GPU监测时问题解决&quot;&gt;&lt;a href=&quot;#GPU监测时问题解决&quot; class=&quot;headerlink&quot; title=&quot;GPU监测时问题解决&quot;&gt;&lt;/a&gt;GPU监测时问题解决&lt;/h1&gt;&lt;p&gt;不管在我们使用服务器还是使用自己的桌面版本的时候，跑程序时一方面，有时候我们会监测一下电脑的资源使用情况,但是监测的时候我们可以能会遇到一些问题。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>互信息</title>
-    <link href="https://huanghailiang.github.io/2017/09/17/%E4%BA%92%E4%BF%A1%E6%81%AF/"/>
-    <id>https://huanghailiang.github.io/2017/09/17/互信息/</id>
-    <published>2017-09-17T07:29:47.000Z</published>
-    <updated>2017-09-17T07:33:00.865Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;互信息&quot;&gt;&lt;a href=&quot;#互信息&quot; class=&quot;headerlink&quot; title=&quot;互信息&quot;&gt;&lt;/a&gt;互信息&lt;/h1&gt;&lt;p&gt;在做医学图像分割时需要用到互信息来计算两幅图像的相似度。之前写好了函数，在此备份。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="医学图像分割" scheme="https://huanghailiang.github.io/tags/%E5%8C%BB%E5%AD%A6%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于距离的计算方法</title>
-    <link href="https://huanghailiang.github.io/2017/09/17/%E5%9F%BA%E4%BA%8E%E8%B7%9D%E7%A6%BB%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/"/>
-    <id>https://huanghailiang.github.io/2017/09/17/基于距离的计算方法/</id>
-    <published>2017-09-17T05:37:46.000Z</published>
-    <updated>2017-09-17T06:44:09.281Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;基于距离的计算方法&quot;&gt;&lt;a href=&quot;#基于距离的计算方法&quot; class=&quot;headerlink&quot; title=&quot;基于距离的计算方法&quot;&gt;&lt;/a&gt;基于距离的计算方法&lt;/h1&gt;&lt;p&gt;在因为之前项目中用到了欧氏距离，所以在网上看了一下，然后感觉还不错就转载到自己的笔记中。顺便测试了一下在博客中直接编写公式。&lt;/p&gt;
-&lt;p&gt;本文转自：&lt;a href=&quot;http://blog.sina.com.cn/s/blog_52510b1d01015nrg.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.sina.com.cn/s/blog_52510b1d01015nrg.html&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="https://huanghailiang.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ssh连接服务器中断，如何让命令继续在服务器执行</title>
-    <link href="https://huanghailiang.github.io/2017/09/08/ssh%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AD%E6%96%AD%EF%BC%8C%E5%A6%82%E4%BD%95%E8%AE%A9%E5%91%BD%E4%BB%A4%E7%BB%A7%E7%BB%AD%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%89%A7%E8%A1%8C/"/>
-    <id>https://huanghailiang.github.io/2017/09/08/ssh连接服务器中断，如何让命令继续在服务器执行/</id>
-    <published>2017-09-08T06:43:07.000Z</published>
-    <updated>2017-09-08T08:05:52.337Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ssh连接linux服务器中断后，如何让命令继续在服务器运行&quot;&gt;&lt;a href=&quot;#ssh连接linux服务器中断后，如何让命令继续在服务器运行&quot; class=&quot;headerlink&quot; title=&quot;ssh连接linux服务器中断后，如何让命令继续在服务器运行&quot;&gt;&lt;/a&gt;ssh连接linux服务器中断后，如何让命令继续在服务器运行&lt;/h1&gt;&lt;p&gt;这个问题也许是我们这些小白比较头疼的问题，尤其对于那些做机器学习需要花很久的时间才能训练出一个结果。然而就在这时，因为各种不可抗力我们使用ssh连接服务器时，ssh的窗口突然断开了连接，那么在服务器上跑的程序就也跟着断掉了，之前所有跑的数据也将丢失，这样将会浪费我们大量的时间。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>快速哈达玛变换</title>
-    <link href="https://huanghailiang.github.io/2017/09/06/%E5%BF%AB%E9%80%9F%E5%93%88%E8%BE%BE%E7%8E%9B%E5%8F%98%E6%8D%A2/"/>
-    <id>https://huanghailiang.github.io/2017/09/06/快速哈达玛变换/</id>
-    <published>2017-09-06T07:24:59.000Z</published>
-    <updated>2017-09-06T07:36:18.640Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;快速哈达玛变换&quot;&gt;&lt;a href=&quot;#快速哈达玛变换&quot; class=&quot;headerlink&quot; title=&quot;快速哈达玛变换&quot;&gt;&lt;/a&gt;快速哈达玛变换&lt;/h1&gt;&lt;p&gt;在生成哈达玛矩阵的文章中我已经提到了沃尔什函数，其实也就是快速哈达玛变换，他是针对与压缩感知中压缩过程中对哈达玛矩阵的行进行一个变换，这么做可以更好的压缩图像，并更好的进行解压。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="常用的C语言小程序代码" scheme="https://huanghailiang.github.io/tags/%E5%B8%B8%E7%94%A8%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>生成哈达玛矩阵</title>
-    <link href="https://huanghailiang.github.io/2017/09/06/%E7%94%9F%E6%88%90%E5%93%88%E8%BE%BE%E7%8E%9B%E7%9F%A9%E9%98%B5/"/>
-    <id>https://huanghailiang.github.io/2017/09/06/生成哈达玛矩阵/</id>
-    <published>2017-09-06T07:17:40.000Z</published>
-    <updated>2017-09-06T07:41:47.668Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;哈达玛矩阵是什么&quot;&gt;&lt;a href=&quot;#哈达玛矩阵是什么&quot; class=&quot;headerlink&quot; title=&quot;哈达玛矩阵是什么&quot;&gt;&lt;/a&gt;哈达玛矩阵是什么&lt;/h1&gt;&lt;p&gt;哈达玛（Hadamard)矩阵是由+1和-1元素构成的正交方阵。所谓正交方阵，指它的任意两行（或两列）都是正交的，且任意一行（列）的所有元素的平方和等于方阵的阶数。即：设A为n阶由+1和-1元素构成的方阵，若AA‘=nI（这里A’为A的转置，I为单位方阵），则称A为n阶Hadamard矩阵。&lt;br&gt;　　已有人证明，Hadamard矩阵的阶数都是4的倍数。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="常用的C语言小程序代码" scheme="https://huanghailiang.github.io/tags/%E5%B8%B8%E7%94%A8%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C语言读取系统当前时间</title>
-    <link href="https://huanghailiang.github.io/2017/09/06/C%E8%AF%AD%E8%A8%80%E8%AF%BB%E5%8F%96%E7%B3%BB%E7%BB%9F%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4/"/>
-    <id>https://huanghailiang.github.io/2017/09/06/C语言读取系统当前时间/</id>
-    <published>2017-09-06T07:03:02.000Z</published>
-    <updated>2017-09-06T07:14:30.159Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;C语言读取系统当前时间&quot;&gt;&lt;a href=&quot;#C语言读取系统当前时间&quot; class=&quot;headerlink&quot; title=&quot;C语言读取系统当前时间&quot;&gt;&lt;/a&gt;C语言读取系统当前时间&lt;/h1&gt;&lt;p&gt;之前编程的时候我们需要来读取当前的时间，或者使用当前的时间对文件进行一个命名等，所以做一个笔记用来备忘。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="常用的C语言小程序代码" scheme="https://huanghailiang.github.io/tags/%E5%B8%B8%E7%94%A8%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用C语言自己写2048</title>
-    <link href="https://huanghailiang.github.io/2017/09/05/2048/"/>
-    <id>https://huanghailiang.github.io/2017/09/05/2048/</id>
-    <published>2017-09-05T12:38:34.000Z</published>
-    <updated>2017-09-05T12:52:18.287Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;用C语言自己写2048&quot;&gt;&lt;a href=&quot;#用C语言自己写2048&quot; class=&quot;headerlink&quot; title=&quot;用C语言自己写2048&quot;&gt;&lt;/a&gt;用C语言自己写2048&lt;/h1&gt;&lt;p&gt;2048是之前非常火爆的一个游戏，记得之前上课的时候很多同学都在玩这个游戏。尤其是一些比较无聊的课上玩的人更多。那么我们应该如何用代码自己来实现2048这个游戏的编写呢？&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="娱乐" scheme="https://huanghailiang.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu server 硬盘挂载教程</title>
-    <link href="https://huanghailiang.github.io/2017/09/05/Ubuntu-server-%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E6%95%99%E7%A8%8B/"/>
-    <id>https://huanghailiang.github.io/2017/09/05/Ubuntu-server-硬盘挂载教程/</id>
-    <published>2017-09-05T00:38:49.000Z</published>
-    <updated>2017-09-05T01:52:21.866Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Ubuntu-server-硬盘挂载教程&quot;&gt;&lt;a href=&quot;#Ubuntu-server-硬盘挂载教程&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu server 硬盘挂载教程&quot;&gt;&lt;/a&gt;Ubuntu server 硬盘挂载教程&lt;/h1&gt;&lt;p&gt;在我们使用服务器的时候，因为使用的人比较多，而且目前做机器学习的人比较多，然而机器学习那边需要训练一些数据，训练集比较大，这就对于我们服务器的存储能力是一个较大的体验，所以一块硬盘已经不能满足我们的需求，我们需要使用多块硬盘来一起存储我们的数据，但是Ubuntu系统要识别多块硬盘需要我们自己配置。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git本地库的建立与使用</title>
-    <link href="https://huanghailiang.github.io/2017/09/03/Git%E6%9C%AC%E5%9C%B0%E5%BA%93%E7%9A%84%E5%BB%BA%E7%AB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
-    <id>https://huanghailiang.github.io/2017/09/03/Git本地库的建立与使用/</id>
-    <published>2017-09-03T12:54:27.000Z</published>
-    <updated>2017-09-03T13:19:26.142Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Git本地库的建立与使用&quot;&gt;&lt;a href=&quot;#Git本地库的建立与使用&quot; class=&quot;headerlink&quot; title=&quot;Git本地库的建立与使用&quot;&gt;&lt;/a&gt;Git本地库的建立与使用&lt;/h1&gt;&lt;p&gt;本笔记是自己在网上学习后整理后得到的，主要针对的是本地库的建立以及使用，对于远程库的操作这里暂时不涉及。&lt;/p&gt;
-&lt;p&gt;本教程的本地库的建立主要是在linux系统上建立，windows上可以使用命令行的git bash 或者带有图形界面的TortoiseGit进行操作，有兴趣的话可以自己学习一下。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Git" scheme="https://huanghailiang.github.io/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>图片转换成字符图</title>
-    <link href="https://huanghailiang.github.io/2017/09/02/%E5%9B%BE%E7%89%87%E8%BD%AC%E6%8D%A2%E6%88%90%E5%AD%97%E7%AC%A6%E5%9B%BE/"/>
-    <id>https://huanghailiang.github.io/2017/09/02/图片转换成字符图/</id>
-    <published>2017-09-02T09:33:11.000Z</published>
-    <updated>2017-09-02T10:01:00.944Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;图片转换成字符图&quot;&gt;&lt;a href=&quot;#图片转换成字符图&quot; class=&quot;headerlink&quot; title=&quot;图片转换成字符图&quot;&gt;&lt;/a&gt;图片转换成字符图&lt;/h1&gt;&lt;p&gt;因为之前写到了一些好玩的注释模板，当然网上有很多很多好玩的图片，我们不可能完全收集过来，当然也不可能正好有你自己所需要的图片，所以我们需要一个自己将图片转换成字符图的一个代码，这样我们就可以很方便的得到自己想得到的一些字符图。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="娱乐" scheme="https://huanghailiang.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注释模板（仅供娱乐）</title>
-    <link href="https://huanghailiang.github.io/2017/09/02/%E6%B3%A8%E9%87%8A%E6%A8%A1%E6%9D%BF%EF%BC%88%E4%BB%85%E4%BE%9B%E5%A8%B1%E4%B9%90%EF%BC%89/"/>
-    <id>https://huanghailiang.github.io/2017/09/02/注释模板（仅供娱乐）/</id>
-    <published>2017-09-02T08:57:39.000Z</published>
-    <updated>2017-09-02T09:33:34.260Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;注释模板（仅供娱乐）&quot;&gt;&lt;a href=&quot;#注释模板（仅供娱乐）&quot; class=&quot;headerlink&quot; title=&quot;注释模板（仅供娱乐）&quot;&gt;&lt;/a&gt;注释模板（仅供娱乐）&lt;/h1&gt;&lt;p&gt;今天无意间在网上看到了一些好玩的注释，让我想起之前开始写代码的时候就已经有人开始在代码中添加这些东西，感觉挺好玩的，随手摘抄，仅供娱乐。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="娱乐" scheme="https://huanghailiang.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vim操作</title>
-    <link href="https://huanghailiang.github.io/2017/08/25/vim%E6%93%8D%E4%BD%9C/"/>
-    <id>https://huanghailiang.github.io/2017/08/25/vim操作/</id>
-    <published>2017-08-25T08:07:16.000Z</published>
-    <updated>2017-08-25T08:11:23.590Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;vim的基本操作&quot;&gt;&lt;a href=&quot;#vim的基本操作&quot; class=&quot;headerlink&quot; title=&quot;vim的基本操作&quot;&gt;&lt;/a&gt;vim的基本操作&lt;/h1&gt;&lt;p&gt;本人在实验楼学习的时候摘抄下来的，留作自己的笔记。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="ubuntu基本操作" scheme="https://huanghailiang.github.io/tags/ubuntu%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>服务器安装问题补充（安装时Select and install software失败）</title>
-    <link href="https://huanghailiang.github.io/2017/08/25/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98%E8%A1%A5%E5%85%85/"/>
-    <id>https://huanghailiang.github.io/2017/08/25/服务器安装问题补充/</id>
-    <published>2017-08-25T06:57:13.000Z</published>
-    <updated>2017-08-26T07:18:04.825Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;服务器安装问题补充&quot;&gt;&lt;a href=&quot;#服务器安装问题补充&quot; class=&quot;headerlink&quot; title=&quot;服务器安装问题补充&quot;&gt;&lt;/a&gt;服务器安装问题补充&lt;/h1&gt;&lt;p&gt;之前写好的服务器安装教程已经写好了，针对与大部分服务器的安装应该都可以正常安装了，但是近期安装实验室服务器的时候遇到了问题。安装时Select and install software失败，这个问题在以前没有遇到过，不过也有可能时启动盘做的有问题吧，不过是刚从ubuntu官网上下载的系统做的启动盘，有点迷，不过先记录一下好了。&lt;/p&gt;
-&lt;img src=&quot;/images/服务器安装问题补充.jpg&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="手把手教你配置Ubuntu server服务器" scheme="https://huanghailiang.github.io/tags/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E9%85%8D%E7%BD%AEUbuntu-server%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C语言编写程序计时</title>
-    <link href="https://huanghailiang.github.io/2017/08/22/C%E8%AF%AD%E8%A8%80%E7%BC%96%E5%86%99%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%97%B6/"/>
-    <id>https://huanghailiang.github.io/2017/08/22/C语言编写程序计时/</id>
-    <published>2017-08-22T12:45:04.000Z</published>
-    <updated>2017-08-22T12:55:00.386Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;C语言编写程序计时&quot;&gt;&lt;a href=&quot;#C语言编写程序计时&quot; class=&quot;headerlink&quot; title=&quot;C语言编写程序计时&quot;&gt;&lt;/a&gt;C语言编写程序计时&lt;/h1&gt;&lt;p&gt;在我们编程的时候，有时候需要我们去监测程序运行的时间问题，尤其是在做加速或者做优化的时候，一个程序运行的时间也许就是我们判断程序好坏的标准，所以我们有时候要进行计时。（因为用到了，所以做个记录方便下次查看）&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="常用的C语言小程序代码" scheme="https://huanghailiang.github.io/tags/%E5%B8%B8%E7%94%A8%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C 语言TXT文件的读写</title>
-    <link href="https://huanghailiang.github.io/2017/08/22/C-%E8%AF%AD%E8%A8%80TXT%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%86%99/"/>
-    <id>https://huanghailiang.github.io/2017/08/22/C-语言TXT文件的读写/</id>
-    <published>2017-08-22T12:30:52.000Z</published>
-    <updated>2017-08-22T12:36:17.106Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;C语言编写TXT文件的读写&quot;&gt;&lt;a href=&quot;#C语言编写TXT文件的读写&quot; class=&quot;headerlink&quot; title=&quot;C语言编写TXT文件的读写&quot;&gt;&lt;/a&gt;C语言编写TXT文件的读写&lt;/h1&gt;&lt;p&gt;本问针对的是对txt文件中数据的读写操作（非二进制的，二进制的可能后面会补充）,因为用到做个记录。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="常用的C语言小程序代码" scheme="https://huanghailiang.github.io/tags/%E5%B8%B8%E7%94%A8%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文件脚本编写问题</title>
-    <link href="https://huanghailiang.github.io/2017/08/17/%E6%96%87%E4%BB%B6%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E9%97%AE%E9%A2%98-by%E9%BB%84%E6%B5%B7%E4%BA%AE/"/>
-    <id>https://huanghailiang.github.io/2017/08/17/文件脚本编写问题-by黄海亮/</id>
-    <published>2017-08-17T05:58:01.000Z</published>
-    <updated>2017-08-17T07:18:23.941Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;文件脚本编写问题&quot;&gt;&lt;a href=&quot;#文件脚本编写问题&quot; class=&quot;headerlink&quot; title=&quot;文件脚本编写问题&quot;&gt;&lt;/a&gt;文件脚本编写问题&lt;/h1&gt;&lt;p&gt;在编写脚本的时候我们可能会遇到一些各种各样的小问题，比如放置位置，以及使用权限等。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>清理集群的脚本</title>
-    <link href="https://huanghailiang.github.io/2017/08/17/%E6%B8%85%E7%90%86%E9%9B%86%E7%BE%A4%E7%9A%84%E8%84%9A%E6%9C%AC-by%E9%BB%84%E6%B5%B7%E4%BA%AE/"/>
-    <id>https://huanghailiang.github.io/2017/08/17/清理集群的脚本-by黄海亮/</id>
-    <published>2017-08-17T05:56:08.000Z</published>
-    <updated>2017-08-17T07:19:36.902Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;清理集群的脚本&quot;&gt;&lt;a href=&quot;#清理集群的脚本&quot; class=&quot;headerlink&quot; title=&quot;清理集群的脚本&quot;&gt;&lt;/a&gt;清理集群的脚本&lt;/h1&gt;&lt;p&gt;该脚本旨在重新配置hadoop的时候我们需要清理一下集群中的东西，比如记录等。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
+      <category term="start" scheme="https://lilywei888.github.io/tags/start/"/>
     
   </entry>
   

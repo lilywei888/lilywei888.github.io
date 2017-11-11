@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huanghailiang.github.io/"/>
-  <updated>2017-09-17T07:33:00.865Z</updated>
+  <updated>2017-11-11T03:35:13.600Z</updated>
   <id>https://huanghailiang.github.io/</id>
   
   <author>
@@ -14,6 +14,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VXL库的简单使用</title>
+    <link href="https://huanghailiang.github.io/2017/11/07/VXL%E5%BA%93%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
+    <id>https://huanghailiang.github.io/2017/11/07/VXL库的简单使用/</id>
+    <published>2017-11-07T05:58:53.000Z</published>
+    <updated>2017-11-11T03:35:13.600Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;VXL库&quot;&gt;&lt;a href=&quot;#VXL库&quot; class=&quot;headerlink&quot; title=&quot;VXL库&quot;&gt;&lt;/a&gt;VXL库&lt;/h1&gt;&lt;p&gt;该库是进行矩阵运算的一个矩阵库，个人感觉使用起来跟eigen库还是比较像，毕竟都是基于C++编写的矩阵运算库。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="工具的使用" scheme="https://huanghailiang.github.io/tags/%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CMakeLists的编写</title>
+    <link href="https://huanghailiang.github.io/2017/11/01/CMakeLists%E7%9A%84%E7%BC%96%E5%86%99/"/>
+    <id>https://huanghailiang.github.io/2017/11/01/CMakeLists的编写/</id>
+    <published>2017-11-01T07:42:27.000Z</published>
+    <updated>2017-11-11T03:35:13.588Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;CMake工具的理解&quot;&gt;&lt;a href=&quot;#CMake工具的理解&quot; class=&quot;headerlink&quot; title=&quot;CMake工具的理解&quot;&gt;&lt;/a&gt;CMake工具的理解&lt;/h1&gt;&lt;p&gt;CMake是一个很方便的跨平台编译的软件，他可以输出各种各样的makefile或者project文件。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="工具的使用" scheme="https://huanghailiang.github.io/tags/%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GPU监测时问题解决</title>
+    <link href="https://huanghailiang.github.io/2017/10/19/GPU%E7%9B%91%E6%B5%8B%E6%97%B6%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    <id>https://huanghailiang.github.io/2017/10/19/GPU监测时问题解决/</id>
+    <published>2017-10-19T04:56:00.000Z</published>
+    <updated>2017-11-11T03:35:13.595Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;GPU监测时问题解决&quot;&gt;&lt;a href=&quot;#GPU监测时问题解决&quot; class=&quot;headerlink&quot; title=&quot;GPU监测时问题解决&quot;&gt;&lt;/a&gt;GPU监测时问题解决&lt;/h1&gt;&lt;p&gt;不管在我们使用服务器还是使用自己的桌面版本的时候，跑程序时一方面，有时候我们会监测一下电脑的资源使用情况,但是监测的时候我们可以能会遇到一些问题。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Ubuntu" scheme="https://huanghailiang.github.io/tags/Ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>互信息</title>
@@ -316,60 +370,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;清理集群的脚本&quot;&gt;&lt;a href=&quot;#清理集群的脚本&quot; class=&quot;headerlink&quot; title=&quot;清理集群的脚本&quot;&gt;&lt;/a&gt;清理集群的脚本&lt;/h1&gt;&lt;p&gt;该脚本旨在重新配置hadoop的时候我们需要清理一下集群中的东西，比如记录等。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>初始化集群</title>
-    <link href="https://huanghailiang.github.io/2017/08/17/%E5%88%9D%E5%A7%8B%E5%8C%96%E9%9B%86%E7%BE%A4-by%E9%BB%84%E6%B5%B7%E4%BA%AE/"/>
-    <id>https://huanghailiang.github.io/2017/08/17/初始化集群-by黄海亮/</id>
-    <published>2017-08-17T05:52:50.000Z</published>
-    <updated>2017-08-17T07:19:21.558Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;初始化集群&quot;&gt;&lt;a href=&quot;#初始化集群&quot; class=&quot;headerlink&quot; title=&quot;初始化集群&quot;&gt;&lt;/a&gt;初始化集群&lt;/h1&gt;&lt;p&gt;该脚本主要时对第一次使用集群的时候进行一个初始化。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>所有节点 文件删除脚本编写</title>
-    <link href="https://huanghailiang.github.io/2017/08/17/%E6%89%80%E6%9C%89%E8%8A%82%E7%82%B9-%E6%96%87%E4%BB%B6%E5%88%A0%E9%99%A4%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99-by%E9%BB%84%E6%B5%B7%E4%BA%AE/"/>
-    <id>https://huanghailiang.github.io/2017/08/17/所有节点-文件删除脚本编写-by黄海亮/</id>
-    <published>2017-08-17T05:49:47.000Z</published>
-    <updated>2017-08-17T07:19:42.101Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;所有节点-文件删除脚本编写&quot;&gt;&lt;a href=&quot;#所有节点-文件删除脚本编写&quot; class=&quot;headerlink&quot; title=&quot;所有节点 文件删除脚本编写&quot;&gt;&lt;/a&gt;所有节点 文件删除脚本编写&lt;/h1&gt;&lt;p&gt;该脚本旨在删除所有节点上相同的东西，比如hadoop的重新配置等，还有删除hadoop的log等文件，都比较方便。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Hadoop脚本编写" scheme="https://huanghailiang.github.io/tags/Hadoop%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>所有节点 文件拷贝脚本编写</title>
-    <link href="https://huanghailiang.github.io/2017/08/17/%E6%89%80%E6%9C%89%E8%8A%82%E7%82%B9-%E6%96%87%E4%BB%B6%E6%8B%B7%E8%B4%9D%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99-by%E9%BB%84%E6%B5%B7%E4%BA%AE/"/>
-    <id>https://huanghailiang.github.io/2017/08/17/所有节点-文件拷贝脚本编写-by黄海亮/</id>
-    <published>2017-08-17T05:46:18.000Z</published>
-    <updated>2017-08-17T07:19:46.838Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;所有节点-文件拷贝脚本编写&quot;&gt;&lt;a href=&quot;#所有节点-文件拷贝脚本编写&quot; class=&quot;headerlink&quot; title=&quot;所有节点 文件拷贝脚本编写&quot;&gt;&lt;/a&gt;所有节点 文件拷贝脚本编写&lt;/h1&gt;&lt;p&gt;该脚本旨在往每个节点拷贝数据，之前我们的拷贝是需要自己一个节点一个节点链接然后拷贝，但是如果我们每个节点都拷贝同样的数据时，这样做显然很麻烦，如果节点多的话还很浪费时间，这样我们就可以通过该脚本自己循环拷贝。&lt;/p&gt;
     
     </summary>
     
